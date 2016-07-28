@@ -1,0 +1,26 @@
+@mixin icons($name) {
+  $width: icons-sprite-width($name);
+  $height: icons-sprite-height($name);
+
+  .icons-#{$name} {
+    display: inline-block;
+    width: $width;
+    height: $height;
+  }
+}
+
+@mixin reset-anchor-color($color) {
+  color: $color;
+
+  &:visited, &:active, &:focus {
+    color: $color;
+  }
+}
+
+@mixin anchor-ellipse {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+}

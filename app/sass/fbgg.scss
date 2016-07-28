@@ -1,0 +1,285 @@
+@import "compass/css3";
+@import "vars";
+@import "utils";
+@import "icons";
+
+.region-right-side {
+  & > .wrapper {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.block-login-register {
+  margin: 0 auto;
+
+  .btn-login, .btn-register {
+    width: 100%;
+    border: 2px solid $brand-primary-color;
+    color: $brand-primary-color;
+    background-color: white;
+    @include border-radius(5px);
+    font-size: 16px;
+
+    &:hover {
+      color: white;
+      background-color: $brand-primary-color;
+    }
+  }
+}
+
+.block-services {
+  margin-top: 20px;
+
+  .block-header {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    border-top: 2px solid #666666;
+    background-color: #f7f7f7;
+    font-size: 16px;
+  }
+
+  @include icons(searchview);
+  @include icons(hand);
+  @include icons(edit);
+  @include icons(gift);
+  @include icons(send);
+  @include icons(cert);
+
+  .block-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    & >.row {
+      margin: 0;
+
+      & > div {
+        padding: 10px 0;
+        height: 130px;
+      }
+      
+    }
+  }
+}
+
+.block-register-info {
+  .block-header {
+    height: 40px;
+    line-height: 40px;
+
+    border-top: 2px solid $brand-primary-color;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: $brand-primary-color;
+    font-size: 16px;
+  }
+
+  .block-content {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    color: $brand-primary-color;
+
+    & > .wrapper {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .control-group {
+      margin-bottom: 20px;
+    }
+
+    input[type='text'] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid $brand-primary-color;
+      @include border-radius(3px);
+      outline: none;
+      color: #333;
+    }
+
+    .control-group-phone {
+      input[type='text'] {
+        width: 60%;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .btn-send-verify-code {
+        width: 30%;
+        font-size: 12px;
+        vertical-align: middle;
+        @include border-radius(15px);
+      }
+    }
+
+    .container-title {
+      margin-bottom: 5px;
+    }
+
+    .btn-register {
+      width: 100%;
+    }
+  }
+}
+
+.block-related-keywords {
+  margin-top: 20px;
+
+  .block-header {
+    font-size: 16px;
+    .keywords {
+      color: $brand-primary-color;
+    }
+  }
+
+  .block-content {
+    padding: 10px 0;
+    max-width: 300px;
+
+    & > .row > div {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+}
+
+.block-region-nav {
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+
+  .block-header {
+    font-size: 16px;
+  }
+
+  .block-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    & > .row > div {
+      padding: 5px 0;
+
+      a {
+        color: #333;
+
+        &:hover {
+          color: $brand-primary-color;
+        }
+      }
+    }
+  }
+}
+
+//
+// The above is copied from zblm.scss, just to view better effect.
+// 
+// -----------------------
+
+.container-publish-warning {
+  @include icons(warn);
+
+  .publish-warning {
+    border: 1px solid #e0e0e0;
+
+    span {
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+
+  .publish-warning-header {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+  }
+
+  .publish-warning-body {
+    padding: 15px;
+
+    .item {
+      margin-top: 5px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .bullet {
+    margin-right: 5px;
+  }
+}
+
+.container-publish-form {
+  margin-top: 50px;
+
+  .publish-form {
+    max-width: 700px;
+
+    input[type="text"] {
+      width: 80%;
+    }
+
+    #bid-title {
+      width: 100%;
+    }
+
+    #bid-content {
+      width: 100%;
+      height: 300px;
+    }
+
+    .form-group > label {
+      padding-right: 0;
+    }
+
+    .form-group-publisher {
+      .container-radios label {
+        margin-right: 20px !important;
+      }
+    }
+
+    //
+    // The above is copied from fbcg.scss.
+    //
+    //
+    // ------------------------
+
+    .form-group-uploaded-files {
+      margin: 20px 0 40px 0;
+    }
+
+    .container-uploaded-files {
+      @include icons(yellow-folder);
+
+      .file {
+        span, a {
+          vertical-align: middle;
+        }
+
+        .icons-yellow-folder, .file-name {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .form-group-actions {
+      margin-top: 20px;
+    }
+
+    .btn-submit {
+      margin-right: 20px;
+    }
+
+    .btn-submit, .btn-upload-file {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}

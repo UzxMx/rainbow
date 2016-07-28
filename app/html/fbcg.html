@@ -1,0 +1,345 @@
+{% extends 'layout.html' %}
+
+{% block breadcrumb %}
+
+<div class="container-breadcrumb">
+  <div class="breadcrumb">
+    <span class="icons-geo"></span>
+    <span>您当前的位置：</span>
+    <a href="#">招标王</a>
+    <span class="icons-arrow-right"></span>
+    <a href="#">招标信息</a>
+    <span class="icons-arrow-right"></span>
+    <a href="#">发布采购</a>    
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="region">
+  <div class="row">
+    <div class="col-sm-8 region-main">
+      <div class="container-publish">
+        <div class="container-publish-warning">
+          <div class="publish-warning">
+            <div class="publish-warning-header">
+              <span class="icons-warn"></span>
+              <span>提示</span>
+            </div>
+            <div class="publish-warning-body">
+              <div class="item">
+                <span class="bullet">&#9642;</span>
+                <span>请务必确认您所发布的信息真实、合法、准确、及时，未侵犯他人合法权利，以免导致不必要的纠纷！</span>
+              </div>
+              <div class="item">
+                <span class="bullet">&#9642;</span>
+                <span>您发布的信息我们后台会有工作人员进行审核，审核成功后即可将您的公告发布出去。</span>
+              </div>              
+            </div>
+          </div>
+        </div>
+
+        <div class="container-publish-form">
+          <div class="publish-form">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="bid-company" class="col-sm-4 control-label">招标单位：</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="bid-company" />
+                </div>                
+              </div>
+              <div class="form-group">
+                <label for="bid-agent" class="col-sm-4 control-label">招标代理：</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="bid-agent" />
+                </div>                
+              </div>     
+              <div class="form-group form-group-publisher">
+                <label for="bid-publisher" class="col-sm-4 control-label">发布单位：</label>
+                <div class="col-sm-8">
+                  <div class="radio container-radios">
+                    <label>
+                      <input type="radio" name="publisher" value=""> 业主单位
+                    </label>
+                    <label>
+                      <input type="radio" name="publisher" value=""> 招标代理
+                    </label>
+                  </div>                 
+                </div>                
+              </div>  
+              <div class="form-group">
+                <label for="bid-date" class="col-sm-4 control-label">开标日期：</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="bid-date" />
+                  <span>（日期格式：2010-01-01）</span>
+                </div>                
+              </div>          
+              <div class="form-group">
+                <label for="bid-manager" class="col-sm-4 control-label">联系人：</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="bid-manager" />
+                </div>                
+              </div>       
+              <div class="form-group">
+                <label for="bid-tel" class="col-sm-4 control-label">联系电话：</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="bid-tel" />
+                </div>                
+              </div>  
+              <div class="form-group">
+                <label for="bid-email" class="col-sm-4 control-label">电子邮箱：</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="bid-email" />
+                </div>                
+              </div>
+              <div class="form-group">
+                <label for="bid-title" class="col-sm-4 control-label">公告标题：</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="bid-title" />
+                </div>                
+              </div>
+              <div class="form-group">
+                <label for="bid-content" class="col-sm-4 control-label">采购内容：</label>
+                <div class="col-sm-8">
+                  <textarea class="form-control" id="bid-content"></textarea>
+                </div>                
+              </div>                                                               
+
+              <div class="form-group">
+                <div class="col-sm-12 container-btn-submit">
+                  <button type="submit" class="btn btn-primary btn-submit">确定</button>
+                </div>
+              </div>                                     
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-sm-4 region-right-side">
+      <div class="wrapper">
+        <div class="block block-login-register">
+          <div class="row">
+            <div class="col-sm-6">
+              <a href="#" class="btn btn-login">登录</a>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" class="btn btn-register">注册</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="block block-services">
+          <div class="block-header">
+            注册后您可享受以下服务
+          </div>
+          <div class="block block-content container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-searchview">
+                  </span>
+                </div>
+                <div>免费查看所有招标信息</div>
+              </div>
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-hand">
+                  </span>
+                </div>
+                <div>提前把握项目</div>
+              </div>           
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-edit">
+                  </span>
+                </div>
+                <div>订阅属于自己的招标信息</div>
+              </div>    
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-gift">
+                  </span>
+                </div>
+                <div>信息免费发送邮箱</div>
+              </div>  
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-send">
+                  </span>
+                </div>
+                <div>发布招标信息</div>
+              </div>
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-cert">
+                  </span>
+                </div>
+                <div>招标王认证</div>
+              </div>                                           
+            </div>
+          </div> 
+        </div>
+
+        <div class="block block-register-info">
+          <div class="block-header">
+            5秒注册，百万招标信息唾手可得
+          </div>
+          <div class="block-content">
+            <div class="wrapper">
+              <form>
+                <div class="control-group">
+                  <div class="container-title">你的名字</div>
+                  <div>
+                    <input type="text" />
+                  </div>
+                </div>
+                <div class="control-group">
+                  <div class="container-title">你的公司</div>
+                  <div>
+                    <input type="text" />
+                  </div>
+                </div>
+
+                <div class="control-group control-group-phone">
+                  <div class="container-title">你的手机号码</div>
+                  <div>
+                    <input type="text" />
+                    <button class="btn btn-primary btn-send-verify-code">发送验证码</button>
+                  </div>
+                </div> 
+                <div class="control-group">
+                  <div class="container-title">短信验证码</div>
+                  <div>
+                    <input type="text" />
+                  </div>
+                </div>                           
+
+                <button class="btn btn-primary btn-register">免费注册</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="block block-related-keywords">
+          <div class="block-header">
+            搜索了<span class="keywords">电梯</span>的人还搜索了以下关键字：
+          </div>
+          <div class="block-content">
+            <div class="row">
+              <div class="col-sm-4">
+                <a href="#">直梯</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">电动直梯</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">商场直梯</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">直梯</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">电动直梯</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">商场直梯</a>
+              </div> 
+              <div class="col-sm-4">
+                <a href="#">直梯</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">电动直梯</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">商场直梯</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">直梯</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">电动直梯</a>
+              </div>                                                             
+            </div>
+          </div>
+        </div>
+
+        <div class="block block-region-nav">
+          <div class="block-header">
+            区域导航
+          </div>
+          <div class="block-content container-fluid">
+            <div class="row">
+              <div class="col-sm-2">
+                <a href="#">全国</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>  
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">全国</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>  
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>   
+              <div class="col-sm-2">
+                <a href="#">全国</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>  
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">全国</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>  
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>                                                       
+            </div>
+          </div>
+        </div>        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

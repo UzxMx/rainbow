@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        {% include "meta.html" %}
+
+        <title>{{ title }}</title>
+        <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/png" /> -->
+        <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,700' rel='stylesheet' type='text/css' /> -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />        
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/header.css" />
+
+        {% block before_main_css %}{% endblock %}
+        {% if main_css %}
+        <link rel="stylesheet" type="text/css" href="{{ main_css }}" />
+        {% endif %}
+        {% block after_main_css %}{% endblock %}
+
+        <link rel="stylesheet" type="text/css" href="css/footer.css" />
+
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/selectivizr.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/prepareTransition.js"></script>
+        <script type="text/javascript" src="js/console.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+
+        {% block before_main_js %}{% endblock %}
+        {% if main_js %}
+        <script type="text/javascript" src="{{ main_js }}"></script>
+        {% endif %}
+        {% block after_main_js %}{% endblock %}
+    </head>
+    <body>
+        <div id="page-container">
+            {% include "header.html" %}
+            {% block breadcrumb %}{% endblock %}
+            <div id="main-container">
+                {% block content %}{% endblock %}
+            </div>
+            {% include "footer.html" %}
+        </div>
+        {% block body_tail %}{% endblock %}
+
+        {% include "analytics.html" %}
+    </body>
+</html>

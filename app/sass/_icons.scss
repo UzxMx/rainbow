@@ -1,0 +1,11 @@
+@import "compass/utilities/sprites";
+
+$icons-use-percentages: true;
+$icons-spacing: 2px;
+
+@import "icons/*.png";
+@include all-icons-sprites;
+
+$sprites-path: sprite-path($icons-sprites);
+$sprites-width: image-width($sprites-path);
+$sprites-height: image-height($sprites-path);
