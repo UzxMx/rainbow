@@ -1,0 +1,122 @@
+{% extends 'user_layout.html' %}
+
+{% block content %}
+
+<div class="container-collection">
+
+  <div class="collection-header">
+    <div class="row">
+      <div class="col-sm-10 container-nav-list">
+        <ul class="nav-list">
+          <li>
+            <a href="#" class="selected">招标信息</a>
+          </li>
+          <li>
+            <a href="#">采购信息</a>
+          </li> 
+          <li>
+            <a href="#">项目信息</a>
+          </li>       
+        </ul>
+      </div>
+      <div class="col-sm-2 container-actions">
+        <button class="btn-manage visible">管理收藏</button>
+        <button class="btn-save">取消选中收藏</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-results">
+    <form>
+      <table class="table style-primary">
+        <thead>
+          <tr>
+            <th class="c-type">
+              <input type="checkbox" class="item-checkbox" />公告类型</th>
+            <th class="c-title">标题</th>
+            <th class="c-place">地区</th>            
+            <th class="c-date">时间</th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="c-type">
+              <input type="checkbox" class="item-checkbox" />中标公告
+            </td>
+            <td class="c-title">
+              <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+              <div class="container-label">
+                <span class="label">标书</span>
+              </div>
+              </a>
+            </td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr>  
+          <tr>
+            <td class="c-type">
+              <input type="checkbox" class="item-checkbox" />中标公告
+            </td>
+            <td class="c-title">
+              <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+              <div class="container-label">
+                <span class="label">标书</span>
+              </div>
+              </a>
+            </td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr> 
+          <tr>
+            <td class="c-type">
+              <input type="checkbox" class="item-checkbox" />中标公告
+            </td>
+            <td class="c-title">
+              <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+              <div class="container-label">
+                <span class="label">标书</span>
+              </div>
+              </a>
+            </td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr> 
+          <tr>
+            <td class="c-type">
+              <input type="checkbox" class="item-checkbox" />中标公告
+            </td>
+            <td class="c-title">
+              <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+              <div class="container-label">
+                <span class="label">标书</span>
+              </div>
+              </a>
+            </td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr>                     
+
+        </tbody>
+      </table>
+    </form>
+
+    <div class="container-view-all">
+      <span>为您优先展示近一年共<span class="highlight">35000</span>条数据，如果您需要查看所有数据</span>
+      <a href="#" class="btn btn-primary btn-view-all">查看全部</a>
+    </div>
+
+    <div class="container-pagination">
+      <div class="pagination">
+        <a href="#">上一页</a>
+        <a href="#" class="pageindex">1</a>
+        <a href="#" class="pageindex current">2</a>
+        <a href="#" class="pageindex">3</a>
+        <a href="#" class="pageindex">4</a>
+        <a href="#">下一页</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends 'user_layout.html' %}
+
+{% block content %}
+
+<div class="container-manage-subscribe">
+  <div class="manage-subscribe-header">
+    订阅设置
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="c-name">名称</th>
+        <th class="c-email">邮件订阅</th>
+        <th class="c-sms">短信订阅</th>
+        <th class="c-actions">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="c-name">电梯</td>
+        <td class="c-email">已订阅</td>
+        <td class="c-sms">已订阅</td>
+        <td class="c-actions">
+          <a href="#">取消邮件</a>
+          <a href="#">取消短信</a>
+        </td>        
+      </tr>
+      <tr>
+        <td class="c-name">电梯</td>
+        <td class="c-email">已订阅</td>
+        <td class="c-sms">已订阅</td>
+        <td class="c-actions">
+          <a href="#">取消邮件</a>
+          <a href="#">取消短信</a>
+        </td>        
+      </tr>
+      <tr>
+        <td class="c-name">电梯</td>
+        <td class="c-email">已订阅</td>
+        <td class="c-sms">已订阅</td>
+        <td class="c-actions">
+          <a href="#">取消邮件</a>
+          <a href="#">取消短信</a>
+        </td>        
+      </tr>
+      <tr>
+        <td class="c-name">电梯</td>
+        <td class="c-email">已订阅</td>
+        <td class="c-sms">已订阅</td>
+        <td class="c-actions">
+          <a href="#">取消邮件</a>
+          <a href="#">取消短信</a>
+        </td>        
+      </tr>                  
+    </tbody>
+  </table>
+
+  <div class="container-subscribe">
+    <form>
+      <div class="container-address">
+        <div>订阅邮箱：</div>
+        <div class="address-list">
+          <div><input type="text" value="18888888888@126.com" /></div>
+          <div><input type="text" /><button class="icons-add"></button></div>
+        </div>
+      </div>
+      <div class="container-frequence">
+        <div>发送频率：</div>
+        <div class="frequence-list">
+          <div class="item"><input type="radio" /><span>每半天</span></div>
+          <div class="item"><input type="radio" /><span>每一天</span></div>
+          <div class="item"><input type="radio" /><span>每一周</span></div>
+          <div class="item"><input type="radio" /><span>每一月</span></div>
+        </div>
+      </div>
+
+      <div class="container-actions">
+        <button type="submit" class="btn-save">保存</button>
+      </div>      
+    </form>
+  </div>
+
+  <div class="container-subscribe container-subscribe-sms">
+    <form>
+      <div class="container-address">
+        <div>订阅手机：</div>
+        <div class="address-list">
+          <div><input type="text" value="18888888888" /></div>
+          <div><input type="text" /><button class="icons-add"></button></div>
+        </div>
+      </div>
+      <div class="container-frequence">
+        <div>发送频率：</div>
+        <div class="frequence-list">
+          <div class="item"><input type="radio" /><span>每半天</span></div>
+          <div class="item"><input type="radio" /><span>每一天</span></div>
+          <div class="item"><input type="radio" /><span>每一周</span></div>
+          <div class="item"><input type="radio" /><span>每一月</span></div>
+        </div>
+      </div>
+
+      <div class="container-actions">
+        <button type="submit" class="btn-save">保存</button>
+      </div>      
+    </form>
+  </div>  
+
+  <div class="container-footer-notes">
+    <ul>
+      <li>
+        每半天：每天12:00发送，发送内容为前一天20:00至当天12:00的相关信息；每天20:00发送，发送内容为当天12:00至当天20:00的相关信息
+      </li>
+      <li>
+        每一天：每天20:00发送，发送内容为前一天20:00至当天20:00的相关信息
+      </li>
+      <li>
+        每一周：每周五20:00发送，发送内容为上周五20:00至这周五20:00的相关信息
+      </li>
+      <li>
+        每一月：每月1日20:00发送，发送内容为上月1日20:00至本月1日20:00的相关信息
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+{% endblock %}

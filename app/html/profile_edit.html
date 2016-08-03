@@ -1,0 +1,158 @@
+{% extends 'user_layout.html' %}
+
+{% block content %}
+
+<ul class="tab-account">
+  <li>
+    <a href="#" class="selected">个人资料</a>
+  </li>
+  <li>
+    <a href="#">修改密码</a>
+  </li>  
+</ul>
+
+<div class="container-edit-account-info">
+  <div class="container-avatar">
+    <img src="images/cafe.png" />
+    <div class="actions">
+      <button class="btn-upload">上传头像</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-key">姓名：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="张三" />
+    </div>
+
+    <div class="col-sm-6 col-key">性别：</div>
+    <div class="col-sm-6 col-val col-val-sex">
+      <div>
+        <input type="radio" />男
+      </div>
+      <div>
+        <input type="radio" />女
+      </div>
+    </div>  
+
+    <div class="col-sm-6 col-key">手机号码：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="18888888888" />
+    </div>
+
+    <div class="col-sm-6 col-key">电子邮箱：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="18888888888@126.com" />
+    </div>    
+
+    <div class="col-sm-6 col-key">QQ号码：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="18888888888" />
+    </div>    
+
+    <div class="col-sm-6 col-key">公司名称：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="北京环宇科技有限公司" />
+    </div> 
+
+    <div class="col-sm-6 col-key">办公地址：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="北京朝阳区soho大厦" />
+    </div>     
+
+    <div class="col-sm-6 col-key">职务：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="总经理" />
+    </div>         
+
+    <div class="col-sm-6 col-key">主营业务：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="电梯" class="input-dropdown" /><div class="dropdown">
+        <div class="container-title">
+          <span>选择</span><span class="icons-blue-dropdown"></span>
+        </div>
+          <div class="container-selection">
+            <div class="selection">
+              <div class="wrapper">电梯1</div>
+            </div>            
+            <div class="selection">
+              <div class="wrapper">电梯2</div>
+            </div>  
+            <div class="selection">
+              <div class="wrapper">电梯3</div>
+            </div>                                                   
+          </div> 
+      </div>
+    </div>               
+
+    <div class="col-sm-6 col-key">业务区域：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="北京、上海" class="input-dropdown" /><div class="dropdown">
+        <div class="container-title">
+          <span>选择</span><span class="icons-blue-dropdown"></span>
+        </div>
+          <div class="container-selection">
+            <div class="selection">
+              <div class="wrapper">北京</div>
+            </div>            
+            <div class="selection">
+              <div class="wrapper">上海</div>
+            </div>  
+            <div class="selection">
+              <div class="wrapper">北京</div>
+            </div>            
+            <div class="selection">
+              <div class="wrapper">上海</div>
+            </div>                                                     
+            <div class="selection">
+              <div class="wrapper">北京</div>
+            </div>            
+            <div class="selection">
+              <div class="wrapper">上海</div>
+            </div>  
+            <div class="selection">
+              <div class="wrapper">北京</div>
+            </div>            
+            <div class="selection">
+              <div class="wrapper">上海</div>
+            </div>  
+            <div class="selection">
+              <div class="wrapper">北京</div>
+            </div>            
+            <div class="selection">
+              <div class="wrapper">上海</div>
+            </div>                                      
+          </div> 
+      </div>
+    </div>  
+
+    <div class="col-sm-6 col-key">关注项目阶段：</div>
+    <div class="col-sm-6 col-val">
+      <input type="text" value="施工在建" class="input-dropdown" /><div class="dropdown">
+        <div class="container-title">
+          <span>选择</span><span class="icons-blue-dropdown"></span>
+        </div>
+          <div class="container-selection">
+            <div class="selection">
+              <div class="wrapper">施工在建</div>
+            </div>            
+            <div class="selection">
+              <div class="wrapper">施工在建</div>
+            </div>  
+            <div class="selection">
+              <div class="wrapper">施工在建</div>
+            </div>                                                   
+          </div> 
+      </div>
+    </div>      
+  </div> 
+
+  <div class="row container-actions">
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6 container-btn-save">
+      <a href="#" class="btn btn-primary btn-save">保存资料</a>
+    </div>      
+  </div>
+
+</div>
+
+{% endblock %}

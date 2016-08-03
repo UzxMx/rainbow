@@ -9,6 +9,10 @@ $body-bg-color: #dddddd;
 
 $page-max-width: 1366px;
 
+* {
+  outline: none;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -36,6 +40,10 @@ h2 {
 
 a {
   @include reset-anchor-color(#2d84e5);
+
+  &:link {
+    text-decoration: none;
+  }
 
   &:hover {
     text-decoration: none;
@@ -89,6 +97,10 @@ ul {
 
 .align-right {
   text-align: right;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
 }
 
 // .row {

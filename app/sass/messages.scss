@@ -1,0 +1,59 @@
+@import "compass/css3";
+@import "vars";
+@import "utils";
+@import "icons";
+
+.container-messages {
+
+  .nav-list {
+    border-bottom: 2px solid $brand-primary-color;
+    li {
+      display: inline-block;
+      margin-right: 15px;
+
+      a {
+        display: block;
+        padding: 10px 30px;
+        $radius: 8px;
+        @include border-top-left-radius($radius);
+        @include border-top-right-radius($radius);
+        color: #333;
+        background-color: #f7f7f7;
+        font-size: 16px;
+
+        &:hover, &.selected {
+          color: white;
+          background-color: $brand-primary-color;
+        }
+      }
+    }
+  }
+
+  .messages {
+    border: 1px solid #e0e0e0;
+    border-top: none;
+
+    li {
+      background-color: white;
+      padding: 15px 10px;
+      border-bottom: 1px solid #e0e0e0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:nth-child(odd) {
+        background-color: #f7f7f7;
+      }
+      .indicator {
+        margin-right: 5px;
+        display: inline-block;
+        $radius: 5px;
+        width: 2 * $radius;
+        height: 2 * $radius;
+        background-color: $brand-primary-color;
+        @include border-radius($radius);
+      }
+    }
+  }
+}

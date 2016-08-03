@@ -1,0 +1,61 @@
+{% extends 'user_layout.html' %}
+
+{% block content %}
+
+<ul class="tab-account">
+  <li>
+    <a href="#" class="selected">个人资料</a>
+  </li>
+  <li>
+    <a href="#">修改密码</a>
+  </li>  
+</ul>
+
+<div class="container-account-info">
+  <div class="container-avatar">
+    <img src="images/cafe.png" />
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-key">姓名：</div>
+    <div class="col-sm-6 col-val">张三</div>
+
+    <div class="col-sm-6 col-key">性别：</div>
+    <div class="col-sm-6 col-val">男</div>  
+
+    <div class="col-sm-6 col-key">手机号码：</div>
+    <div class="col-sm-6 col-val">18888888888</div>
+
+    <div class="col-sm-6 col-key">电子邮箱：</div>
+    <div class="col-sm-6 col-val">
+      <span>18888888888@126.com</span>
+      <a href="#" class="btn btn-primary btn-verify-email">立即验证</a>
+    </div>
+
+    <div class="col-sm-6 col-key">QQ号码：</div>
+    <div class="col-sm-6 col-val">18888888888</div>    
+
+    <div class="col-sm-6 col-key">公司名称：</div>
+    <div class="col-sm-6 col-val">北京环宇科技有限公司</div> 
+
+    <div class="col-sm-6 col-key">办公地址：</div>
+    <div class="col-sm-6 col-val">北京朝阳区soho大厦</div>    
+
+    <div class="col-sm-6 col-key">职务：</div>
+    <div class="col-sm-6 col-val">总经理</div>    
+
+    <div class="col-sm-6 col-key">主营业务：</div>
+    <div class="col-sm-6 col-val">电梯</div>               
+
+    <div class="col-sm-6 col-key">业务区域：</div>
+    <div class="col-sm-6 col-val">北京、上海</div>  
+
+    <div class="col-sm-6 col-key">关注项目阶段：</div>
+    <div class="col-sm-6 col-val">施工在建</div>      
+
+    <div class="col-sm-12 container-actions">
+      <a href="#" class="btn btn-primary btn-edit">编辑资料</a>
+    </div>
+  </div> 
+</div>
+
+{% endblock %}

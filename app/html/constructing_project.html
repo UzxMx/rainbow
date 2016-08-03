@@ -1,0 +1,393 @@
+{% extends 'layout.html' %}
+
+{% block breadcrumb %}
+
+<div class="container-breadcrumb">
+  <div class="breadcrumb">
+    <span class="icons-geo"></span>
+    <span>您当前的位置：</span>
+    <a href="#">招标王</a>
+    <span class="icons-arrow-right"></span>
+    <a href="#">项目信息</a>
+    <span class="icons-arrow-right"></span>
+    <a href="#">拟在建项目</a>    
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="region">
+  <div class="row">
+    <div class="col-sm-9 region-main">
+      <div class="container-search">
+        <input type="text" placeholder="电梯" class="searchbox" /><button class="btn btn-primary btn-search">搜索</button>
+      </div>
+
+      <div class="container-conditions container-project-conditions">
+
+        <div class="condition" data-selected-pos="0">
+          <span class="condition-selected">选择省份</span><span class="container-icon"><span class="icons-dropdown"></span></span>
+          <div class="container-selection">
+            <div class="selection" data-pos="0">
+              <div class="wrapper">选择省份</div>
+            </div>
+            <div class="selection" data-pos="1">
+              <div class="wrapper">上海</div>
+            </div>
+            <div class="selection" data-pos="2">
+              <div class="wrapper">天津</div>
+            </div>
+            <div class="selection" data-pos="3">
+              <div class="wrapper">山西</div>
+            </div>
+            <div class="selection" data-pos="4">
+              <div class="wrapper">重庆</div>
+            </div>
+            <div class="selection" data-pos="5">
+              <div class="wrapper">北京</div>
+            </div>
+            <div class="selection" data-pos="6">
+              <div class="wrapper">上海</div>
+            </div>
+            <div class="selection" data-pos="7">
+              <div class="wrapper">天津</div>
+            </div>
+            <div class="selection" data-pos="8">
+              <div class="wrapper">山西</div>
+            </div>
+            <div class="selection" data-pos="9">
+              <div class="wrapper">重庆</div>
+            </div>                                                                 
+          </div>
+        </div> 
+        <div class="condition" data-selected-pos="0">
+          <span class="condition-selected">选择城市</span><span class="container-icon"><span class="icons-dropdown"></span></span>
+          <div class="container-selection">
+            <div class="selection" data-pos="0">
+              <div class="wrapper">选择城市</div>
+            </div>
+            <div class="selection" data-pos="1">
+              <div class="wrapper">上海</div>
+            </div>                                                               
+          </div>
+        </div>
+        <div class="condition" data-selected-pos="0">
+          <span class="condition-selected">项目阶段</span><span class="container-icon"><span class="icons-dropdown"></span></span>
+          <div class="container-selection">
+            <div class="selection" data-pos="0">
+              <div class="wrapper">可研</div>
+            </div>
+            <div class="selection" data-pos="1">
+              <div class="wrapper">设计阶段</div>
+            </div>
+            <div class="selection" data-pos="2">
+              <div class="wrapper">备案</div>
+            </div>            
+            <div class="selection" data-pos="3">
+              <div class="wrapper">审批</div>
+            </div>     
+            <div class="selection" data-pos="4">
+              <div class="wrapper">核准</div>
+            </div>                   
+            <div class="selection" data-pos="5">
+              <div class="wrapper">立项</div>
+            </div>            
+            <div class="selection" data-pos="6">
+              <div class="wrapper">环评</div>
+            </div>            
+            <div class="selection" data-pos="7">
+              <div class="wrapper">施工准备</div>
+            </div>            
+            <div class="selection" data-pos="8">
+              <div class="wrapper">施工在建</div>
+            </div>            
+            <div class="selection" data-pos="9">
+              <div class="wrapper">竣工</div>
+            </div>            
+
+          </div>
+        </div> 
+
+        <div class="condition" data-selected-pos="0">
+          <span class="condition-selected">选择一级行业</span><span class="container-icon"><span class="icons-dropdown"></span></span>
+          <div class="container-selection">
+            <div class="selection" data-pos="0">
+              <div class="wrapper">住宅</div>
+            </div>
+            <div class="selection" data-pos="1">
+              <div class="wrapper">办公楼</div>
+            </div>
+            <div class="selection" data-pos="0">
+              <div class="wrapper">酒店及零售</div>
+            </div>
+
+          </div>
+        </div>  
+
+        <div class="condition" data-selected-pos="0">
+          <span class="condition-selected">选择二级行业</span><span class="container-icon"><span class="icons-dropdown"></span></span>
+          <div class="container-selection">
+            <div class="selection" data-pos="0">
+              <div class="wrapper">住宅</div>
+            </div>
+            <div class="selection" data-pos="1">
+              <div class="wrapper">办公楼</div>
+            </div>
+            <div class="selection" data-pos="0">
+              <div class="wrapper">酒店及零售</div>
+            </div>
+
+          </div>
+        </div>     
+
+        <div class="condition" data-selected-pos="0">
+          <span class="condition-selected">选择资金</span><span class="container-icon"><span class="icons-dropdown"></span></span>
+          <div class="container-selection">
+            <div class="selection" data-pos="0">
+              <div class="wrapper">500万以内</div>
+            </div>
+            <div class="selection" data-pos="1">
+              <div class="wrapper">1000万以内</div>
+            </div>
+
+          </div>
+        </div>                   
+
+        <div class="condition" data-selected-pos="0">
+          <span class="condition-selected">选择时间</span><span class="container-icon"><span class="icons-dropdown"></span></span>
+          <div class="container-selection">
+            <div class="selection" data-pos="0">
+              <div class="wrapper">选择时间</div>
+            </div>
+            <div class="selection" data-pos="1">
+              <div class="wrapper">07-23</div>
+            </div>
+            <div class="selection" data-pos="2">
+              <div class="wrapper">07-22</div>
+            </div>
+            <div class="selection" data-pos="3">
+              <div class="wrapper">07-21</div>
+            </div>
+            <div class="selection" data-pos="4">
+              <div class="wrapper">07-20</div>
+            </div>                                                   
+          </div>
+        </div>
+
+        <button class="btn-subscribe">
+          <span class="icons-subscribe"></span><span>添加到我的订阅</span>
+        </button>
+
+      </div>
+
+      <div class="container-results">
+        <table class="table style-primary">
+          <thead>
+            <tr>
+              <th class="c-stage">项目阶段</th>
+              <th class="c-title">项目名称</th>
+              <th class="c-price">项目投资</th>
+              <th class="c-type">项目类别</th>            
+              <th class="c-place">项目地区</th>
+              <th class="c-date">更新时间</th>            
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="c-stage">地质勘查</td>
+              <td class="c-title">
+                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+                </a>
+              </td>
+              <td class="c-price">190000万</td>
+              <td class="c-type">办公楼</td>
+              <td class="c-place">广西</td>
+              <td class="c-date">今天</td>
+            </tr>
+            <tr>
+              <td class="c-stage">地质勘查</td>
+              <td class="c-title">
+                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+                </a>
+              </td>
+              <td class="c-price">190000万</td>
+              <td class="c-type">办公楼</td>
+              <td class="c-place">广西</td>
+              <td class="c-date">今天</td>
+            </tr>
+            <tr>
+              <td class="c-stage">地质勘查</td>
+              <td class="c-title">
+                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+                </a>
+              </td>
+              <td class="c-price">190000万</td>
+              <td class="c-type">办公楼</td>
+              <td class="c-place">广西</td>
+              <td class="c-date">今天</td>
+            </tr>                        
+                                                                 
+          </tbody>
+        </table>
+
+        <div class="container-view-all">
+          <span>为您优先展示近一年共<span class="highlight">35000</span>条数据，如果您需要查看所有数据</span>
+          <a href="#" class="btn btn-primary btn-view-all">查看全部</a>
+        </div>
+
+        <div class="container-pagination">
+          <div class="pagination">
+            <a href="#">上一页</a>
+            <a href="#" class="pageindex">1</a>
+            <a href="#" class="pageindex current">2</a>
+            <a href="#" class="pageindex">3</a>
+            <a href="#" class="pageindex">4</a>
+            <a href="#">下一页</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 region-right-side">
+      <div class="wrapper">
+
+        <div class="block block-ad-quick-search">
+          <div class="wrapper">
+            <a href="#" class="ad-quick-search">
+              <img src="images/quick-search.png" />
+            </a>
+          </div>
+        </div>
+
+        <div class="block block-ad-search-plus-email">
+          <div class="wrapper">
+            <a href="#" class="ad-search-plus-email">
+              <img src="images/search-plus-email-price.png" />
+            </a>
+          </div>
+        </div>         
+        
+        <div class="block block-project-types">
+          <div class="block-header">
+            项目类型
+          </div>
+          <div class="block-content container-fluid">
+            <div class="row">
+              <div class="col-sm-4">
+                <a href="#">基础设施</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">公用事业设施</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">石油天然气</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">开采</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">公用事业设施</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">石油天然气</a>
+              </div> 
+              <div class="col-sm-4">
+                <a href="#">基础设施</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">公用事业设施</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">石油天然气</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">开采</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">公用事业设施</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">石油天然气</a>
+              </div>                                                                                       
+            </div>
+          </div>
+        </div>
+
+        <div class="block block-region-subsites">
+          <div class="block-header">
+            招标王分站
+          </div>
+          <div class="block-content container-fluid">
+            <div class="row">
+              <div class="col-sm-2">
+                <a href="#">全国</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>  
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">全国</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>  
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>   
+              <div class="col-sm-2">
+                <a href="#">全国</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>  
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">全国</a>
+              </div>
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>  
+              <div class="col-sm-2">
+                <a href="#">湖北</a>
+              </div>            
+              <div class="col-sm-2">
+                <a href="#">上海</a>
+              </div>                                                       
+            </div>
+          </div>
+        </div>        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

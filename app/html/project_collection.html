@@ -1,0 +1,170 @@
+{% extends 'user_layout.html' %}
+
+{% block content %}
+
+<div class="container-collection">
+
+  <div class="collection-header">
+    <div class="row">
+      <div class="col-sm-10 container-nav-list">
+        <ul class="nav-list">
+          <li>
+            <a href="#">招标信息</a>
+          </li>
+          <li>
+            <a href="#">采购信息</a>
+          </li> 
+          <li>
+            <a href="#" class="selected">项目信息</a>
+          </li>       
+        </ul>
+      </div>
+      <div class="col-sm-2 container-actions">
+        <button class="btn-manage visible">管理收藏</button>
+        <button class="btn-save">取消选中收藏</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-results">
+    <form>
+      <table class="table style-primary">
+        <thead>
+          <tr>
+            <th class="c-stage">
+              <input type="checkbox" class="item-checkbox" />项目阶段</th>
+            <th class="c-title">项目名称</th>
+            <th class="c-price">项目投资</th>
+            <th class="c-type">项目类别</th>            
+            <th class="c-place">项目地区</th>
+            <th class="c-date">更新时间</th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="c-stage">
+              <input type="checkbox" class="item-checkbox" />地质勘查</td>
+            <td class="c-title">
+              <div>
+                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+              </a>
+              </div>
+              <div class="description">
+                跟进3:截止到目前2016年7月7日，该项目正在主体施工，预计于2017年5月完工。
+              </div>
+            </td>
+            <td class="c-price">190000万</td>
+            <td class="c-type">办公楼</td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr>      
+          <tr>
+            <td class="c-stage">
+              <input type="checkbox" class="item-checkbox" />地质勘查</td>
+            <td class="c-title">
+              <div>
+                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+              </a>
+              </div>
+              <div class="description">
+                跟进3:截止到目前2016年7月7日，该项目正在主体施工，预计于2017年5月完工。
+              </div>
+            </td>
+            <td class="c-price">190000万</td>
+            <td class="c-type">办公楼</td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr>
+          <tr>
+            <td class="c-stage">
+              <input type="checkbox" class="item-checkbox" />地质勘查</td>
+            <td class="c-title">
+              <div>
+                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+              </a>
+              </div>
+              <div class="description">
+                跟进3:截止到目前2016年7月7日，该项目正在主体施工，预计于2017年5月完工。
+              </div>
+            </td>
+            <td class="c-price">190000万</td>
+            <td class="c-type">办公楼</td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr>      
+          <tr>
+            <td class="c-stage">
+              <input type="checkbox" class="item-checkbox" />地质勘查</td>
+            <td class="c-title">
+              <div>
+                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+              </a>
+              </div>
+              <div class="description">
+                跟进3:截止到目前2016年7月7日，该项目正在主体施工，预计于2017年5月完工。
+              </div>
+            </td>
+            <td class="c-price">190000万</td>
+            <td class="c-type">办公楼</td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr>
+          <tr>
+            <td class="c-stage">
+              <input type="checkbox" class="item-checkbox" />地质勘查</td>
+            <td class="c-title">
+              <div>
+                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+              </a>
+              </div>
+              <div class="description">
+                跟进3:截止到目前2016年7月7日，该项目正在主体施工，预计于2017年5月完工。
+              </div>
+            </td>
+            <td class="c-price">190000万</td>
+            <td class="c-type">办公楼</td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr>      
+          <tr>
+            <td class="c-stage">
+              <input type="checkbox" class="item-checkbox" />地质勘查</td>
+            <td class="c-title">
+              <div>
+                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+              </a>
+              </div>
+              <div class="description">
+                跟进3:截止到目前2016年7月7日，该项目正在主体施工，预计于2017年5月完工。
+              </div>
+            </td>
+            <td class="c-price">190000万</td>
+            <td class="c-type">办公楼</td>
+            <td class="c-place">广西</td>
+            <td class="c-date">今天</td>
+          </tr>                           
+            
+        </tbody>
+      </table>
+    </form>
+
+    <div class="container-view-all">
+      <span>为您优先展示近一年共<span class="highlight">35000</span>条数据，如果您需要查看所有数据</span>
+      <a href="#" class="btn btn-primary btn-view-all">查看全部</a>
+    </div>
+
+    <div class="container-pagination">
+      <div class="pagination">
+        <a href="#">上一页</a>
+        <a href="#" class="pageindex">1</a>
+        <a href="#" class="pageindex current">2</a>
+        <a href="#" class="pageindex">3</a>
+        <a href="#" class="pageindex">4</a>
+        <a href="#">下一页</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

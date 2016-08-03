@@ -1,0 +1,74 @@
+@import "compass/css3";
+@import "vars";
+@import "utils";
+@import "icons";
+
+.tab-account {
+  border-bottom: 1px solid #e0e0e0;
+
+  li {
+    display: inline-block;
+
+    a {
+      padding: 8px 10px;
+      color: #333;
+      display: inline-block;
+
+      &:hover {
+        color: $brand-primary-color;
+      }
+
+      &.selected {
+        font-size: 16px;
+        border-bottom: 2px solid $brand-primary-color;
+        color: $brand-primary-color;
+      }
+    }
+  }
+}
+
+.container-account-info {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 30px;
+
+  .container-avatar {
+    margin-bottom: 30px;
+    text-align: center;
+
+    img {
+      $radius: 45px;
+      width: 2 * $radius;
+      height: 2 * $radius;
+    }
+  }
+
+  .col-key, .col-val {
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .col-key {
+    padding-right: 10px;
+    text-align: right;
+  }
+
+  .col-val {
+    padding-left: 0px;
+  }
+
+  .btn-verify-email {
+    padding: 0px 10px;
+    margin-left: 10px;
+    @include border-radius(15px);
+  }
+
+  .container-actions {
+    margin-top: 40px;
+    text-align: center;
+
+    .btn-edit {
+      padding: 8px 30px;
+    }
+  }
+}

@@ -226,6 +226,11 @@
       width: 80%;
     }
 
+    span.required {
+      color: red;
+      margin-right: 5px;
+    }
+
     #bid-title {
       width: 100%;
     }
@@ -254,5 +259,36 @@
         padding-right: 30px;
       }
     }
+
+    .form-group-uploaded-files {
+      margin: 20px 0 40px 0;
+    }
+
+    .container-uploaded-files {
+      @include icons(yellow-folder);
+
+      .file {
+        span, a {
+          vertical-align: middle;
+        }
+
+        .icons-yellow-folder, .file-name {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .form-group-actions {
+      margin-top: 20px;
+    }
+
+    .btn-submit {
+      margin-right: 20px;
+    }
+
+    .btn-submit, .btn-upload-file {
+      padding-left: 30px;
+      padding-right: 30px;
+    }    
   }
 }

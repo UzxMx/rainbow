@@ -41,12 +41,11 @@
 
     .condition {
       display: inline-block;
-      width: 110px;
       height: $box-height;
       line-height: $box-height;
       position: relative;
       cursor: pointer;
-      margin-right: 10px;
+      margin-right: 0;
 
       .condition-selected, .container-icon {
         display: inline-block;
@@ -54,8 +53,7 @@
       }
 
       .condition-selected {
-        width: 90px;
-        padding: 0 13px;
+        padding: 0 1px;
         border: 1px solid #e0e0e0;
         background-color: #f7f7f7;
         text-align: center;
@@ -78,8 +76,8 @@
       .container-selection {
         position: absolute;
         top: $box-height + 10px;
-        left: 0;
-        right: 0;
+        left: -20px;
+        right: -20px;
         text-align: center;
         overflow-x: auto;
         max-height: 300px;        
@@ -114,6 +112,7 @@
     }
 
     .btn-subscribe {
+      float: right;
       background-color: #f7f7f7;
       padding: 5px;
       border: 1px solid #e0e0e0;

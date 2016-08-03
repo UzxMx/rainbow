@@ -1,0 +1,58 @@
+{% extends 'user_layout.html' %}
+
+{% block content %}
+
+<div class="container-orders">
+  <div class="orders-header">
+    我的订单
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="c-description">订单详情</th>
+        <th class="c-duration">年限</th>
+        <th class="c-amount">金额</th>
+        <th class="c-status">状态</th>
+        <th class="c-date">时间</th>
+        <th class="c-actions">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="c-description">初级会员</td>
+        <td class="c-duration">1年</td>
+        <td class="c-amount">¥300</td>
+        <td class="c-status">未支付</td>
+        <td class="c-date">2016年7月8日 17:15:15</td>
+        <td class="c-actions">
+          <a href="#" class="btn btn-danger">立即支付</a>
+        </td>       
+      </tr>
+      <tr>
+        <td class="c-description">高级会员</td>
+        <td class="c-duration">3年</td>
+        <td class="c-amount">¥800</td>
+        <td class="c-status">已支付</td>
+        <td class="c-date">2016年7月8日 17:15:15</td>
+        <td class="c-actions">
+        </td>       
+      </tr>    
+      <tr>
+        <td class="c-description">
+          <span class="icons-vip"></span>
+          <span class="vip">vip会员</span>
+        </td>
+        <td class="c-duration">3年</td>
+        <td class="c-amount">¥800</td>
+        <td class="c-status">已开通</td>
+        <td class="c-date">2016年7月8日 17:15:15</td>
+        <td class="c-actions">
+        </td>       
+      </tr>   
+    </tbody>
+  </table>
+
+</div>
+
+{% endblock %}

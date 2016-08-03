@@ -144,6 +144,30 @@ compile_resource('zblm');
 compile_resource('bid_details');
 compile_resource('fbcg');
 compile_resource('fbgg');
+compile_resource('main_search');
+compile_resource('zbgg');
+compile_resource('bid_details_not_login');
+compile_resource('bid_details_free_account');
+compile_resource('cglm');
+compile_resource('project');
+compile_resource('constructing_project');
+compile_resource('project_details');
+compile_resource('project_details_free_account');
+compile_resource('project_details_not_login');
+
+compile_css('user_header');
+compile_css('user_left_side');
+
+compile_resource('profile');
+compile_resource('profile_edit');
+compile_resource('modify_password');
+compile_resource('manage_subscribe');
+compile_resource('orders');
+compile_resource('messages');
+compile_resource('feedback');
+compile_resource('bid_collection');
+compile_resource('cg_collection');
+compile_resource('project_collection');
 
 gulp.task('compile', gulp.parallel(
   'compile-common-css',
@@ -169,8 +193,80 @@ gulp.task('compile', gulp.parallel(
   // 'compile-fbcg-js',
 
   'compile-fbgg-html',
-  'compile-fbgg-css'
+  'compile-fbgg-css',
   // 'compile-fbgg-js',
+
+  'compile-main_search-html',
+  'compile-main_search-css',
+  'compile-main_search-js',
+
+  'compile-zbgg-html',
+  'compile-zbgg-css',
+  'compile-zbgg-js',
+
+  'compile-bid_details_not_login-html',
+  'compile-bid_details_not_login-css',
+
+  'compile-bid_details_free_account-html',
+  'compile-bid_details_free_account-css',
+
+  'compile-cglm-html',
+  'compile-cglm-css',
+  'compile-cglm-js',
+
+  'compile-project-html',
+  'compile-project-css',
+  'compile-project-js',
+
+  'compile-constructing_project-html',
+  'compile-constructing_project-css',
+  'compile-constructing_project-js',
+
+  'compile-project_details-html',
+  'compile-project_details-css',
+
+  'compile-project_details_free_account-html',
+  'compile-project_details_free_account-css',
+
+  'compile-project_details_not_login-html',
+  'compile-project_details_not_login-css',
+
+  'compile-user_header-css',
+  'compile-user_left_side-css',
+
+  'compile-profile-html',
+  'compile-profile-css',
+
+  'compile-profile_edit-html',
+  'compile-profile_edit-css',
+  'compile-profile_edit-js',
+
+  'compile-modify_password-html',
+  'compile-modify_password-css',
+
+  'compile-manage_subscribe-html',
+  'compile-manage_subscribe-css',
+
+  'compile-orders-html',
+  'compile-orders-css',
+
+  'compile-messages-html',
+  'compile-messages-css',
+
+  'compile-feedback-html',
+  'compile-feedback-css',
+
+  'compile-bid_collection-html',
+  'compile-bid_collection-css',
+  'compile-bid_collection-js',
+
+  'compile-cg_collection-html',
+  'compile-cg_collection-css',
+  'compile-cg_collection-js',
+
+  'compile-project_collection-html',
+  'compile-project_collection-css',
+  'compile-project_collection-js'
 ));
 
 gulp.task("build", gulp.series("clean", "precompile", "compile", "copy-assets", "optimize"));

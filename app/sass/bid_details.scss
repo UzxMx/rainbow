@@ -296,8 +296,60 @@
   }
 }
 
+.block-timeline {
+  margin-bottom: 30px;
+  border: 1px solid $brand-primary-color;
+
+  .block-header {
+    padding: 20px 0 0 20px;
+    font-size: 16px;
+    color: $brand-primary-color;
+  }
+}
+
 .container-timeline {
+  padding: 20px 10px 20px 100px;
+  @include border-radius(5px);
+
   ul.timeline {
-    
+    $padding-left: 25px;
+
+    .event {
+      padding-bottom: 50px;
+      padding-left: $padding-left;
+      position: relative;
+      border-left: 1px solid $brand-yellow-color;
+
+      &:before {
+        display: block;
+        content: attr(data-date);
+        position: absolute;
+        left: -$padding-left - 40px;
+      }
+
+      &:after {
+        $radius: 8px;
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: -($radius);
+        width: 2 * $radius;
+        height: 2 * $radius;
+        background-color: $brand-yellow-color;
+        @include border-radius($radius);
+      }
+
+      &:first-child {
+        &:after {
+          top: 0px;
+        }
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+        margin-top: -5px;
+        border: none;
+      }      
+    }
   }
 }

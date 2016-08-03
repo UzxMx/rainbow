@@ -1,0 +1,387 @@
+@import "compass/css3";
+@import "vars";
+@import "utils";
+@import "icons";
+
+.region-main {
+  .container-search {
+    .searchbox {
+      width: 85%;
+      height: 40px;
+      padding: 0 10px;
+
+      @include border-top-left-radius(5px);
+      @include border-bottom-left-radius(5px);
+
+      outline: none;
+      vertical-align: middle;
+      font-size: 16px;
+      border: 1px solid $brand-primary-color;
+    }
+
+    .btn-search {
+      width: 15%;
+      height: 40px;
+
+      @include border-top-left-radius(0);
+      @include border-bottom-left-radius(0);
+
+      vertical-align: middle;
+      font-size: 16px;
+    }
+  }
+
+  .container-conditions {
+    background-color: #e8f4fe;
+    padding: 10px;
+
+    $box-height: 30px;
+
+    @include icons(dropdown);
+
+    .condition {
+      display: inline-block;
+      height: $box-height;
+      line-height: $box-height;
+      position: relative;
+      cursor: pointer;
+      margin-right: 0px;
+
+      .condition-selected, .container-icon {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .condition-selected {
+        padding: 0 1px;
+        border: 1px solid #e0e0e0;
+        background-color: #f7f7f7;
+        text-align: center;
+        @include border-top-left-radius(5px);
+        @include border-bottom-left-radius(5px);
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .container-icon {
+        width: 20px;
+        padding: 0 6px;
+        background-color: #96c3f5;
+        @include border-top-right-radius(5px);
+        @include border-bottom-right-radius(5px);        
+      }
+
+      .container-selection {
+        position: absolute;
+        top: $box-height + 10px;
+        left: -20px;
+        right: -20px;
+        text-align: center;
+        overflow-x: auto;
+        max-height: 300px;        
+
+        z-index: 100;
+        display: none;
+
+        border: 1px solid $brand-primary-color;
+        @include border-radius(5px);
+        background-color: #f7f7f7;
+
+        &.visible {
+          display: block;
+        }
+
+        .selection {
+          padding: 5px;
+          border-bottom: 1px dotted #e0e0e0;
+
+          & > .wrapper {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &.selected, &:hover {
+            color: $brand-primary-color;
+            background-color: white;
+          }
+        }
+      }
+    }
+
+    .btn-subscribe {
+      float: right;
+      background-color: #f7f7f7;
+      padding: 5px;
+      border: 1px solid #e0e0e0;
+      @include border-radius(5px);
+      cursor: pointer;
+      outline: none;
+
+      @include icons(subscribe);
+
+      .icons-subscribe {
+        margin-right: 5px;
+      }
+
+      span {
+        color: $brand-primary-color;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .container-results {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+
+    .table {
+      .c-type, .c-place, .c-date {
+        text-align: center;
+      }
+
+      .c-date {
+        padding-right: 20px;
+      }
+
+      .c-place {
+        width: 100px;
+      }
+
+      .c-date {
+        width: 100px;
+      }
+
+      td.c-type {
+        color: $brand-primary-color;
+      }
+
+      .c-title {
+        max-width: 350px;
+        a {
+          position: relative;
+          @include anchor-ellipse;
+          @include reset-anchor-color(#333);
+
+          &:hover {
+            color: $brand-primary-color;
+          }
+        }
+
+        .highlight {
+          color: red;
+        }
+
+        .container-label {
+          display: inline-block;
+          position: relative;
+
+          .label {
+            font-size: 10px;
+            padding: 2px 3px;
+            font-weight: lighter;
+            background-color: $brand-warm-color;
+            @include border-radius(3px);
+          }
+        }
+      }
+    }
+
+    .container-view-all {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 10px;
+
+      .highlight {
+        color: red;
+        margin: 0 3px;
+      }
+
+      .btn-view-all {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.region-right-side {
+  & > .wrapper {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.block-login-register {
+  margin: 0 auto;
+
+  .btn-login, .btn-register {
+    width: 100%;
+    border: 2px solid $brand-primary-color;
+    color: $brand-primary-color;
+    background-color: white;
+    @include border-radius(5px);
+    font-size: 16px;
+
+    &:hover {
+      color: white;
+      background-color: $brand-primary-color;
+    }
+  }
+}
+
+.block-services {
+  margin-top: 20px;
+
+  .block-header {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    border-top: 2px solid #666666;
+    background-color: #f7f7f7;
+    font-size: 16px;
+  }
+
+  @include icons(searchview);
+  @include icons(hand);
+  @include icons(edit);
+  @include icons(gift);
+  @include icons(send);
+  @include icons(cert);
+
+  .block-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    & >.row {
+      margin: 0;
+
+      & > div {
+        padding: 10px 0;
+        height: 130px;
+      }
+      
+    }
+  }
+}
+
+.block-register-info {
+  .block-header {
+    height: 40px;
+    line-height: 40px;
+
+    border-top: 2px solid $brand-primary-color;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: $brand-primary-color;
+    font-size: 16px;
+  }
+
+  .block-content {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    color: $brand-primary-color;
+
+    & > .wrapper {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .control-group {
+      margin-bottom: 20px;
+    }
+
+    input[type='text'] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid $brand-primary-color;
+      @include border-radius(3px);
+      outline: none;
+      color: #333;
+    }
+
+    .control-group-phone {
+      input[type='text'] {
+        width: 60%;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .btn-send-verify-code {
+        width: 30%;
+        font-size: 12px;
+        vertical-align: middle;
+        @include border-radius(15px);
+      }
+    }
+
+    .container-title {
+      margin-bottom: 5px;
+    }
+
+    .btn-register {
+      width: 100%;
+    }
+  }
+}
+
+.block-related-keywords {
+  margin-top: 20px;
+
+  .block-header {
+    font-size: 16px;
+    .keywords {
+      color: $brand-primary-color;
+    }
+  }
+
+  .block-content {
+    padding: 10px 0;
+    max-width: 300px;
+
+    & > .row > div {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+}
+
+.block-region-nav {
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+
+  .block-header {
+    font-size: 16px;
+  }
+
+  .block-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    & > .row > div {
+      padding: 5px 0;
+
+      a {
+        color: #333;
+
+        &:hover {
+          color: $brand-primary-color;
+        }
+      }
+    }
+  }
+}
+
+//
+// The above is copied from zblm.scss
+//
+//
+// -----------------
