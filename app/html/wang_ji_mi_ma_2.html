@@ -1,0 +1,47 @@
+{% set body_class = "page-find-password" %}
+{% set header_description = '找回密码' %}
+
+{% extends 'login_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.FindPassword.Step2.init();
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-find-password">
+  <form>
+    <div class="form-row row-password">
+      <div class="col">
+        <span class="required">*</span>新密码：
+      </div>
+      <div class="col">
+        <input type="password" id="password" />
+      </div>
+    </div>
+
+    <div class="form-row row-confirm-password">
+      <div class="col">
+        <span class="required">*</span>重复输入密码：
+      </div>
+      <div class="col">
+        <input type="password" id="confirm_password" />
+      </div>
+    </div>
+    
+    <div class="form-row row-actions">
+      <div class="col">
+      </div>
+      <div class="col">
+        <button type="submit" class="btn btn-primary btn-submit">提交</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+{% endblock %}

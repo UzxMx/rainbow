@@ -1,0 +1,187 @@
+.page-login {
+  #main-container {
+    max-width: 100%;
+  }
+
+  .container-login {
+    background-image: url(../images/login-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 410px;
+    margin-bottom: 200px;
+    position: relative;
+
+    .login {
+      position: absolute;
+      right: 200px;
+      bottom: -90px;
+
+      width: 350px;
+      padding: 20px 30px;
+      background-color: white;
+      border: 1px solid #e0e0e0;
+      @include border-radius(5px);
+      @include box-shadow(rgba(white, 0.4) 0 0 25px, rgba(black, 0.2) 0 0 30px 10px);
+
+      .login-header {
+        color: black;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 8px 10px;
+        padding-left: 35px;
+        @include border-radius(5px);
+
+        &:focus {
+          border-color: #65b9ff;
+        }
+      }
+
+      .login-username, .login-password {
+        & > .wrapper {
+          position: relative;
+        }
+      }
+
+      .validation {
+        margin-top: 10px;
+        color: red;
+      }      
+
+      .container-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 35px;
+        line-height: 38px;
+        text-align: center;
+      }
+
+      .user-icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: icons-sprite-width(user-normal);
+        height: icons-sprite-height(user-normal);
+        @include icons-sprite(user-normal);
+
+        &.focused {
+          @include icons-sprite(user-focused);
+        }
+      }
+
+      .password-icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: icons-sprite-width(password-normal);
+        height: icons-sprite-height(password-normal);
+        @include icons-sprite(password-normal);
+
+        &.focused {
+          @include icons-sprite(password-focused);
+        }
+      }
+
+      .login-username, .login-password {
+        margin-bottom: 15px;
+      }
+
+      .container-verify-code {
+        & > .wrapper {
+          &:after {
+            content: "";
+            clear: both;
+            display: block;
+          }
+
+          .col-left, .col-right {
+            float: left;
+          }
+
+          .col-left {
+            width: 60%;
+          }
+          .col-right {
+            width: 40%;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-left: none;
+            @include border-top-right-radius(5px);
+            @include border-bottom-right-radius(5px);
+            cursor: pointer;
+          }
+        }
+
+        input[type="text"] {
+          @include border-top-right-radius(0);
+          @include border-bottom-right-radius(0);
+        }
+      }
+
+      .container-options {
+        margin: 15px 0 25px 0;
+        color: #777;
+
+        & > div:first-child {
+          float: left;
+
+          .cb-remember-me {
+            margin-right: 5px;
+          }
+        }
+
+        & > div:last-child {
+          float: right;
+
+          a {
+            color: #777;
+
+            &:hover {
+              color: $brand-primary-color;
+            }
+          }
+        }
+
+        &:after {
+          content: " ";
+          display: block;
+          clear: both;
+        }
+      }
+
+      .container-actions {
+        .action-login {
+          margin-bottom: 10px;
+
+          .btn-login {
+            $bg-color: #fba500;
+            width: 100%;
+            background-color: $bg-color;
+            padding: 10px 0;
+            font-size: 16px;
+            @include border-radius(5px);
+            border: none;
+            color: white;
+
+            &:hover {
+              background-color: darken($bg-color, 10%);
+            }
+          }
+        }
+
+        .action-register {
+          text-align: center;
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+  }  
+}

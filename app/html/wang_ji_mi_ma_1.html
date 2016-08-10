@@ -1,0 +1,56 @@
+{% set body_class = "page-find-password" %}
+{% set header_description = '找回密码' %}
+
+{% extends 'login_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.FindPassword.Step1.init();
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-find-password">
+  <form>
+    <div class="form-row row-username">
+      <div class="col">
+        <span class="required">*</span>用户名：
+      </div>
+      <div class="col">
+        <input type="text" id="username" />
+      </div>
+    </div>
+
+    <div class="form-row row-phone">
+      <div class="col">
+        <span class="required">*</span>手机号码：
+      </div>
+      <div class="col">
+        <input type="text" id="telphone" />
+      </div>
+    </div>
+
+    <div class="form-row row-verify-code">
+      <div class="col">
+        <span class="required">*</span>验证码：
+      </div>
+      <div class="col">
+        <input type="text" id="verify_code" /><button type="button" class="btn-send-verify-code">点击发送验证码</button>
+      </div>
+    </div> 
+    
+    <div class="form-row row-actions">
+      <div class="col">
+      </div>
+      <div class="col">
+        <button type="submit" class="btn btn-primary btn-submit">下一步</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+{% endblock %}

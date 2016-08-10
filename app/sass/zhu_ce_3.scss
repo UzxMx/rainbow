@@ -1,0 +1,294 @@
+@import "compass/css3";
+@import "vars";
+@import "utils";
+@import "icons";
+
+.container-register {
+  padding: 30px 0;
+  .container-register-progress {
+    .register-progress {
+      $bar-height: 35px;
+      $arrow-length: 20px;
+      $inactive-color: #e6e6e6;
+
+      .item {
+        display: inline-block;
+
+        .tail, .body, .head {
+          display: inline-block;
+          vertical-align: top;
+          height: $bar-height;
+        }
+
+        .tail {
+          width: 30px;
+          background-color: $inactive-color;
+
+          &:before {
+            content: " ";
+            display: inline-block;
+            border-left: $arrow-length solid white;
+            border-top: $bar-height / 2 solid transparent;
+            border-bottom: $bar-height / 2 solid transparent;            
+          }
+        }
+
+        .body {
+          width: 320px;
+          line-height: $bar-height;
+          background-color: $inactive-color;
+
+          span:first-child {
+            font-size: 16px;
+            margin-right: 10px;
+          }
+        }
+
+        .head {
+          border-left: $arrow-length solid $inactive-color;
+          border-top: $bar-height / 2 solid transparent;
+          border-bottom: $bar-height / 2 solid transparent;
+        }        
+
+        &.active {
+          color: white;
+
+          .body {
+            background-color: $brand-primary-color;
+          }
+
+          .head {
+            border-left-color: $brand-primary-color;
+          }
+
+          .tail {
+            background-color: $brand-primary-color;
+          }
+        }
+
+        &:first-child {
+          &.active {
+            .tail {
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          .head {
+            border: none;
+            width: $arrow-length;
+          }
+        }
+      }
+
+    }
+  }
+
+  .container-content {
+    @include icons(direct-login);
+
+    &:after {
+      content: " ";
+      display: block;
+      clear: both;
+    }
+
+    .container-register-form {
+      float: left;
+      padding: 30px 0;
+
+      .required {
+        color: red;
+        margin-right: 5px;
+      }
+
+      $input-text-width: 300px;
+      $input-text-height: 32px;
+
+      .form-row {
+        margin-bottom: 20px;
+
+        & > .col {
+          display: inline-block;
+        }
+
+        .col:first-child {
+          width: 120px;
+          text-align: right;
+        }
+
+        input[type="text"], input[type="password"] {
+          padding: 5px;
+          width: $input-text-width;
+          height: $input-text-height;
+          vertical-align: middle;
+        }
+
+        .hint {
+          margin-left: 5px;
+          color: #888;
+        }
+      }
+
+      .row-type {
+        .item {
+          display: inline-block;
+          margin-right: 10px;
+
+          input[type="radio"] {
+            margin-right: 2px;
+          }
+        }
+      }  
+
+      .row-password-complexity {
+        & > div:last-child {
+          $spacing: 5px;
+          span {
+            display: inline-block;
+            margin-right: $spacing;
+            width: ($input-text-width - 2 * $spacing) / 3;
+            background-color: #97c2f7;
+            text-align: center;
+            padding: 5px 0;
+            color: white;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            &.active {
+              background-color: #2d84e5;
+            }
+          }
+        }
+      }
+
+      .row-name {
+        input[type="text"] {
+          width: $input-text-width - 100px;  
+        }
+
+        .wrapper {
+          display: inline-block;
+          width: $input-text-width;
+        }
+        
+        .container-sex {
+          display: inline-block;
+          margin-left: 10px;
+
+          .item {
+            display: inline-block;
+            margin-right: 10px;
+            input {
+              margin-right: 2px;
+            }
+          }
+        }
+      }
+
+      .row-verify-code {
+        input[type="text"] {
+          width: $input-text-width - 150px;
+        }
+
+        .btn-send-verify-code {
+          width: 150px;
+          height: $input-text-height;
+          color: $brand-primary-color;
+          background-color: #e8f5fe;
+          border: 1px solid #ccc;
+          border-left: none;
+          vertical-align: middle;
+        }
+      }
+
+      .row-accept-license {
+      }
+
+      .row-actions {
+        .btn-submit {
+          padding: 5px 30px;
+        }
+      }
+    }
+
+    .container-login {
+      float: right;
+
+      .login {
+        margin-top: 20px;
+        margin-right: 50px;
+
+        &:before, &:after {
+          content: " ";
+          display: block;
+          height: 70px;
+          border-left: 1px solid #e0e0e0;
+        }
+
+        & > div {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        & > div:first-child {
+          height: 50px;
+          line-height: 50px;
+          margin-left: -5px;
+        }
+
+        & > div:last-child {
+          margin-left: 40px;
+          .btn-login {
+            span {
+              vertical-align: middle;
+            }
+
+            span:first-child {
+              font-size: 16px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// The above is copied from zhu_ce_1.scss
+//
+//
+// --------------------------------
+.container-register {
+  @include icons(register-succeed);
+
+  .icons-register-succeed {
+    margin-right: 10px;
+  }
+
+  .container-content {
+    padding: 80px 0 350px 0;
+    text-align: center;
+
+    .wrapper span {
+      vertical-align: middle;
+    }
+
+    .container-description {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 18px;
+      margin-left: 15px;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

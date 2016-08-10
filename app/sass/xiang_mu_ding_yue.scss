@@ -1,12 +1,12 @@
-
 @import "compass/css3";
 @import "vars";
 @import "utils";
 @import "icons";
 
-.container-collection {
+.container-subscribe {
 
-  .collection-header {
+  .container-subscribe-nav {
+    border-bottom: 2px solid $brand-primary-color;
     .nav-list {
       li {
         display: inline-block;
@@ -33,23 +33,83 @@
     .container-actions {
       text-align: right;
 
-      .btn-manage, .btn-save {
-        display: none;
+      .btn-add-subscribe-item {
         padding: 5px 10px;
-        color: $brand-primary-color;
+        $color: #ff8300;
+        color: $color;
         background-color: white;
-        border: 1px solid $brand-primary-color;
+        border: 1px solid $color;
         @include border-radius(10px);
+
+        &:hover {
+          background-color: $color;
+          color: white;
+        }
+      }
+
+    }
+  }
+
+  .container-subscribe-item-list {
+    padding: 10px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    .subscribe-item-list {
+      li {
+        display: inline-block;
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          display: block;
+          padding: 8px 40px;
+          color: #333;
+          font-size: 16px;
+          position: relative;
+          @include border-radius(5px);
+
+          &:hover {
+            color: $brand-primary-color;
+          }
+
+          &.selected {
+            color: $brand-primary-color;
+            border: 1px solid $brand-primary-color;
+            cursor: default;
+          }
+
+          .btn-remove {
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            font-size: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .container-actions {
+      text-align: right;
+
+      .btn-modify {
+        color: $brand-primary-color;
+        border: 1px solid $brand-primary-color;
+        padding: 5px 30px;
+        @include border-radius(10px);
+        height: 40px;
+        line-height: 40px;
 
         &:hover {
           background-color: $brand-primary-color;
           color: white;
         }
       }
-
-      .visible {
-        display: inline-block;
-      }      
     }
   }
 
@@ -61,11 +121,6 @@
         border: 1px solid #e0e0e0;
         border-top: none;
         border-bottom: none;
-      }
-
-      .item-checkbox {
-        display: none;
-        margin-right: 5px;
       }
 
       .c-type, .c-place, .c-date {
@@ -85,7 +140,7 @@
       }
 
       th, td {
-        vertical-align: top;
+        vertical-align: middle;
       }
 
       td.c-type {
@@ -150,15 +205,18 @@
 }
 
 //
-//
-// The above is copied from bid_collection.scss.
-//
+// The above is copied from zhao_biao_ding_yue.scss.
 //
 //
-// ----------------------------------------------
-.container-collection {
+//
+// --------------------------------------
+.container-subscribe {
   .container-results {
     .table {
+
+      th, td {
+        vertical-align: top;
+      }    
 
       .highlight {
         margin-left: 10px;
@@ -182,7 +240,7 @@
 
       td.c-stage {
         color: $brand-primary-color;
-      }
+      }      
 
       td.c-type {
         color: #333;
@@ -206,5 +264,5 @@
         color: #777;
       }
     }
-  }  
+  }
 }

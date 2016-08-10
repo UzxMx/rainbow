@@ -168,6 +168,19 @@ compile_resource('feedback');
 compile_resource('bid_collection');
 compile_resource('cg_collection');
 compile_resource('project_collection');
+compile_resource('zhao_biao_ding_yue');
+compile_resource('xiang_mu_ding_yue');
+compile_resource('zhao_biao_ding_yue_xiu_gai_huo_chuang_jian');
+
+compile_resource('deng_lu');
+compile_resource('zhu_ce_1');
+compile_resource('zhu_ce_2');
+compile_resource('zhu_ce_3');
+compile_resource('wang_ji_mi_ma_1');
+compile_resource('wang_ji_mi_ma_2');
+
+compile_resource('cai_gou_ding_yue_xiu_gai_huo_chuang_jian');
+compile_resource('xiang_mu_ding_yue_xiu_gai_huo_chuang_jian');
 
 gulp.task('compile', gulp.parallel(
   'compile-common-css',
@@ -266,7 +279,34 @@ gulp.task('compile', gulp.parallel(
 
   'compile-project_collection-html',
   'compile-project_collection-css',
-  'compile-project_collection-js'
+  'compile-project_collection-js',
+
+  'compile-zhao_biao_ding_yue-html',
+  'compile-zhao_biao_ding_yue-css',
+
+  'compile-xiang_mu_ding_yue-html',
+  'compile-xiang_mu_ding_yue-css',
+
+  'compile-zhao_biao_ding_yue_xiu_gai_huo_chuang_jian-html',
+  'compile-zhao_biao_ding_yue_xiu_gai_huo_chuang_jian-css',
+  'compile-zhao_biao_ding_yue_xiu_gai_huo_chuang_jian-js',
+
+  'compile-deng_lu-html',
+
+  'compile-zhu_ce_1-html',
+  'compile-zhu_ce_2-html',
+  'compile-zhu_ce_3-html',
+
+  'compile-wang_ji_mi_ma_1-html',
+  'compile-wang_ji_mi_ma_2-html',
+
+  'compile-cai_gou_ding_yue_xiu_gai_huo_chuang_jian-html',
+  'compile-cai_gou_ding_yue_xiu_gai_huo_chuang_jian-css',
+  'compile-cai_gou_ding_yue_xiu_gai_huo_chuang_jian-js',
+
+  'compile-xiang_mu_ding_yue_xiu_gai_huo_chuang_jian-html',
+  'compile-xiang_mu_ding_yue_xiu_gai_huo_chuang_jian-css',
+  'compile-xiang_mu_ding_yue_xiu_gai_huo_chuang_jian-js'
 ));
 
 gulp.task("build", gulp.series("clean", "precompile", "compile", "copy-assets", "optimize"));

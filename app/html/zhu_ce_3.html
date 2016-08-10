@@ -1,0 +1,41 @@
+{% set body_class = "page-register" %}
+{% set header_description = '免费注册' %}
+
+{% extends 'login_layout.html' %}
+
+{% block content %}
+
+<div class="container-register container-register-step-3">
+  <div class="container-register-progress">
+    <div class="register-progress">
+      <div class="item active">
+        <div class="tail"></div><div class="body"><span>1 注册</span><span>填写资料</span></div><div class="head"></div>
+      </div>
+
+      <div class="item active">
+        <div class="tail"></div><div class="body"><span>2 完善</span><span>注册信息</span></div><div class="head"></div>
+      </div>
+
+      <div class="item active">
+        <div class="tail"></div><div class="body"><span>3 完成</span><span>账号注册</span></div><div class="head"></div>
+      </div>      
+
+    </div>
+  </div>
+
+  <div class="container-content">
+    <div class="wrapper">
+      <span class="icons-register-succeed" style="margin-top: -15px;"></span>
+      <div class="container-description">
+        <div>恭喜您已经完成了招标王的账号注册，您可以：</div>
+        <div class="container-actions">
+          <!-- 立即查看链接，真正是需要跳转到招标信息的免费公告页面 -->
+          <a href="zblm.html" style="margin-right: 20px;">立即查看</a>招标采购信息，或前往<a href="profile.html" style="margin-left: 20px;">个人中心</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

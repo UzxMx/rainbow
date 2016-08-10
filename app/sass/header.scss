@@ -52,6 +52,7 @@
       @include icons(search);
 
       .icons-search {
+        cursor: pointer;
         position: absolute;
         right: 8px;
         top: (80px - $search-icons-height) / 2;

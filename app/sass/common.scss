@@ -99,7 +99,7 @@ ul {
   text-align: right;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
 }
 
@@ -488,3 +488,8 @@ a.ellipse, span.ellipse {
 
   }  
 }
+
+@import "header_auth";
+@import "login";
+@import "register";
+@import "find_password";

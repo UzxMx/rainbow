@@ -1,0 +1,208 @@
+{% set body_class = "page-register" %}
+{% set header_description = '免费注册' %}
+
+{% extends 'login_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Register.Step2.init();
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-register container-register-step-2">
+  <div class="container-register-progress">
+    <div class="register-progress">
+      <div class="item active">
+        <div class="tail"></div><div class="body"><span>1 注册</span><span>填写资料</span></div><div class="head"></div>
+      </div>
+
+      <div class="item active">
+        <div class="tail"></div><div class="body"><span>2 完善</span><span>注册信息</span></div><div class="head"></div>
+      </div>
+
+      <div class="item">
+        <div class="tail"></div><div class="body"><span>3 完成</span><span>账号注册</span></div><div class="head"></div>
+      </div>      
+
+    </div>
+  </div>
+
+  <div class="container-content">
+    <div class="container-register-form">
+      <form>
+        <div class="form-row row-email">
+          <div class="col">
+            电子邮箱：
+          </div>
+          <div class="col">
+            <input type="text" id="email" />
+            <span class="hint">请填写您的邮箱</span>
+          </div>
+        </div>
+
+        <div class="form-row row-tencent-number">
+          <div class="col">
+            QQ号码：
+          </div>
+          <div class="col">
+            <input type="text" id="tencent-number" />
+            <span class="hint">请填写您的QQ号码</span>
+          </div>
+        </div>
+
+        <div class="form-row row-company-address">
+          <div class="col">
+            办公地址：
+          </div>
+          <div class="col">
+            <input type="text" id="company-address" />
+            <span class="hint">请填写公司工商注册地址</span>
+          </div>
+        </div>        
+
+        <div class="form-row row-company-phone">
+          <div class="col">
+            公司电话：
+          </div>
+          <div class="col">
+            <input type="text" id="company-phone" />
+            <span class="hint">请填写正确的公司联系电话</span>
+          </div>
+        </div>
+
+        <div class="form-row row-position">
+          <div class="col">
+            职务：
+          </div>
+          <div class="col">
+            <input type="text" id="position" />
+            <span class="hint">请填写您的职务</span>      
+          </div>
+        </div>
+
+        <div class="form-row row-business">
+          <div class="col">
+            主营业务：
+          </div>
+          <div class="col">
+            <input type="text" id="business" /><div class="dropdown">
+            <div class="wrapper"><span>选择</span><span class="icons-blue-dropdown"></span></div>
+            <div class="container-selection">
+              <div class="selection">
+                <div class="wrapper">住宅社区</div>
+              </div>            
+              <div class="selection">
+                <div class="wrapper">交通运输</div>
+              </div>
+              <div class="selection">
+                <div class="wrapper">住宅社区</div>
+              </div>            
+              <div class="selection">
+                <div class="wrapper">交通运输</div>
+              </div> 
+              <div class="selection">
+                <div class="wrapper">住宅社区</div>
+              </div>            
+              <div class="selection">
+                <div class="wrapper">交通运输</div>
+              </div> 
+              <div class="selection">
+                <div class="wrapper">住宅社区</div>
+              </div>            
+              <div class="selection">
+                <div class="wrapper">交通运输</div>
+              </div> 
+            </div>
+          </div>
+          <span class="hint">请选择您的主营业务</span>
+          </div>
+        </div>
+
+        <div class="form-row row-business-region">
+          <div class="col">
+            业务区域：
+          </div>
+          <div class="col">
+            <input type="text" id="business-region" /><div class="dropdown">
+            <div class="wrapper"><span>选择</span><span class="icons-blue-dropdown"></span></div>
+            <div class="container-selection">
+              <div class="selection">
+                <div class="wrapper">北京</div>
+              </div>            
+              <div class="selection">
+                <div class="wrapper">上海</div>
+              </div>                           
+
+            </div>
+          </div>
+          <span class="hint">请选择您的业务区域</span>         
+          </div>
+        </div> 
+
+        <div class="form-row row-project-stage">
+          <div class="col">
+            关注项目阶段：
+          </div>
+          <div class="col">
+            <input type="text" id="project-stage" /><div class="dropdown">
+            <div class="wrapper"><span>选择</span><span class="icons-blue-dropdown"></span></div>
+            <div class="container-selection">
+              <div class="selection">
+                <div class="wrapper">阶段1</div>
+              </div>            
+              <div class="selection">
+                <div class="wrapper">阶段2</div>
+              </div>                           
+
+            </div>
+          </div>
+          <span class="hint">请选择您关注项目的阶段</span>         
+          </div>
+        </div> 
+
+        <div class="form-row row-product-keywords">
+          <div class="col">
+            产品关键字：
+          </div>
+          <div class="col">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <span class="hint">请至少填写一个您公司的主营产品（服务）</span>
+          </div>
+        </div>                               
+
+        <div class="form-row row-actions">
+          <div class="col">
+          </div>
+          <div class="col">
+            <button type="submit" onclick="window.location.href='zhu_ce_3.html';return false;" class="btn btn-primary btn-submit">提交</button>
+          </div>
+        </div>                                                 
+
+      </form>
+    </div>
+
+    <div class="container-login">
+      <div class="login">
+        <div>or</div>
+        <div>
+          <div>已有账号：</div>
+          <div>
+            <a href="deng_lu.html" class="btn-login">
+              <span>请直接登录</span>
+              <span class="icons-direct-login"></span>
+            </a>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

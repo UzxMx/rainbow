@@ -1,0 +1,177 @@
+{% set body_class = "page-register" %}
+{% set header_description = '免费注册' %}
+
+{% extends 'login_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Register.Step1.init();
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-register">
+  <div class="container-register-progress">
+    <div class="register-progress">
+      <div class="item active">
+        <div class="tail"></div><div class="body"><span>1 注册</span><span>填写资料</span></div><div class="head"></div>
+      </div>
+
+      <div class="item">
+        <div class="tail"></div><div class="body"><span>2 完善</span><span>注册信息</span></div><div class="head"></div>
+      </div>
+
+      <div class="item">
+        <div class="tail"></div><div class="body"><span>3 完成</span><span>账号注册</span></div><div class="head"></div>
+      </div>      
+
+    </div>
+  </div>
+
+  <div class="container-content">
+    <div class="container-register-form">
+      <form>
+        <div class="form-row row-type">
+          <div class="col">
+            <span class="required">*</span>会员类型：
+          </div>
+          <div class="col">
+            <div class="item"><input type="radio" name="user_type" class="user-type" />供应商</div>
+            <div class="item"><input type="radio" name="user_type" class="user-type" />开发商</div>
+            <div class="item"><input type="radio" name="user_type" class="user-type" />设计院</div>
+          </div>
+          <span class="hint">请选择会员类型</span>
+        </div>
+
+        <div class="form-row row-username">
+          <div class="col">
+            <span class="required">*</span>用户名：
+          </div>
+          <div class="col">
+            <input type="text" id="username" />
+            <span class="hint">请输入3－30个字母或数字</span>
+          </div>
+        </div>
+
+        <div class="form-row row-password">
+          <div class="col">
+            <span class="required">*</span>登录密码：
+          </div>
+          <div class="col">
+            <input type="password" id="password" />
+            <span class="hint">请输入6－20个字符，区分大小写</span>
+          </div>
+        </div>
+
+        <div class="form-row row-password-complexity">
+          <div class="col">
+            密码强度：
+          </div>
+          <div class="col">
+            <span class="weak">弱</span><span class="medium">中</span><span class="strong">强</span>
+          </div>
+        </div>        
+
+        <div class="form-row row-confirm-password">
+          <div class="col">
+            <span class="required">*</span>重复输入密码：
+          </div>
+          <div class="col">
+            <input type="password" id="confirm_password" />
+          </div>
+        </div>
+
+        <div class="form-row row-name">
+          <div class="col">
+            <span class="required">*</span>姓名：
+          </div>
+          <div class="col">
+            <div class="wrapper">
+              <input type="text" id="name" />
+              <div class="container-sex">
+                <div class="item">
+                  <input type="radio" name="sex" class="sex" />男
+                </div>
+                <div class="item">
+                  <input type="radio" name="sex" class="sex" />女
+                </div>              
+              </div>
+            </div>
+            <span class="hint">请与身份证姓名保持一致，否则无法通过审核
+            </span>
+          </div>
+        </div>
+
+        <div class="form-row row-company-name">
+          <div class="col">
+            <span class="required">*</span>公司名称：
+          </div>
+          <div class="col">
+            <input type="text" id="company_name" />
+            <span class="hint">
+              请填写公司全称，与营业执照保持一致
+            </span>            
+          </div>
+        </div>
+
+        <div class="form-row row-phone">
+          <div class="col">
+            <span class="required">*</span>手机号码：
+          </div>
+          <div class="col">
+            <input type="text" id="telphone" />
+            <span class="hint">请填写手机号码</span>
+          </div>
+        </div>
+
+        <div class="form-row row-verify-code">
+          <div class="col">
+            <span class="required">*</span>验证码：
+          </div>
+          <div class="col">
+            <input type="text" id="verify_code" /><button type="button" class="btn-send-verify-code">点击发送验证码</button>
+          </div>
+        </div>
+
+        <div class="form-row row-accept-license">
+          <div class="col">
+          </div>
+          <div class="col">
+            <input type="checkbox" id="accept_license" />
+            我已认真阅读并接受<a href="#">《招标王会员服务条款》</a>中的各项内容
+          </div>
+        </div>
+
+        <div class="form-row row-actions">
+          <div class="col">
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary btn-submit">提交</button>
+          </div>
+        </div>                                                 
+
+      </form>
+    </div>
+
+    <div class="container-login">
+      <div class="login">
+        <div>or</div>
+        <div>
+          <div>已有账号：</div>
+          <div>
+            <a href="deng_lu.html" class="btn-login">
+              <span>请直接登录</span>
+              <span class="icons-direct-login"></span>
+            </a>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

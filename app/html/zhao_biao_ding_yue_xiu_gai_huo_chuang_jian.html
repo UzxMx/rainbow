@@ -1,0 +1,323 @@
+{% extends 'user_layout.html' %}
+
+{% block content %}
+
+<div class="container-subscribe">
+
+  <div class="container-subscribe-nav">
+    <div class="row">
+      <div class="col-sm-10 container-nav-list">
+        <ul class="nav-list">
+          <li>
+            <a href="#" class="selected">招标信息</a>
+          </li>
+          <li>
+            <a href="#">采购信息</a>
+          </li> 
+          <li>
+            <a href="xiang_mu_ding_yue.html">项目信息</a>
+          </li>       
+        </ul>
+      </div>
+      <div class="col-sm-2 container-actions">
+        <a href="#" class="btn-add-subscribe-item">添加订阅</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-subscribe-item-list">
+    <div class="row">
+      <div class="col-sm-12 container-item-list">
+        <ul class="subscribe-item-list">
+          <li>
+            <a href="#" class="selected">
+              <span>电梯</span>
+              <span class="indicator">邮箱</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>客梯</span>
+              <span class="indicator">短信</span>
+            </a>
+          </li>       
+          <li>
+            <a href="#">
+              <span>打印机</span>
+              <span class="indicator">邮＋短</span>
+            </a>
+          </li> 
+        </ul>
+      </div>
+    </div>    
+  </div>
+
+  <div class="container-form">
+    <form>
+      <div class="row row-name">
+        <div class="col-sm-3">
+          订阅器名称：
+        </div>
+        <div class="col-sm-9">
+          <input type="text" />
+        </div>
+      </div>
+
+      <div class="row row-keywords">
+        <div class="col-sm-3">
+          关键词：
+        </div>
+        <div class="col-sm-9">
+          <div class="description">信息中含有所填关键词，便会被收录到订阅中</div>
+          <div class="item">
+            <input type="text" value="电梯" />
+          </div>          
+          <div class="item">
+            <input type="text" />
+            <button class="icons-add btn-add-keyword"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-type">
+        <div class="col-sm-3">
+          信息类型：
+        </div>
+        <div class="col-sm-9">
+          <div class="selections selections-single">
+            <span class="selection">
+              招标公告
+            </span>
+            <span class="selection">
+              招标预告
+            </span>         
+            <span class="selection">
+              招标变更
+            </span>  
+            <span class="selection">
+              中标结果
+            </span>                             
+          </div> 
+        </div>
+      </div>
+
+      <div class="row row-province">
+        <div class="col-sm-3">
+          省份：
+        </div>
+        <div class="col-sm-9">
+          <div class="selections">
+            <span class="selection selection-all">
+              全国
+            </span>            
+          </div>
+          <div class="selections selections-multiple">
+            <span class="selection selection-first-level">
+              华北
+            </span>
+            <div class="selection-second-level-group">
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>                                                                  
+            </div>                           
+          </div> 
+          <div class="selections selections-multiple">
+            <span class="selection selection-first-level">
+              东北
+            </span>
+            <div class="selection-second-level-group">
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>                                                                  
+            </div>                           
+          </div>
+          <div class="selections selections-multiple">
+            <span class="selection selection-first-level">
+              华东
+            </span>
+            <div class="selection-second-level-group">
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>
+              <span class="selection">
+                北京
+              </span>
+              <span class="selection">
+                天津
+              </span>                                                                  
+            </div>                           
+          </div>                    
+        </div>
+      </div> 
+
+      <div class="row row-city">
+        <div class="col-sm-3">
+          城市：
+        </div>
+        <div class="col-sm-9">
+          <div class="hint visible">
+            如需订阅市级地区，请点击上列省份按钮
+          </div>
+          <div class="selections selections-multiple" style="display:none;">
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span> 
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span>
+            <span class="selection">
+              保定
+            </span>                                                                         
+          </div>
+        </div>           
+      </div>
+
+      <div class="row row-keywords-location">
+        <div class="col-sm-3">
+          关键词在：
+        </div>
+        <div class="col-sm-9">
+          <div class="selections selections-single">
+            <span class="selection">
+              全文
+            </span>
+            <span class="selection">
+              标题
+            </span>                            
+          </div> 
+        </div>
+      </div>
+
+      <div class="row row-search-method">
+        <div class="col-sm-3">
+          搜索方式：
+        </div>
+        <div class="col-sm-9">
+          <div class="selections selections-single">
+            <span class="selection">
+              模糊
+            </span>
+            <span class="selection">
+              精准
+            </span>                            
+          </div> 
+        </div>
+      </div>
+
+      <div class="row row-subscribe">
+        <div class="col-sm-3">
+          是否订阅：
+        </div>
+        <div class="col-sm-9">
+          <div class="selections selections-multiple">
+            <span class="selection">
+              邮箱
+            </span>
+            <span class="selection">
+              短信
+            </span>                          
+          </div> 
+        </div>
+      </div>
+
+      <div class="row row-actions">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-9">
+          <div class="container-actions">
+            <button class="btn btn-primary btn-save">完成</button>
+          </div>
+        </div>
+      </div>                        
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}

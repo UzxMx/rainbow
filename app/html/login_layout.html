@@ -8,14 +8,6 @@
         <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,700' rel='stylesheet' type='text/css' /> -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />        
         <link rel="stylesheet" type="text/css" href="css/common.css" />
-        <link rel="stylesheet" type="text/css" href="css/user_header.css" />
-        <link rel="stylesheet" type="text/css" href="css/user_left_side.css" />
-
-        {% block before_main_css %}{% endblock %}
-        {% if main_css %}
-        <link rel="stylesheet" type="text/css" href="{{ main_css }}" />
-        {% endif %}
-        {% block after_main_css %}{% endblock %}
 
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
 
@@ -28,24 +20,14 @@
         <script type="text/javascript" src="js/common.js"></script>
 
         {% block before_main_js %}{% endblock %}
-        {% if main_js %}
-        <script type="text/javascript" src="{{ main_js }}"></script>
-        {% endif %}
         {% block after_main_js %}{% endblock %}
     </head>
     <body class="{{ body_class }}">
         <div id="page-container">
-            {% include "user_header.html" %}
+            {% include "login_header.html" %}
             {% block breadcrumb %}{% endblock %}
             <div id="main-container">
-                <div class="row">
-                    <div class="col-sm-3 region-left-side">
-                        {% include "user_left_side.html" %}
-                    </div>
-                    <div class="col-sm-9 region-main">
-                        {% block content %}{% endblock %}                    
-                    </div>    
-                </div>
+                {% block content %}{% endblock %}
             </div>
             {% include "footer.html" %}
         </div>
