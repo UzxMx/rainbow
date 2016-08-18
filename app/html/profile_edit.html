@@ -1,157 +1,347 @@
+{% set body_class = "page-account" %}
+{% set my_account = 'true' %}
+
 {% extends 'user_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Profile.Edit.init();
+  });
+</script>
+{% endblock %}
 
 {% block content %}
 
 <ul class="tab-account">
   <li>
-    <a href="#" class="selected">个人资料</a>
+    <a href="profile.html" class="selected">个人资料</a>
   </li>
   <li>
-    <a href="#">修改密码</a>
-  </li>  
+    <a href="modify_password.html">修改密码</a>
+  </li>
 </ul>
 
 <div class="container-edit-account-info">
   <div class="container-avatar">
-    <img src="images/cafe.png" />
+    <img src="images/cafe.png" class="img-avatar" />
     <div class="actions">
-      <button class="btn-upload">上传头像</button>
+      <button type="button" class="btn-choose-avatar">选择头像</button>
+    </div>
+    <div class="container-avatar-selections">
+      <div style="margin-bottom:10px;text-align:left;">系统头像</div>
+      <div class="avatar-selections">
+        <div class="selection selected">
+          <div class="wrapper">
+            <img src="images/avatar1.png" />
+          </div>
+        </div>
+        <div class="selection">
+          <div class="wrapper">
+            <img src="images/avatar2.png" />
+          </div>
+        </div>
+        <div class="selection">
+          <div class="wrapper">
+            <img src="images/avatar3.png" />
+          </div>
+        </div>
+        <div class="selection">
+          <div class="wrapper">
+            <img src="images/avatar4.png" />
+          </div>
+        </div>        
+        <div class="selection">
+          <div class="wrapper">
+            <img src="images/avatar5.png" />
+          </div>
+        </div>
+        <div class="selection">
+          <div class="wrapper">
+            <img src="images/avatar6.png" />
+          </div>
+        </div>
+        <div class="selection">
+          <div class="wrapper">
+            <img src="images/avatar7.png" />
+          </div>
+        </div>
+        <div class="selection">
+          <div class="wrapper">
+            <img src="images/avatar8.png" />
+          </div>
+        </div>                                
+      </div>
+      <div class="container-actions">
+        <button type="button" class="btn btn-primary btn-finish">完成</button>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-6 col-key">姓名：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="张三" />
+  <form>
+    <div class="form-row">
+      <div class="col-key">姓名：</div>
+      <div class="col-val">
+        <input type="text" value="张三" />
+      </div>
     </div>
 
-    <div class="col-sm-6 col-key">性别：</div>
-    <div class="col-sm-6 col-val col-val-sex">
-      <div>
-        <input type="radio" />男
+    <div class="form-row">
+      <div class="col-key">性别：</div>
+      <div class="col-val col-val-sex">
+        <div>
+          <input type="radio" name="sex" />男
+        </div>
+        <div>
+          <input type="radio" name="sex" />女
+        </div>
       </div>
-      <div>
-        <input type="radio" />女
-      </div>
-    </div>  
-
-    <div class="col-sm-6 col-key">手机号码：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="18888888888" />
     </div>
+    
+    <div class="form-row row-phone">      
+      <div class="col-key">手机号码：</div>
+      <div class="col-val">
+        <input type="text" id="telphone" value="18888888888" />
+      </div>
+    </div>
+    
+    <div class="form-row row-email">
+      <div class="col-key">电子邮箱：</div>
+      <div class="col-val">
+        <input type="text" id="email" value="18888888888@126.com" />
+      </div>    
 
-    <div class="col-sm-6 col-key">电子邮箱：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="18888888888@126.com" />
-    </div>    
+    </div>
+    
+    <div class="form-row">
+      <div class="col-key">QQ号码：</div>
+      <div class="col-val">
+        <input type="text" value="18888888888" />
+      </div>    
 
-    <div class="col-sm-6 col-key">QQ号码：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="18888888888" />
-    </div>    
+    </div>
+    
+    <div class="form-row">
+      <div class="col-key">公司名称：</div>
+      <div class="col-val">
+        <input type="text" value="北京环宇科技有限公司" />
+      </div> 
+    </div>
+    
+    <div class="form-row">
+      <div class="col-key">办公地址：</div>
+      <div class="col-val">
+        <input type="text" value="北京朝阳区soho大厦" />
+      </div>     
 
-    <div class="col-sm-6 col-key">公司名称：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="北京环宇科技有限公司" />
+    </div>
+    
+    <div class="form-row">
+      <div class="col-key">职务：</div>
+      <div class="col-val">
+        <input type="text" value="总经理" />
+      </div>         
+    </div>
+    
+    <div class="form-row row-business">
+      <div class="col-key">主营业务：</div>
+      <div class="col-val" style="height:auto;line-height:1;">
+        <div class="wrapper">
+          <div class="dropdown">
+            <div class="visible-part">
+              <div class="container-selected">
+              </div>
+              <div class="container-selection-btn">
+                <button type="button" class="btn btn-primary btn-selection">选择</button>
+              </div>
+            </div>
+            <div class="container-selections">
+              <input type="hidden" name="business" value="" />
+              <div class="selections selections-single">
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    住宅社区
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    交通
+                  </span>                   
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    住宅社区
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    交通运输
+                  </span> 
+                </div>    
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    住宅社区
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    交通运输
+                  </span> 
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    住宅社区
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    交通运输
+                  </span> 
+                </div>                                            
+                                               
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>               
+    </div>
+    
+    <div class="form-row row-business-region">
+      <div class="col-key">业务区域：</div>
+      <div class="col-val" style="height:auto;line-height:1;">
+        <div class="wrapper">
+          <div class="dropdown">
+            <div class="visible-part">
+              <div class="container-selected">
+              </div>
+              <div class="container-selection-btn">
+                <button type="button" class="btn btn-primary btn-selection">选择</button>
+              </div>
+            </div>
+            <div class="container-selections">
+              <input type="hidden" name="business_region" value="" />
+              <div class="selections">
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    北京
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    上海
+                  </span>
+                </div>                
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="2">
+                    北京
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="3">
+                    上海
+                  </span>
+                </div> 
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    北京
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    上海
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    北京
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    上海
+                  </span>
+                </div>                                                                                       
+              </div>
+              <div class="container-actions">
+                <button type="button" class="btn btn-primary btn-finish-selection">完成</button>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>  
+    </div>
+    
+    <div class="form-row row-project-stage">
+      <div class="col-key">关注项目阶段：</div>
+      <div class="col-val" style="height:auto;line-height:1;">
+        <div class="wrapper">
+          <div class="dropdown">
+            <div class="visible-part">
+              <div class="container-selected">
+              </div>
+              <div class="container-selection-btn">
+                <button type="button" class="btn btn-primary btn-selection">选择</button>
+              </div>
+            </div>
+            <div class="container-selections">
+              <input type="hidden" name="project_stage" value="" />
+              <div class="selections">
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    阶段1
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    阶段2
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    阶段1
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    阶段2
+                  </span>
+                </div> 
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    阶段1
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    阶段2
+                  </span>
+                </div> 
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    阶段1
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    阶段2
+                  </span>
+                </div>                                                                
+                                                                                      
+              </div>
+              <div class="container-actions">
+                <button type="button" class="btn btn-primary btn-finish-selection">完成</button>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>      
     </div> 
 
-    <div class="col-sm-6 col-key">办公地址：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="北京朝阳区soho大厦" />
-    </div>     
-
-    <div class="col-sm-6 col-key">职务：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="总经理" />
-    </div>         
-
-    <div class="col-sm-6 col-key">主营业务：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="电梯" class="input-dropdown" /><div class="dropdown">
-        <div class="container-title">
-          <span>选择</span><span class="icons-blue-dropdown"></span>
-        </div>
-          <div class="container-selection">
-            <div class="selection">
-              <div class="wrapper">电梯1</div>
-            </div>            
-            <div class="selection">
-              <div class="wrapper">电梯2</div>
-            </div>  
-            <div class="selection">
-              <div class="wrapper">电梯3</div>
-            </div>                                                   
-          </div> 
-      </div>
-    </div>               
-
-    <div class="col-sm-6 col-key">业务区域：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="北京、上海" class="input-dropdown" /><div class="dropdown">
-        <div class="container-title">
-          <span>选择</span><span class="icons-blue-dropdown"></span>
-        </div>
-          <div class="container-selection">
-            <div class="selection">
-              <div class="wrapper">北京</div>
-            </div>            
-            <div class="selection">
-              <div class="wrapper">上海</div>
-            </div>  
-            <div class="selection">
-              <div class="wrapper">北京</div>
-            </div>            
-            <div class="selection">
-              <div class="wrapper">上海</div>
-            </div>                                                     
-            <div class="selection">
-              <div class="wrapper">北京</div>
-            </div>            
-            <div class="selection">
-              <div class="wrapper">上海</div>
-            </div>  
-            <div class="selection">
-              <div class="wrapper">北京</div>
-            </div>            
-            <div class="selection">
-              <div class="wrapper">上海</div>
-            </div>  
-            <div class="selection">
-              <div class="wrapper">北京</div>
-            </div>            
-            <div class="selection">
-              <div class="wrapper">上海</div>
-            </div>                                      
-          </div> 
-      </div>
-    </div>  
-
-    <div class="col-sm-6 col-key">关注项目阶段：</div>
-    <div class="col-sm-6 col-val">
-      <input type="text" value="施工在建" class="input-dropdown" /><div class="dropdown">
-        <div class="container-title">
-          <span>选择</span><span class="icons-blue-dropdown"></span>
-        </div>
-          <div class="container-selection">
-            <div class="selection">
-              <div class="wrapper">施工在建</div>
-            </div>            
-            <div class="selection">
-              <div class="wrapper">施工在建</div>
-            </div>  
-            <div class="selection">
-              <div class="wrapper">施工在建</div>
-            </div>                                                   
-          </div> 
-      </div>
-    </div>      
-  </div> 
-
-  <div class="row container-actions">
-    <div class="col-sm-6"></div>
-    <div class="col-sm-6 container-btn-save">
-      <a href="#" class="btn btn-primary btn-save">保存资料</a>
-    </div>      
-  </div>
+    <div class="form-row container-actions">
+      <div class="container-btn-save">
+        <button type="submit" class="btn btn-primary btn-save">保存资料</button>
+      </div>      
+    </div>
+  </form>
 
 </div>
 

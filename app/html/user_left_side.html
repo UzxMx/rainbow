@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="container-avatar-name">
       <div class="container-avatar">
-        <img src="images/cafe.png" />
+        <img src="images/cafe.png" class="img-avatar" />
       </div>
       <div class="container-name">被淹死的鱼</div>
     </div>
@@ -14,7 +14,7 @@
       <div class="container-progress">
         <div class="progress" style="width:50%;"></div>
       </div>
-      <div class="container-actions"><a href="#" class="btn-fill-info">立即完善</a></div>
+      <div class="container-actions"><a href="profile_edit.html" class="btn-fill-info">立即完善</a></div>
     </div>
   </div>
 </div>
@@ -39,43 +39,43 @@
 <div class="block block-user-menus">
   <ul class="menu-list">
     <li>
-      <a href="#" class="selected">
+      <a href="zhao_biao_ding_yue.html" {% if my_subscribe %}class="selected"{% endif %}>
         <span class="icons-book"></span>
         <span>我的订阅</span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="bid_collection.html" {% if my_collection %}class="selected"{% endif %}>
         <span class="icons-star"></span>
         <span>我的收藏</span>
       </a>
     </li>   
     <li>
-      <a href="#">
+      <a href="profile.html" {% if my_account %}class="selected"{% endif %}>
         <span class="icons-profile"></span>
         <span>我的账号</span>
       </a>
     </li>       
     <li>
-      <a href="#">
+      <a href="manage_subscribe.html" {% if subscribe_management %}class="selected"{% endif %}>
         <span class="icons-flag-add"></span>
         <span>订阅管理</span>
       </a>
     </li>       
     <li>
-      <a href="#">
+      <a href="orders.html" {% if my_orders %}class="selected"{% endif %}>
         <span class="icons-dollar"></span>
         <span>我的订单</span>
       </a>
     </li>       
     <li>
-      <a href="#">
+      <a href="messages.html" {% if my_messages %}class="selected"{% endif %}>
         <span class="icons-mail"></span>
         <span>我的消息</span><span class="red-circle"></span>
       </a>
     </li>       
     <li>
-      <a href="#">
+      <a href="feedback.html" {% if feedback %}class="selected"{% endif %}>
         <span class="icons-note"></span>
         <span>意见反馈</span>
       </a>

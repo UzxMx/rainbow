@@ -1,0 +1,233 @@
+.page-account, .page-manage-subscribe, .page-subscribe, .page-collection, .page-orders, .page-messages, .page-feedback {
+  #main-container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .region-left-side {
+    @include icons(book);
+    @include icons(star);
+    @include icons(profile);
+    @include icons(flag-add);
+    @include icons(dollar);
+    @include icons(mail);
+    @include icons(note);
+
+    .block {
+      max-width: 219px;
+      margin: 0 auto;
+    }
+
+    .block-profile {
+      color: white;
+      font-size: 13px;
+
+      .wrapper {
+        display: inline-block;
+        width: 219px;
+        height: 238px;
+        background-image: url(../images/profile-bg.png);
+      }
+
+      .container-avatar-name {
+        padding: 15px 20px;
+
+        .container-avatar, .container-name {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .container-avatar {
+          margin-right: 10px;
+          $radius: 30px;
+          img {
+            width: 2 * $radius;
+            height: 2 * $radius;
+            @include border-radius($radius);
+          }
+        }
+
+        .container-name {
+          font-size: 16px;
+          max-width: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }      
+      }
+
+      .container-info {
+        padding: 0 30px;
+      }
+
+      .container-fullment-percentage {
+        margin-top: 30px;
+        padding: 0 20px;
+        .container-progress {
+          margin-top: 5px;
+          height: 5px;
+          background-color: white;
+          @include border-radius(2px);
+        }
+
+        .progress {
+          display: inline-block;
+          height: 100%;
+          background-color: #ffd936;
+        }
+
+        .container-actions {
+          margin-top: 15px;
+          text-align: center;
+          .btn-fill-info {
+            padding: 5px 10px;
+            color: white;
+            border: 1px solid white;
+            @include border-radius(10px);
+
+            &:hover {
+              background-color: white;
+              color: $brand-primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    .block-user-status {
+      color: #864c00;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      background-color: #fcf2e8;
+      border: 1px solid #d4bfa4;
+
+      @include icons(status-bg);
+
+      .status-banner {
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+
+        .icons-status-bg {
+          line-height: icons-sprite-height(status-bg);
+        }
+      }
+
+      .status-info {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .container-actions {
+        height: 34px;
+        line-height: 34px;
+        padding: 0 10px;
+        & > div:first-child {
+          float: left;
+        }
+
+        & > div:last-child {
+          float: right;
+        }
+
+        &:after {
+          clear: both;
+          display: block;
+          content: " ";
+        }
+
+        .btn-invite-friends {
+          color: #864c00;
+        }
+
+        .btn-buy {
+          border: 1px solid #864c00;
+          @include border-radius(10px);
+          color: #864c00;
+
+          &:hover {
+            background-color: #864c00;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .block-user-menus {
+      margin-top: 20px;
+      padding-bottom: 20px;
+      background-color: #f7f7f7;
+      border: 1px solid #e0e0e0;
+      @include border-radius(3px);
+
+      .menu-list {
+        li {
+          a {
+            color: #333;
+            display: block;
+            padding: 10px 20px;
+
+            span {
+              vertical-align: middle;
+
+              &:first-child {
+                margin-right: 10px;
+              }
+            }
+
+            &:hover, &.selected {
+              background-color: $brand-primary-color;
+              color: white;
+
+              .icons-book {
+                @include icons-sprite(book-w);
+              }
+              .icons-star {
+                @include icons-sprite(star-w);
+              }
+              .icons-profile {
+                @include icons-sprite(profile-w);
+              }
+              .icons-flag-add {
+                @include icons-sprite(flag-add-w);
+              }
+              .icons-dollar {
+                @include icons-sprite(dollar-w);
+              }
+              .icons-mail {
+                @include icons-sprite(mail-w);
+              }
+              .icons-note {
+                @include icons-sprite(note-w);
+              }
+            }
+          }
+        }
+      }
+
+      .red-circle {
+        display: inline-block;
+        $radius: 3px;
+        width: 2 * $radius;
+        height: 2 * $radius;
+        margin-top: -10px;
+        margin-left: 3px;
+        background-color: red;
+        @include border-radius($radius);
+      }    
+
+      .container-actions {
+        margin-top: 30px;
+        text-align: center;
+
+        .btn-logout {
+          padding: 8px 30px;
+          color: #333;
+        }
+      }
+    }
+
+  }
+}

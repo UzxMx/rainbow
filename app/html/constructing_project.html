@@ -1,4 +1,14 @@
+{% set body_class = "page-search" %}
+
 {% extends 'layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Search.init();
+  });
+</script>
+{% endblock %}
 
 {% block breadcrumb %}
 
@@ -6,11 +16,11 @@
   <div class="breadcrumb">
     <span class="icons-geo"></span>
     <span>您当前的位置：</span>
-    <a href="#">招标王</a>
+    <a href="home.html">招标王</a>
     <span class="icons-arrow-right"></span>
-    <a href="#">项目信息</a>
+    <a href="project.html">项目信息</a>
     <span class="icons-arrow-right"></span>
-    <a href="#">拟在建项目</a>    
+    <a href="constructing_project.html">拟在建项目</a>    
   </div>
 </div>
 
@@ -20,7 +30,7 @@
 
 <div class="region">
   <div class="row">
-    <div class="col-sm-9 region-main">
+    <div class="col-sm-9 region-main project-search">
       <div class="container-search">
         <input type="text" placeholder="电梯" class="searchbox" /><button class="btn btn-primary btn-search">搜索</button>
       </div>
@@ -183,7 +193,7 @@
       </div>
 
       <div class="container-results">
-        <table class="table style-primary">
+        <table class="table style-primary table-sortable">
           <thead>
             <tr>
               <th class="c-stage">项目阶段</th>
@@ -198,7 +208,7 @@
             <tr>
               <td class="c-stage">地质勘查</td>
               <td class="c-title">
-                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+                <a href="project_details.html">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
                 </a>
               </td>
               <td class="c-price">190000万</td>
@@ -209,7 +219,7 @@
             <tr>
               <td class="c-stage">地质勘查</td>
               <td class="c-title">
-                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+                <a href="project_details.html">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
                 </a>
               </td>
               <td class="c-price">190000万</td>
@@ -220,7 +230,7 @@
             <tr>
               <td class="c-stage">地质勘查</td>
               <td class="c-title">
-                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+                <a href="project_details.html">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
                 </a>
               </td>
               <td class="c-price">190000万</td>
@@ -276,29 +286,47 @@
           <div class="block-content container-fluid">
             <div class="row">
               <div class="col-sm-4">
-                <a href="#">基础设施</a>
+                <a href="#">会展</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">公用事业设施</a>
+                <a href="#">办公楼</a>
               </div>            
               <div class="col-sm-4">
-                <a href="#">石油天然气</a>
+                <a href="#">商业零售</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">开采</a>
+                <a href="#">工业</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">公用事业设施</a>
+                <a href="#">住宅</a>
               </div>            
               <div class="col-sm-4">
-                <a href="#">石油天然气</a>
+                <a href="#">司法</a>
               </div> 
               <div class="col-sm-4">
-                <a href="#">基础设施</a>
+                <a href="#">农业</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">交通</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">社区</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">教育研究</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">休闲娱乐</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">医疗</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">基础建设</a>
               </div>
               <div class="col-sm-4">
                 <a href="#">公用事业设施</a>
-              </div>            
+              </div>
               <div class="col-sm-4">
                 <a href="#">石油天然气</a>
               </div>
@@ -306,11 +334,14 @@
                 <a href="#">开采</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">公用事业设施</a>
-              </div>            
+                <a href="#">酒店餐饮</a>
+              </div>  
               <div class="col-sm-4">
-                <a href="#">石油天然气</a>
-              </div>                                                                                       
+                <a href="#">新市区开发</a>
+              </div> 
+              <div class="col-sm-4">
+                <a href="#">其它</a>
+              </div>
             </div>
           </div>
         </div>
@@ -386,6 +417,23 @@
         </div>        
       </div>
 
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
     </div>
   </div>
 </div>

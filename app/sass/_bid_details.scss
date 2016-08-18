@@ -1,0 +1,317 @@
+.page-bid-details {
+  .container-bid {
+
+    .container-bid-outline {
+      margin: 30px 0;
+
+      table {
+        td {
+          border: 1px solid #e0e0e0;
+        }
+        td:first-child, td:nth-child(3) {
+          width: 20%;
+          background-color: #f1f1f1;
+          text-align: right;
+        }
+        td:nth-child(2), td:last-child {
+          width: 30%;
+          text-align: left;
+        }
+      }
+    }
+
+    .container-bid-actions {
+      margin-top: 50px;
+      text-align: center;
+
+      .container-action {
+        display: inline-block;
+        width: 100px;
+        height: 80px;
+        background-color: #f7f7f7;
+        margin-right: 15px;
+        font-size: 13px;
+        @include border-radius(10px);
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .table-col {
+          padding: 0 10px;
+        }
+      }
+
+      .container-action-btn {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      @include icons(big-download);
+      @include icons(blue-folder);
+      @include icons(blue-edit);
+      @include icons(print);
+    }
+  }
+
+  .container-guess-what-you-like {
+    margin-top: 80px;
+
+    .guess-what-you-like {
+      border: 1px solid #e0e0e0;
+      padding: 15px 10px;
+    }
+
+    @include icons(heart);
+
+    .guess-what-you-like-header {
+      span {
+        margin-right: 10px;
+        vertical-align: middle;
+        color: $brand-primary-color;
+        font-size: 16px;
+      }
+    }
+
+    .guess-what-you-like-body {
+      margin-top: 20px;
+
+      .list {
+        li {
+          margin-top: 5px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+        .col {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .col-bullet {
+          width: 5%;
+          text-align: left;
+          vertical-align: middle;
+        }
+
+        .col-title {
+          width: 70%;
+
+          a {
+            vertical-align: middle;
+            color: #666;
+            &:hover {
+              color: $brand-primary-color;
+            }
+          }
+        }
+
+        .col-date {
+          width: 20%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .block-timeline {
+    margin-bottom: 30px;
+    border: 1px solid $brand-primary-color;
+
+    .block-header {
+      padding: 20px 0 0 20px;
+      font-size: 16px;
+      color: $brand-primary-color;
+    }
+  }
+
+  .container-timeline {
+    padding: 20px 10px 20px 100px;
+    @include border-radius(5px);
+
+    ul.timeline {
+      $padding-left: 25px;
+
+      .event {
+        padding-bottom: 50px;
+        padding-left: $padding-left;
+        position: relative;
+        border-left: 1px solid $brand-yellow-color;
+
+        &:before {
+          display: block;
+          content: attr(data-date);
+          position: absolute;
+          left: -$padding-left - 40px;
+        }
+
+        &:after {
+          $radius: 8px;
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: -($radius);
+          width: 2 * $radius;
+          height: 2 * $radius;
+          background-color: $brand-yellow-color;
+          @include border-radius($radius);
+        }
+
+        &:first-child {
+          &:after {
+            top: 0px;
+          }
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+          margin-top: -5px;
+          border: none;
+        }      
+      }
+    }
+  }
+
+  .container-user-ad-banner {
+    margin-bottom: 25px;
+    color: white;
+    font-size: 16px;
+    .user-ad-banner {
+      padding: 20px;
+      background-image: url(../images/not-login-banner.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .item {
+        margin-top: 10px;
+        line-height: 28px;
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:after {
+          clear: left;
+          content: " ";
+          display: block;
+        }
+
+        .col-feature {
+          display: inline-block;
+          width: 35%;
+          vertical-align: middle;
+          font-size: 20px;
+          float: left;
+        }
+
+        .col-detail {
+          display: inline-block;
+          width: 65%;
+          vertical-align: middle;
+          float: left;
+        }
+
+        .btn-register {
+          color: $brand-yellow-color;
+          text-decoration: underline;
+        }
+
+        .btn-login, .btn-view-sample {
+          margin-left: 30px;
+          @include border-radius(5px);
+          color: black;
+          background-color: #ffff77;
+          text-decoration: none;
+
+          &:hover {
+            background-color: darken(#ffff77, 20%);
+          }
+        }
+
+        .btn-login {
+          padding: 8px 30px;
+        }
+
+        .btn-view-sample {
+          padding: 8px;
+        }
+      }
+    }
+  }
+
+  #choose_other_stage_dialog {
+    @include icons(bid-yugao);
+    @include icons(bid-notification);
+    @include icons(bid-change);
+    @include icons(bid-result);
+
+    .dialog-header {
+      h1 {
+        float: left;
+        font-size: 18px;
+        padding: 20px 0 0 20px;
+      }
+    }
+
+    .dialog-content {
+      padding-top: 60px;
+      padding-bottom: 40px;
+
+      & > .wrapper {
+        font-size: 0;
+        text-align: center;
+      }
+    }
+
+    .separator {
+      display: inline-block;
+      background-color: #ccc;
+      height: 2px;
+      width: 60px;
+      vertical-align: top;
+      margin-top: 30px;
+
+      &.active {
+        background-color: $brand-primary-color;
+      }
+    }
+
+    .stage {
+      display: inline-block;
+      font-size: 15px;
+      vertical-align: top;
+      color: #666;
+      cursor: default;
+
+      &.active {
+        cursor: pointer;
+
+        .icons-bid-yugao {
+          @include icons-sprite(bid-yugao-active);
+        }
+
+        .icons-bid-notification {
+          @include icons-sprite(bid-notification-active);
+        }
+
+        .icons-bid-change {
+          @include icons-sprite(bid-change-active);
+        }
+
+        .icons-bid-result {
+          @include icons-sprite(bid-result-active);
+        }
+
+        &.current, &:hover {
+          color: $brand-primary-color;
+        }
+      }
+
+      .container-icon {
+        margin-bottom: 10px;
+      }      
+    }
+  }  
+}

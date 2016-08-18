@@ -1,4 +1,14 @@
+{% set body_class = "page-publish" %}
+
 {% extends 'layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.PublishCG.init();
+  });
+</script>
+{% endblock %}
 
 {% block breadcrumb %}
 
@@ -6,11 +16,11 @@
   <div class="breadcrumb">
     <span class="icons-geo"></span>
     <span>您当前的位置：</span>
-    <a href="#">招标王</a>
+    <a href="home.html">招标王</a>
     <span class="icons-arrow-right"></span>
-    <a href="#">招标信息</a>
+    <a href="cglm.html">采购信息</a>
     <span class="icons-arrow-right"></span>
-    <a href="#">发布采购</a>    
+    <a href="fbcg.html">发布采购</a>    
   </div>
 </div>
 
@@ -20,7 +30,7 @@
 
 <div class="region">
   <div class="row">
-    <div class="col-sm-8 region-main">
+    <div class="col-sm-9 region-main">
       <div class="container-publish">
         <div class="container-publish-warning">
           <div class="publish-warning">
@@ -44,8 +54,8 @@
         <div class="container-publish-form">
           <div class="publish-form">
             <form class="form-horizontal">
-              <div class="form-group">
-                <label for="bid-company" class="col-sm-4 control-label"><span class="required">*</span>招标单位：</label>
+              <div class="form-group form-group-bid-company">
+                <label for="bid-company" class="col-sm-4 control-label"><span class="required">*</span>采购单位：</label>
                 <div class="col-sm-8">
                   <input type="text" class="form-control" id="bid-company" />
                 </div>                
@@ -69,7 +79,7 @@
                   </div>                 
                 </div>                
               </div>  
-              <div class="form-group">
+              <div class="form-group form-group-date">
                 <label for="bid-date" class="col-sm-4 control-label"><span class="required">*</span>开标日期：</label>
                 <div class="col-sm-8">
                   <input type="text" class="form-control" id="bid-date" />
@@ -82,7 +92,7 @@
                   <input type="text" class="form-control" id="bid-manager" />
                 </div>                
               </div>       
-              <div class="form-group">
+              <div class="form-group form-group-tel">
                 <label for="bid-tel" class="col-sm-4 control-label"><span class="required">*</span>联系电话：</label>
                 <div class="col-sm-8">
                   <input type="text" class="form-control" id="bid-tel" />
@@ -94,13 +104,13 @@
                   <input type="text" class="form-control" id="bid-email" />
                 </div>                
               </div>
-              <div class="form-group">
+              <div class="form-group form-group-title">
                 <label for="bid-title" class="col-sm-4 control-label"><span class="required">*</span>公告标题：</label>
                 <div class="col-sm-8">
                   <input type="text" class="form-control" id="bid-title" />
                 </div>                
               </div>
-              <div class="form-group">
+              <div class="form-group form-group-content">
                 <label for="bid-content" class="col-sm-4 control-label"><span class="required">*</span>采购内容：</label>
                 <div class="col-sm-8">
                   <textarea class="form-control" id="bid-content"></textarea>
@@ -108,19 +118,15 @@
               </div>                                                               
 
               <div class="form-group form-group-uploaded-files">
+                <input type="file" name="file[]">
                 <div class="col-sm-offset-4 col-sm-8 container-uploaded-files">
-                  <div class="file">
-                    <span class="icons-yellow-folder"></span>
-                    <span class="file-name">招标文件1</span>
-                    <a href="#">删除</a>
-                  </div>
                 </div>
-              </div>                                                         
+              </div>                            
 
               <div class="form-group form-group-actions">
                 <div class="col-sm-offset-4 col-sm-8">
                   <button type="submit" class="btn btn-primary btn-submit">确定</button>
-                  <button class="btn btn-primary btn-upload-file">上传招标文件</button>
+                  <button type="button" class="btn btn-primary btn-upload-file">上传招标文件</button>
                 </div>
               </div> 
                                                   
@@ -131,157 +137,12 @@
       </div>
     </div>
 
-    <div class="col-sm-4 region-right-side">
+    <div class="col-sm-3 region-right-side">
       <div class="wrapper">
-        <div class="block block-login-register">
-          <div class="row">
-            <div class="col-sm-6">
-              <a href="#" class="btn btn-login">登录</a>
-            </div>
-            <div class="col-sm-6">
-              <a href="#" class="btn btn-register">注册</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="block block-services">
+        <div class="block block-region-nav" style="margin-top:0;border-top:none;">
           <div class="block-header">
-            注册后您可享受以下服务
-          </div>
-          <div class="block block-content container-fluid">
-            <div class="row">
-              <div class="col-sm-6">
-                <div>
-                  <span class="icons-searchview">
-                  </span>
-                </div>
-                <div>免费查看所有招标信息</div>
-              </div>
-              <div class="col-sm-6">
-                <div>
-                  <span class="icons-hand">
-                  </span>
-                </div>
-                <div>提前把握项目</div>
-              </div>           
-              <div class="col-sm-6">
-                <div>
-                  <span class="icons-edit">
-                  </span>
-                </div>
-                <div>订阅属于自己的招标信息</div>
-              </div>    
-              <div class="col-sm-6">
-                <div>
-                  <span class="icons-gift">
-                  </span>
-                </div>
-                <div>信息免费发送邮箱</div>
-              </div>  
-              <div class="col-sm-6">
-                <div>
-                  <span class="icons-send">
-                  </span>
-                </div>
-                <div>发布招标信息</div>
-              </div>
-              <div class="col-sm-6">
-                <div>
-                  <span class="icons-cert">
-                  </span>
-                </div>
-                <div>招标王认证</div>
-              </div>                                           
-            </div>
-          </div> 
-        </div>
-
-        <div class="block block-register-info">
-          <div class="block-header">
-            5秒注册，百万招标信息唾手可得
-          </div>
-          <div class="block-content">
-            <div class="wrapper">
-              <form>
-                <div class="control-group">
-                  <div class="container-title">你的名字</div>
-                  <div>
-                    <input type="text" />
-                  </div>
-                </div>
-                <div class="control-group">
-                  <div class="container-title">你的公司</div>
-                  <div>
-                    <input type="text" />
-                  </div>
-                </div>
-
-                <div class="control-group control-group-phone">
-                  <div class="container-title">你的手机号码</div>
-                  <div>
-                    <input type="text" />
-                    <button class="btn btn-primary btn-send-verify-code">发送验证码</button>
-                  </div>
-                </div> 
-                <div class="control-group">
-                  <div class="container-title">短信验证码</div>
-                  <div>
-                    <input type="text" />
-                  </div>
-                </div>                           
-
-                <button class="btn btn-primary btn-register">免费注册</button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <div class="block block-related-keywords">
-          <div class="block-header">
-            搜索了<span class="keywords">电梯</span>的人还搜索了以下关键字：
-          </div>
-          <div class="block-content">
-            <div class="row">
-              <div class="col-sm-4">
-                <a href="#">直梯</a>
-              </div>
-              <div class="col-sm-4">
-                <a href="#">电动直梯</a>
-              </div>            
-              <div class="col-sm-4">
-                <a href="#">商场直梯</a>
-              </div>
-              <div class="col-sm-4">
-                <a href="#">直梯</a>
-              </div>
-              <div class="col-sm-4">
-                <a href="#">电动直梯</a>
-              </div>            
-              <div class="col-sm-4">
-                <a href="#">商场直梯</a>
-              </div> 
-              <div class="col-sm-4">
-                <a href="#">直梯</a>
-              </div>
-              <div class="col-sm-4">
-                <a href="#">电动直梯</a>
-              </div>            
-              <div class="col-sm-4">
-                <a href="#">商场直梯</a>
-              </div>
-              <div class="col-sm-4">
-                <a href="#">直梯</a>
-              </div>
-              <div class="col-sm-4">
-                <a href="#">电动直梯</a>
-              </div>                                                             
-            </div>
-          </div>
-        </div>
-
-        <div class="block block-region-nav">
-          <div class="block-header">
-            区域导航
+            招标王分站
           </div>
           <div class="block-content container-fluid">
             <div class="row">
@@ -347,9 +208,40 @@
               </div>                                                       
             </div>
           </div>
-        </div>        
+        </div>         
       </div>
 
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+    </div>
+  </div>
+</div>
+
+<div id="remove_file_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+      <button type="button" class="btn btn-default btn-cancel" style="width:80px;margin-left:20px;">取消</button>
     </div>
   </div>
 </div>

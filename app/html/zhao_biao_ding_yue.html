@@ -1,4 +1,15 @@
+{% set body_class = "page-subscribe" %}
+{% set my_subscribe = 'true' %}
+
 {% extends 'user_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Subscribe.init();
+  });
+</script>
+{% endblock %}
 
 {% block content %}
 
@@ -12,7 +23,7 @@
             <a href="#" class="selected">招标信息</a>
           </li>
           <li>
-            <a href="#">采购信息</a>
+            <a href="cai_gou_ding_yue.html">采购信息</a>
           </li> 
           <li>
             <a href="xiang_mu_ding_yue.html">项目信息</a>
@@ -20,7 +31,7 @@
         </ul>
       </div>
       <div class="col-sm-2 container-actions">
-        <a href="#" class="btn-add-subscribe-item">添加订阅</a>
+        <a href="zhao_biao_ding_yue_xiu_gai_huo_chuang_jian.html" class="btn-add-subscribe-item">添加订阅</a>
       </div>
     </div>
   </div>
@@ -31,80 +42,80 @@
         <ul class="subscribe-item-list">
           <li>
             <a href="#" class="selected">
-              <span>电梯</span>
-              <span class="btn-remove">&#x274C;</span>
+              <span>电梯采购商采购电梯</span>
+              <span class="btn-remove">&times;</span>
             </a>
           </li>
           <li>
-            <a href="#">客梯</a>
+            <a href="zhao_biao_ding_yue.html">客梯</a>
           </li>       
         </ul>
       </div>
       <div class="col-sm-2 container-actions">
-        <a href="#" class="btn-modify">修改</a>
+        <a href="zhao_biao_ding_yue_xiu_gai_huo_chuang_jian.html" class="btn-modify">修改</a>
       </div>
     </div>    
   </div>
 
   <div class="container-results">
     <form>
-      <table class="table style-primary">
+      <table class="table style-primary table-sortable">
         <thead>
           <tr>
             <th class="c-type">公告类型</th>
             <th class="c-title">标题</th>
             <th class="c-place">地区</th>            
-            <th class="c-date">时间</th>            
+            <th class="c-date">时间</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="c-type">中标公告</td>
-            <td class="c-title">
-              <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+            <td class="c-type" data-sort-val="招标公告">招标公告</td>
+            <td class="c-title" data-sort-val="广西科文招标有限公司电梯设备采购及安装">
+              <a href="bid_details.html">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
               <div class="container-label">
                 <span class="label">标书</span>
               </div>
               </a>
             </td>
-            <td class="c-place">广西</td>
-            <td class="c-date">今天</td>
+            <td class="c-place" data-sort-val="北京">北京</td>
+            <td class="c-date" data-sort-val="2016-07-30 10:10:10">07-30</td>
           </tr>
           <tr>
-            <td class="c-type">中标公告</td>
-            <td class="c-title">
-              <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+            <td class="c-type" data-sort-val="招标公告">招标公告</td>
+            <td class="c-title" data-sort-val="广西科文招标有限公司电梯设备采购及安装">
+              <a href="bid_details.html">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
               <div class="container-label">
                 <span class="label">标书</span>
               </div>
               </a>
             </td>
-            <td class="c-place">广西</td>
-            <td class="c-date">今天</td>
+            <td class="c-place" data-sort-val="山东">山东</td>
+            <td class="c-date" data-sort-val="2016-07-29 10:10:10">07-29</td>
           </tr> 
           <tr>
-            <td class="c-type">中标公告</td>
-            <td class="c-title">
-              <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+            <td class="c-type" data-sort-val="招标预告">招标预告</td>
+            <td class="c-title" data-sort-val="广西华强招标有限公司电梯设备采购及安装">
+              <a href="bid_details.html">广西华强招标有限公司<span class="highlight">电梯</span>设备采购及安装
               <div class="container-label">
                 <span class="label">标书</span>
               </div>
               </a>
             </td>
             <td class="c-place">广西</td>
-            <td class="c-date">今天</td>
+            <td class="c-date" data-sort-val="2015-07-30 10:10:10">2015-07-30</td>
           </tr> 
           <tr>
-            <td class="c-type">中标公告</td>
-            <td class="c-title">
-              <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+            <td class="c-type" data-sort-val="中标结果">中标结果</td>
+            <td class="c-title" data-sort-val="广西盛大招标有限公司电梯设备采购及安装">
+              <a href="bid_details.html">广西盛大招标有限公司<span class="highlight">电梯</span>设备采购及安装
               <div class="container-label">
                 <span class="label">标书</span>
               </div>
               </a>
             </td>
-            <td class="c-place">广西</td>
-            <td class="c-date">今天</td>
+            <td class="c-place" data-sort-val="山西">山西</td>
+            <td class="c-date" data-sort-val="2014-07-30 10:10:10">2014-07-30</td>
           </tr>                                 
 
         </tbody>
@@ -128,6 +139,24 @@
     </div>
   </div>
 
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="remove_subscribe_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+      <button type="button" class="btn btn-default btn-cancel" style="width:80px;margin-left:20px;">取消</button>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

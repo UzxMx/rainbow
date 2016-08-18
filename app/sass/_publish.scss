@@ -1,0 +1,131 @@
+.page-publish {
+  .container-publish-warning {
+    @include icons(warn);
+
+    .publish-warning {
+      border: 1px solid #e0e0e0;
+
+      span {
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+
+    .publish-warning-header {
+      padding: 10px;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 16px;
+    }
+
+    .publish-warning-body {
+      padding: 15px;
+
+      .item {
+        margin-top: 5px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .bullet {
+      margin-right: 5px;
+    }
+  }
+
+  .container-publish-form {
+    margin-top: 50px;
+
+    .hint {
+      margin-top: 5px;
+      display: inline-block;
+      color: red;
+    }
+
+    .publish-form {
+      max-width: 700px;
+
+      input[type="text"] {
+        width: 80%;
+      }
+
+      span.required {
+        color: red;
+        margin-right: 5px;
+      }
+
+      #bid-title {
+        width: 100%;
+      }
+
+      #bid-content {
+        width: 100%;
+        height: 300px;
+      }
+
+      .form-group > label {
+        padding-right: 0;
+      }
+
+      .form-group-publisher {
+        .container-radios label {
+          margin-right: 20px !important;
+        }
+      }
+
+      .container-btn-submit {
+        margin-top: 20px;
+        text-align: center;
+
+        .btn-submit {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+
+      .form-group-uploaded-files {
+        margin: 20px 0 40px 0;
+
+        input[type="file"] {
+          position: absolute;
+          top:-999999px;
+        }
+
+        .btn-remove {
+          background-color: white;
+          border: none;
+          color: $brand-primary-color;
+          vertical-align: middle;
+        }
+      }
+
+      .container-uploaded-files {
+        @include icons(yellow-folder);
+
+        .file {
+          span, a {
+            vertical-align: middle;
+          }
+
+          .icons-yellow-folder, .file-name {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .form-group-actions {
+        margin-top: 20px;
+      }
+
+      .btn-submit {
+        margin-right: 20px;
+      }
+
+      .btn-submit, .btn-upload-file {
+        padding-left: 30px;
+        padding-right: 30px;
+      }    
+    }
+  }  
+}

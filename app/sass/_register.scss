@@ -212,6 +212,10 @@
         }
 
         .row-accept-license {
+          .btn-show-license-dialog {
+            color: $brand-primary-color;
+            cursor: pointer;
+          }
         }
 
         .row-actions {
@@ -264,69 +268,197 @@
     }
   }
 
+  #license_dialog {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+
+    .dialog-content {
+      padding: 20px;
+      position: relative;
+
+      @include icons(close);
+
+      .container-close-icon {
+        position: absolute;
+        right: 35px;
+        top: 0px;
+      }
+
+      .icons-close {
+        cursor: pointer;
+      }
+
+      & > .wrapper {
+        border: 1px solid #ddd;
+        padding: 20px;
+        background-color: #e4f1ff;
+        @include border-radius(5px);
+      }
+
+      .content {
+        max-height: 500px;
+        overflow-y: auto;
+
+        p.title {
+          color: $brand-primary-color;
+        }
+
+        p {
+          margin-bottom: 22px;
+
+          &:last-child {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .dialog-footer {
+      text-align: center;
+      padding-bottom: 20px;
+      .btn-finish-read {
+        padding: 8px 30px;
+      }
+    }
+  }
+
   // step 2
   .container-register-step-2 {
     @include icons(blue-dropdown);
 
     $selection-btn-width: 100px;
 
-      .dropdown {
-        display: inline-block;
-        width: $selection-btn-width;
+    .dropdown {
+      display: inline-block;
+      width: $selection-btn-width;
+      height: $input-text-height;
+      position: relative;
+      vertical-align: middle;
+      text-align: center;
+      background-color: #e8f5fe;
+      border: 1px solid #ccc;
+      border-left: none;
+
+      & > .wrapper {
         height: $input-text-height;
-        position: relative;
-        vertical-align: middle;
-        text-align: center;
-        background-color: #e8f5fe;
-        border: 1px solid #ccc;
-        border-left: none;
+        line-height: $input-text-height;
+        color: $brand-primary-color;
+        cursor: pointer;
+      }
 
-        & > .wrapper {
-          height: $input-text-height;
-          line-height: $input-text-height;
-          color: $brand-primary-color;
-          cursor: pointer;
+      .icons-blue-dropdown {
+        margin-left: 10px;
+      }
+
+      .container-selections {
+        position: absolute;
+        top: $input-text-height + 10px;
+        left: -150px;
+        width: 300px;
+        border: 1px solid $brand-primary-color;
+        @include border-radius(5px);
+        display: none;
+        background-color: white;
+        max-height: 250px;
+        overflow-y: auto;
+        z-index: 100;
+
+        &.visible {
+          display: block;
         }
 
-        .icons-blue-dropdown {
-          margin-left: 10px;
-        }
+        .selections {
+          padding: 30px 0 0 0;
 
-        .container-selection {
-          position: absolute;
-          top: $input-text-height + 10px;
-          left: -20px;
-          right: -20px;
-          border: 1px solid $brand-primary-color;
-          @include border-radius(5px);
-          display: none;
-          background-color: white;
-          max-height: 250px;
-          overflow-y: auto;
-          z-index: 100;
-
-          &.visible {
+          &:after {
+            content: "";
+            clear: both;
             display: block;
           }
 
-          .selection {
-            padding: 8px 5px;
-            border-bottom: 1px dotted #e0e0e0;
-            cursor: pointer;
+          .selection-wrapper {
+            float: left;
+            text-align: center;
+          }
+        }
 
-            & > .wrapper {
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-            }
+        .container-actions {
+          padding: 20px 0;
+          text-align: center;
 
-            &.selected, &:hover {
-              color: $brand-primary-color;
-              background-color: white;
-            }
-          }        
+          .btn-finish-selection {
+            padding: 5px 30px;
+          }
+        }
+
+        .selection {
+          display: inline-block;
+          width: 80px;
+          padding: 2px 0;
+          text-align: center;
+          border: 1px solid #ccc;
+          @include border-radius(3px);
+          cursor: pointer;
+          font-size: 13px;
+          margin-bottom: 10px;
+          vertical-align: top;
+
+          &.selected {
+            border: 1px solid #2d84e5;
+            background-color: #e8f5fe;
+          }
         }
       }
+    }
+
+    .row-business {
+      .dropdown {
+        .container-selections {
+          .selections {
+            padding-bottom: 30px;
+          }
+        }
+      }      
+    }
+
+    .row-business, .row-project-stage {
+      .dropdown {
+        .container-selections {
+          left: -200px;
+          width: 540px;
+
+          .selections {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          .selection-wrapper {
+            width: 20%;
+          }
+        }
+      }
+    }
+
+    .row-business-region {
+      .dropdown {
+        .container-selections {
+          left: -250px;
+          width: 590px;
+
+          .selections {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          .selection-wrapper {
+            width: 16.66%;
+          }
+        }
+      }      
+    }    
 
     .row-business, .row-business-region, .row-project-stage {
       input {
@@ -359,9 +491,13 @@
 
       .container-description {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
         font-size: 18px;
         margin-left: 15px;
+
+        .container-actions {
+          margin-top: 15px;
+        }
 
         a {
           text-decoration: underline;

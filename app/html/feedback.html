@@ -1,4 +1,15 @@
+{% set body_class = "page-feedback" %}
+{% set feedback = 'true' %}
+
 {% extends 'user_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Feedback.init();
+  });
+</script>
+{% endblock %}
 
 {% block content %}
 
@@ -43,6 +54,23 @@
           <button type="submit" class="btn btn-primary btn-submit">提交</button>
         </div>
       </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
     </div>
   </div>
 </div>

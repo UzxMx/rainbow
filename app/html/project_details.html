@@ -1,4 +1,15 @@
+{% set body_class = "page-project-details page-logged-in" %}
+{% set logged_in = "true" %}
+
 {% extends 'layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.ProjectDetails.init();
+  });
+</script>
+{% endblock %}
 
 {% block breadcrumb %}
 
@@ -6,11 +17,13 @@
   <div class="breadcrumb">
     <span class="icons-geo"></span>
     <span>您当前的位置：</span>
-    <a href="#">招标王</a>
+    <a href="home.html">招标王</a>
     <span class="icons-arrow-right"></span>
-    <a href="#">项目信息</a>
+    <a href="project.html">项目信息</a>
     <span class="icons-arrow-right"></span>
-    <a href="#">拟在建项目</a>    
+    <a href="constructing_project.html">拟在建项目</a>
+    <span class="icons-arrow-right"></span>
+    <a href="project_details.html">年产10万吨石脑油综合利用厂房建设项目年产10万吨石脑油综合利用厂房建设项目年产10万吨石脑油综合利用厂房建设项目</a>
   </div>
 </div>
 
@@ -474,29 +487,47 @@
           <div class="block-content container-fluid">
             <div class="row">
               <div class="col-sm-4">
-                <a href="#">基础设施</a>
+                <a href="#">会展</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">公用事业设施</a>
+                <a href="#">办公楼</a>
               </div>            
               <div class="col-sm-4">
-                <a href="#">石油天然气</a>
+                <a href="#">商业零售</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">开采</a>
+                <a href="#">工业</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">公用事业设施</a>
+                <a href="#">住宅</a>
               </div>            
               <div class="col-sm-4">
-                <a href="#">石油天然气</a>
+                <a href="#">司法</a>
               </div> 
               <div class="col-sm-4">
-                <a href="#">基础设施</a>
+                <a href="#">农业</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">交通</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">社区</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">教育研究</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">休闲娱乐</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">医疗</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">基础建设</a>
               </div>
               <div class="col-sm-4">
                 <a href="#">公用事业设施</a>
-              </div>            
+              </div>
               <div class="col-sm-4">
                 <a href="#">石油天然气</a>
               </div>
@@ -504,11 +535,14 @@
                 <a href="#">开采</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">公用事业设施</a>
-              </div>            
+                <a href="#">酒店餐饮</a>
+              </div>  
               <div class="col-sm-4">
-                <a href="#">石油天然气</a>
-              </div>                                                                                       
+                <a href="#">新市区开发</a>
+              </div> 
+              <div class="col-sm-4">
+                <a href="#">其它</a>
+              </div>
             </div>
           </div>
         </div>

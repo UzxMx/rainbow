@@ -1,4 +1,14 @@
+{% set body_class = "page-search" %}
+
 {% extends 'layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Search.init();
+  });
+</script>
+{% endblock %}
 
 {% block breadcrumb %}
 
@@ -6,9 +16,9 @@
   <div class="breadcrumb">
     <span class="icons-geo"></span>
     <span>您当前的位置：</span>
-    <a href="#">招标王</a>
+    <a href="home.html">招标王</a>
     <span class="icons-arrow-right"></span>
-    <a href="#">采购信息</a>
+    <a href="cglm.html">采购信息</a>
   </div>
 </div>
 
@@ -18,12 +28,12 @@
 
 <div class="region">
   <div class="row">
-    <div class="col-sm-8 region-main">
+    <div class="col-sm-9 region-main">
       <div class="container-search">
         <input type="text" placeholder="电梯" class="searchbox" /><button class="btn btn-primary btn-search">搜索</button>
       </div>
 
-      <div class="container-conditions">
+      <div class="container-conditions container-cg-conditions">
         <div class="condition" data-selected-pos="0">
           <span class="condition-selected">选择类型</span><span class="container-icon"><span class="icons-dropdown"></span></span>
           <div class="container-selection">
@@ -128,52 +138,65 @@
       </div>
 
       <div class="container-results">
-        <table class="table style-primary">
+        <table class="table style-primary table-sortable">
           <thead>
             <tr>
               <th class="c-type">公告类型</th>
               <th class="c-title">标题</th>
               <th class="c-place">地区</th>            
-              <th class="c-date">时间</th>            
+              <th class="c-date">时间</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="c-type">中标公告</td>
-              <td class="c-title">
-                <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+              <td class="c-type" data-sort-val="招标公告">招标公告</td>
+              <td class="c-title" data-sort-val="广西科文招标有限公司电梯设备采购及安装">
+                <a href="bid_details.html">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
                 <div class="container-label">
                   <span class="label">标书</span>
                 </div>
                 </a>
               </td>
-              <td class="c-place">广西</td>
-              <td class="c-date">今天</td>
+              <td class="c-place" data-sort-val="北京">北京</td>
+              <td class="c-date" data-sort-val="2016-07-30 10:10:10">07-30</td>
             </tr>
             <tr>
-              <td class="c-type">中标公告</td>
-              <td class="c-title">
-                <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
+              <td class="c-type" data-sort-val="招标公告">招标公告</td>
+              <td class="c-title" data-sort-val="广西科文招标有限公司电梯设备采购及安装">
+                <a href="bid_details.html">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装
                 <div class="container-label">
                   <span class="label">标书</span>
                 </div>
                 </a>
               </td>
-              <td class="c-place">广西</td>
-              <td class="c-date">今天</td>
-            </tr>
+              <td class="c-place" data-sort-val="山东">山东</td>
+              <td class="c-date" data-sort-val="2016-07-29 10:10:10">07-29</td>
+            </tr> 
             <tr>
-              <td class="c-type">中标公告</td>
-              <td class="c-title">
-                <a href="#">广西科文招标有限公司<span class="highlight">电梯</span>设备采购及安装广西科文招标有限公司设备采购及安装广西科文招标有限公司设备采购及安装
+              <td class="c-type" data-sort-val="招标预告">招标预告</td>
+              <td class="c-title" data-sort-val="广西华强招标有限公司电梯设备采购及安装">
+                <a href="bid_details.html">广西华强招标有限公司<span class="highlight">电梯</span>设备采购及安装
                 <div class="container-label">
                   <span class="label">标书</span>
                 </div>
                 </a>
               </td>
               <td class="c-place">广西</td>
-              <td class="c-date">今天</td>
-            </tr>                                                                  
+              <td class="c-date" data-sort-val="2015-07-30 10:10:10">2015-07-30</td>
+            </tr> 
+            <tr>
+              <td class="c-type" data-sort-val="中标结果">中标结果</td>
+              <td class="c-title" data-sort-val="广西盛大招标有限公司电梯设备采购及安装">
+                <a href="bid_details.html">广西盛大招标有限公司<span class="highlight">电梯</span>设备采购及安装
+                <div class="container-label">
+                  <span class="label">标书</span>
+                </div>
+                </a>
+              </td>
+              <td class="c-place" data-sort-val="山西">山西</td>
+              <td class="c-date" data-sort-val="2014-07-30 10:10:10">2014-07-30</td>
+            </tr>                                 
+
           </tbody>
         </table>
 
@@ -195,15 +218,15 @@
       </div>
     </div>
 
-    <div class="col-sm-4 region-right-side">
+    <div class="col-sm-3 region-right-side">
       <div class="wrapper">
         <div class="block block-login-register">
           <div class="row">
             <div class="col-sm-6">
-              <a href="#" class="btn btn-login">登录</a>
+              <a href="deng_lu.html" class="btn btn-login">登录</a>
             </div>
             <div class="col-sm-6">
-              <a href="#" class="btn btn-register">注册</a>
+              <a href="zhu_ce_1.html" class="btn btn-register">注册</a>
             </div>
           </div>
         </div>
@@ -270,31 +293,31 @@
                 <div class="control-group">
                   <div class="container-title">你的名字</div>
                   <div>
-                    <input type="text" />
+                    <input type="text" class="name" />
                   </div>
                 </div>
                 <div class="control-group">
                   <div class="container-title">你的公司</div>
                   <div>
-                    <input type="text" />
+                    <input type="text" class="company-name" />
                   </div>
                 </div>
 
                 <div class="control-group control-group-phone">
                   <div class="container-title">你的手机号码</div>
                   <div>
-                    <input type="text" />
-                    <button class="btn btn-primary btn-send-verify-code">发送验证码</button>
+                    <input type="text" class="telphone" />
+                    <button type="button" class="btn btn-primary btn-send-verify-code">发送验证码</button>
                   </div>
                 </div> 
                 <div class="control-group">
                   <div class="container-title">短信验证码</div>
                   <div>
-                    <input type="text" />
+                    <input type="text" class="verify-code" />
                   </div>
                 </div>                           
 
-                <button class="btn btn-primary btn-register">免费注册</button>
+                <button type="submit" class="btn btn-primary btn-register">免费注册</button>
               </form>
             </div>
           </div>
@@ -345,7 +368,7 @@
 
         <div class="block block-region-nav">
           <div class="block-header">
-            区域导航
+            招标王分站
           </div>
           <div class="block-content container-fluid">
             <div class="row">
@@ -414,6 +437,23 @@
         </div>        
       </div>
 
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
     </div>
   </div>
 </div>

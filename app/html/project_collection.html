@@ -1,34 +1,45 @@
+{% set body_class = "page-collection" %}
+{% set my_collection = 'true' %}
+
 {% extends 'user_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Collection.init();
+  });
+</script>
+{% endblock %}
 
 {% block content %}
 
-<div class="container-collection">
+<div class="container-collection container-collection-project">
 
   <div class="collection-header">
     <div class="row">
       <div class="col-sm-10 container-nav-list">
         <ul class="nav-list">
           <li>
-            <a href="#">招标信息</a>
+            <a href="bid_collection.html">招标信息</a>
           </li>
           <li>
-            <a href="#">采购信息</a>
+            <a href="cg_collection.html">采购信息</a>
           </li> 
           <li>
-            <a href="#" class="selected">项目信息</a>
+            <a href="project_collection.html" class="selected">项目信息</a>
           </li>       
         </ul>
       </div>
       <div class="col-sm-2 container-actions">
         <button class="btn-manage visible">管理收藏</button>
-        <button class="btn-save">取消选中收藏</button>
+        <button class="btn-save">删除选中收藏</button>
       </div>
     </div>
   </div>
 
   <div class="container-results">
     <form>
-      <table class="table style-primary">
+      <table class="table style-primary table-sortable">
         <thead>
           <tr>
             <th class="c-stage">
@@ -165,6 +176,37 @@
     </div>
   </div>
 
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+    </div>
+  </div>
+</div>
+
+<div id="remove_collection_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+      <button type="button" class="btn btn-default btn-cancel" style="width:80px;margin-left:20px;">取消</button>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

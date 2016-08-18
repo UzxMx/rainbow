@@ -1,0 +1,430 @@
+.page-account {
+  .tab-account {
+    border-bottom: 1px solid #e0e0e0;
+
+    li {
+      display: inline-block;
+
+      a {
+        padding: 8px 10px;
+        color: #333;
+        display: inline-block;
+
+        &:hover {
+          color: $brand-primary-color;
+        }
+
+        &.selected {
+          font-size: 16px;
+          border-bottom: 2px solid $brand-primary-color;
+          color: $brand-primary-color;
+        }
+      }
+    }
+  }
+
+  .container-account-info {
+    max-width: 600px;
+    width: 100%;
+    margin-top: 30px;
+
+    .container-avatar {
+      margin-bottom: 30px;
+      text-align: center;
+
+      img {
+        $radius: 45px;
+        width: 2 * $radius;
+        height: 2 * $radius;
+      }
+    }
+
+    .col-key, .col-val {
+      height: 32px;
+      line-height: 32px;
+    }
+
+    .col-key {
+      padding-right: 10px;
+      text-align: right;
+    }
+
+    .col-val {
+      padding-left: 0px;
+    }
+
+    .btn-verify-email {
+      padding: 0px 10px;
+      margin-left: 10px;
+      @include border-radius(15px);
+    }
+
+    .container-actions {
+      margin-top: 40px;
+      text-align: center;
+
+      .btn-edit {
+        padding: 8px 30px;
+      }
+    }
+  }
+
+  // edit profile
+  .container-edit-account-info {
+    width: 100%;
+    margin-top: 30px;
+
+    .highlight {
+      color: red;
+    }
+
+    .container-avatar {
+      max-width: 600px;
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+
+      img {
+        $radius: 45px;
+        width: 2 * $radius;
+        height: 2 * $radius;
+      }
+
+      .actions {
+        margin-top: 15px;
+        text-align: center;
+
+        .btn-choose-avatar {
+          padding: 5px 20px;
+          border: 1px solid $brand-primary-color;
+          color: $brand-primary-color;
+          background-color: white;
+
+          @include border-radius(10px);
+
+          &:hover {
+            background-color: $brand-primary-color;
+            color: white;
+          }
+        }
+      }
+
+      .container-avatar-selections {
+        padding: 15px;
+        position: absolute;
+        top: 137px;
+        left: 300px;
+        width: 310px;
+        display: none;
+        @include border-radius(5px);
+        @include box-shadow(0px 3px 10px 2px rgba(0, 0, 0, 0.16));
+        background-color: white;
+
+        &.visible {
+          display: block;
+        }
+
+        .avatar-selections {
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+
+          .selection {
+            float: left;
+            width: 70px;
+            margin-bottom: 10px;
+            text-align: center;
+
+            & > .wrapper {
+              width: 54px;
+              display: inline-block;
+              border: 2px solid transparent;
+              @include border-radius(5px);
+            }
+
+            &.selected .wrapper {
+              border-color: $brand-primary-color;
+            }
+
+            img {
+              width: 50px;
+              height: 50px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .container-actions {
+          margin-top: 15px;
+          text-align: center;
+
+          .btn-finish {
+            width: 80px;
+          }
+        }        
+      }
+    }
+
+    .form-row {
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+      .col-key {
+        float: left;
+        width: 300px;
+      }
+
+      .col-val {
+        float: left;
+        width: 500px;
+      }
+    }
+
+    .col-key, .col-val {
+      height: 50px;
+      line-height: 50px;
+    }
+
+    .col-key {
+      padding-right: 10px;
+      text-align: right;
+    }
+
+    .col-val {
+      padding-left: 0px;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      line-height: 35px;
+      padding: 0px 8px;
+    }
+
+    .col-val-sex {
+      & > div {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+
+    .row-business, .row-business-region, .row-project-stage {
+      .col-val {
+        width: 500px;
+      }
+    }
+
+    .dropdown {
+      margin-top: 10px;
+      position: relative;
+
+      .container-selection-btn {
+        display: inline-block;
+      }
+
+      .btn-selection {
+        width: 80px;
+      }
+
+      .container-selections {
+        position: absolute;
+        top: 50px;
+        left: -150px;
+        width: 300px;
+        border: 1px solid $brand-primary-color;
+        @include border-radius(5px);
+        display: none;
+        background-color: white;
+        max-height: 250px;
+        overflow-y: auto;
+        z-index: 100;
+
+        &.visible {
+          display: block;
+        }
+
+        .selections {
+          padding: 30px 0 0 0;
+
+          &:after {
+            content: "";
+            clear: both;
+            display: block;
+          }
+
+          .selection-wrapper {
+            float: left;
+            text-align: center;
+          }
+        }
+
+        .container-actions {
+          margin-top: 0;
+          padding: 20px 0;
+          text-align: center;
+
+          .btn-finish-selection {
+            padding: 5px 30px;
+          }
+        }
+
+        .selection {
+          display: inline-block;
+          width: 80px;
+          padding: 6px 0;
+          text-align: center;
+          border: 1px solid #ccc;
+          @include border-radius(3px);
+          cursor: pointer;
+          font-size: 13px;
+          margin-bottom: 10px;
+          vertical-align: top;
+          line-height: 1;
+
+          &.selected {
+            border: 1px solid #2d84e5;
+            background-color: #e8f5fe;
+          }
+        }
+      }
+    }
+
+    .container-selected {
+      display: inline-block;
+
+      .more {
+        margin: 0 10px 0 0;
+      }
+
+      .selection {
+        display: inline-block;
+        width: 80px;
+        padding: 6px 0;
+        text-align: center;
+        border: 1px solid #ccc;
+        @include border-radius(3px);
+        font-size: 13px;
+        margin-right: 10px;
+        vertical-align: middle;
+        line-height: 1;
+      }
+    }
+
+    .row-business {
+      .dropdown {
+        .container-selections {
+          .selections {
+            padding-bottom: 30px;
+          }
+        }
+      }      
+    }    
+
+    .row-business, .row-project-stage {
+      .dropdown {
+        .container-selections {
+          left: -50px;
+          width: 540px;
+
+          .selections {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          .selection-wrapper {
+            width: 20%;
+          }
+        }
+      }
+    }
+
+    .row-business-region {
+      .dropdown {
+        .container-selections {
+          left: -50px;
+          width: 590px;
+
+          .selections {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          .selection-wrapper {
+            width: 16.66%;
+          }
+        }
+      }      
+    }    
+
+    .container-actions {
+      margin-top: 40px;
+
+      .container-btn-save {
+        margin-left: 300px;
+        padding-left: 0;
+      }
+
+      .btn-save {
+        padding: 8px 30px;
+      }
+    }
+  }
+
+  // modify password
+  .container-modify-password {
+    margin-top: 30px;
+
+    .highlight {
+      color: red;
+    }
+
+    .col-key, .col-val {
+      height: 50px;
+      line-height: 50px;
+    }
+
+    .form-row {
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .col-key {
+        float: left;
+        width: 100px;
+        padding-right: 10px;
+        text-align: right;
+      }
+
+      .col-val {
+        float: left;
+        width: 500px;
+        padding-left: 0px;
+      }
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 300px;
+      line-height: 35px;
+      padding: 0px 8px;
+    }  
+
+    .container-actions {
+      margin-top: 40px;
+
+      .container-btn-save {
+        margin-left: 100px;
+        padding-left: 0;
+      }
+
+      .btn-save {
+        padding: 8px 30px;
+      }
+    }  
+  }  
+}

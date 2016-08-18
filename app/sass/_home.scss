@@ -1,0 +1,472 @@
+.page-home {
+  @include icons(search);
+
+  .region {
+    margin-bottom: 20px;
+  }
+
+  .block-zbxx {
+    .block-header {
+      padding: 0px 20px;
+      background-color: #f7f7f7;
+      border-bottom: 2px solid $brand-primary-color;
+
+      .contailer-title {
+        height: 50px;
+        line-height: 50px;
+      }
+
+      .title {
+        font-size: 20px;
+        color: #333;
+      }
+
+      .container-tabs {
+        height: 50px;
+        text-align: right;
+
+        @include icons(tab-indicator);
+
+        .container-tab-indicator {
+          display: none;
+        }
+
+        .icons-tab-indicator {
+          vertical-align: top;
+        }
+
+        .tab, .action-more {
+          height: 40px;
+          line-height: 40px;
+          margin-top: 10px;
+        }
+
+        .tab {
+          display: inline-block;
+          cursor: pointer;
+          position: relative;
+          padding: 0 20px;
+
+          span {
+            color: $brand-primary-color;
+          }        
+
+          &.selected {
+            @include border-top-left-radius(5px);
+            @include border-top-right-radius(5px);
+            background-color: $brand-primary-color;
+
+            span {
+              color: white;
+            }
+
+            .container-tab-indicator {
+              display: block;
+              position: absolute;
+              top: 42px;            
+              left: 0;
+              right: 0;
+              text-align: center;
+              line-height: initial;
+            }
+          }
+
+          .hot {
+            position: absolute;
+            right: -8px;
+            top: 0;
+            width: 28px;
+            height: 20px;
+            line-height: 20px;
+            padding: 0 5px;
+            z-index: 100;
+
+            background-color: $brand-danger-color;
+            color: white;
+            font-size: 10px;
+
+            @include border-radius(5px);
+          }        
+        }
+
+        .action-more {
+          display: inline-block;
+          padding: 0 10px;
+
+          a {
+            @include reset-anchor-color(#666);
+
+            &:hover {
+              color: $brand-primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    .block-content {
+      border-bottom: 1px solid #e0e0e0;
+
+      & > .content {
+        display: none;
+      }
+
+      .current {
+        display: block;
+      }
+
+      .content-list {
+        li {
+          line-height: 40px;
+        }
+
+        a {
+          @include anchor-ellipse;
+        }
+
+        .col-province {
+          color: $brand-primary-color;
+        }
+
+        .col-date {
+          color: #666;
+        }
+      }
+    }
+  }
+
+  .block-banner-airplane {
+    margin-top: 20px;
+    height: 90px;
+  }
+
+  .region-submain {
+    margin-top: 20px;
+  }
+
+  .block-zfcg, .block-qycg {
+    .block-content {
+      .col-title {
+        width: 70%;
+      }
+      .col-date {
+        width: 20%;
+        text-align: right;
+      }
+    }
+  }
+
+  .block-login-register {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #edf4fa;
+
+    .btn-login, .btn-register {
+      width: 100%;
+      font-weight: bold;
+    }
+
+    .container-login-register {
+      margin-bottom: 10px;
+    }
+
+    .feature {
+      padding: 5px 0;
+      text-align: left;
+
+      span {
+        vertical-align: middle;
+      }
+
+      .container-icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        text-align: center;
+        margin-right: 10px;
+      }
+
+      .feature-title {
+        margin-right: 30px;
+        color: #555;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .feature-info {
+        color: $brand-primary-color;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .block-member-info {
+    margin-bottom: 20px;
+    padding: 20px;
+    @include border-radius(8px);
+
+    @include icons(free);
+    @include icons(new);
+    @include icons(publish);
+    @include icons(trace);
+    @include icons(cart);
+    @include icons(servant);
+    @include icons(books);
+    @include icons(gold);
+    @include icons(all);
+    @include icons(custom);
+    @include icons(best);
+    @include icons(train);
+
+    .member-status {
+      text-align: center;
+      color: white;
+      margin: 30px 0;
+    }
+
+    .features {
+      padding-bottom: 5px;
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .feature {
+        float: left;
+        width: 50%;
+
+        a {
+          color: black;
+          &:hover {
+            color: $brand-primary-color;
+          }
+        }
+
+        .icon, .descrip {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        .icon {
+          width: 25px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .member-free, .member-first-level, .member-second-level {
+    background-color: #edf4fa;
+    .welcome-msg {
+      color: $brand-primary-color;
+    }
+
+    .member-status {
+      $width: icons-sprite-width(member-status-blue);
+      $height: icons-sprite-height(member-status-blue);
+      & > .wrapper {
+        display: inline-block;
+        @include icons-sprite(member-status-blue);
+        width: $width;
+        height: $height;
+        line-height: $height;
+      }
+    }
+  }
+
+  .member-vip {
+    background-color: #ffedd6;
+    .welcome-msg {
+      color: #864c00;
+    }
+
+    .member-status {
+      color: #864c00;
+      $width: icons-sprite-width(member-status-yellow);
+      $height: icons-sprite-height(member-status-yellow);
+      & > .wrapper {
+        display: inline-block;
+        @include icons-sprite(member-status-yellow);
+        width: $width;
+        height: $height;
+        line-height: $height;
+      }
+    }    
+  }  
+
+  .block-zbhz {
+    margin-bottom: 20px;
+    .block-header {
+    }
+
+    .block-content {
+      background-color: #f7f7f7;
+
+      .col-title {
+        width: 70%;
+      }
+      .col-date {
+        width: 20%;
+        text-align: center;
+      }
+    }
+  }
+
+  .block-city {
+    margin-bottom: 40px;
+    height: 170px;
+  }
+
+  .block-zbwj {
+
+    .block-content {
+      background-color: #f7f7f7;
+
+      .col-title {
+        width: 60%;
+        color: #666;
+      }
+      .col-download {
+        width: 25%;
+        text-align: center;
+      }
+
+      .content-list li .col-download .btn-download {
+          @include reset-anchor-color($brand-danger-color);
+          &:hover {
+            color: $brand-danger-color;
+          }
+      } 
+    }  
+  }
+
+  .block-shine {
+    height: 90px;
+  }
+
+  .region-project {
+    margin: 20px 0;
+  }
+
+  .block-xmxx, .block-jxxm, .block-xmgz {
+    .block-content {
+      .col-title {
+        width: 70%;
+      }
+      .col-date {
+        width: 20%;
+        text-align: right;
+      }
+    }
+  }
+
+  .region-wrapper {
+    margin: 20px 0;
+  }
+
+  .block-flag {
+    height: 90px;
+  }
+
+  .block-zbw-subsites {
+    margin-top: 20px;
+    background-color: #f7f7f7;
+
+    .block-header {
+      font-size: 16px;
+      height: 40px;
+      line-height: 40px;
+      border-top: 2px solid $brand-primary-color;
+      padding: 0 20px;
+    }
+
+    .block-content {
+      padding: 20px;
+      border-top: 1px solid #e0e0e0;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+
+      & > .row > div {
+        margin-top: 10px;
+
+        &:nth-child(1), &:nth-child(2) {
+          margin-top: 0px;
+        }
+      }
+
+      .btn-subsite {
+        display: inline-block;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        @include border-radius(2px);
+
+        @include reset-anchor-color(#666);
+
+        &:hover {
+          background-color: $brand-primary-color;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .block-industry {
+    background-color: #f7f7f7;
+    padding: 15px;
+
+    .block-header {
+      border-left: 5px solid $brand-primary-color;
+      font-size: 20px;
+      color: #333;
+      padding: 2px 0 2px 5px;
+    }
+
+    .block-content {
+      margin-top: 10px;
+      padding: 10px;
+
+      & > .row > div {
+        margin-top: 10px;
+
+        &:nth-child(1), &:nth-child(2) {
+          margin-top: 0;
+        }
+      }
+
+      .industry {
+        background-color: white;
+        padding: 0 5px;
+        @include border-radius(5px);
+      }
+
+      .industry-name {
+        padding: 10px;
+        font-size: 16px;
+        border-bottom: 1px solid #e0e0e0;
+        color: #666;
+      }
+
+      .industry-parts {
+        padding: 10px;
+      }
+
+      .sub-industry {
+        color: #888888;
+        padding: 5px 0;
+        margin: 0;
+
+        a {
+          @include reset-anchor-color(#888888);
+          &:hover {
+            color: $brand-primary-color;
+          }
+        }
+      }
+    }
+  }
+
+}

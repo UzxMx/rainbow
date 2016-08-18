@@ -1,0 +1,317 @@
+#page-header {
+  padding-top: 80px;
+
+  .header-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .link-logo {
+      display: inline-block;
+    }
+
+    .selection-sites {
+      display: inline-block;
+      margin-left: 15px;
+      padding: 10px 0 10px 15px;
+      border-left: 1px solid #ccc;
+
+      .description {
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+      }
+
+      @include icons(blue-dropdown);
+
+      .dropdown {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        position: relative;
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+        color: $brand-primary-color;
+        @include border-radius(3px);
+
+        & > .wrapper {
+          padding: 4px 15px;
+          cursor: pointer;
+          @include user-select(none);
+        }
+
+        .site-selected {
+          margin-right: 5px;
+        }
+
+        .container-selection {
+          position: absolute;
+          top: 40px;
+          left: -15px;
+          right: -15px;
+          text-align: center;
+          overflow-x: auto;
+          max-height: 300px;        
+
+          z-index: 100;
+          display: none;
+
+          border: 1px solid #ccc;
+          @include border-radius(5px);
+          background-color: #f7f7f7;
+
+          &.visible {
+            display: block;
+          }
+
+          .selection {
+            border-bottom: 1px solid #e0e0e0;
+            &:last-child {
+              border-bottom: none;
+            }
+            a {
+              display: block;
+              padding: 8px 0;
+              color: #666;
+              &:hover {
+                color: $brand-primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & > .wrapper {
+      background-color: #f7f7f7;
+      padding-left: 40px;
+      padding-right: 40px;
+      max-width: $page-max-width;
+      margin: 0 auto;
+      border-bottom: 1px solid #ccc;
+
+      & > .row, .col-left, .col-right {
+        height: 80px;
+      }
+
+      .col-right {
+        & > div {
+          display: inline-block;
+          height: 100%;
+        }
+      }
+
+      .container-phone {
+        color: #666;
+        width: 200px;
+
+        padding-right: 10px;
+      }
+
+      .container-search {
+        width: 200px;
+        margin-right: 10px;
+        position: relative;
+
+        $search-box-height: 35px;
+        $search-icons-width: icons-sprite-width(search);
+        $search-icons-height: icons-sprite-height(search);
+
+        .input-search {
+          padding: 5px $search-icons-width + 10px 5px 15px;
+          width: 100%;
+          height: $search-box-height;
+          background-color: #eee;
+
+          @include border-radius(10px);
+          border: 1px solid #ccc;
+          outline: none;
+
+          box-sizing: border-box;
+        }
+
+        @include icons(search);
+
+        .icons-search {
+          cursor: pointer;
+          position: absolute;
+          right: 8px;
+          top: (80px - $search-icons-height) / 2;
+          bottom: (80px - $search-icons-height) / 2;
+        }
+      }
+
+      .container-actions {
+        width: 270px;
+        font-size: 16px;
+
+        $btn-border-radius: 15px;
+
+        .btn-buy {
+          padding: 5px 20px;
+          margin-right: 10px;
+
+          @include border-radius($btn-border-radius);
+          border: 1px solid $brand-danger-color;
+
+          @include reset-anchor-color($brand-danger-color);
+
+          &:hover {
+            background-color: $brand-danger-color;
+            color: white;
+          }
+        }
+
+        .btn-login {
+          margin-right: 10px;
+        }
+
+        .btn-login, .btn-register {
+          padding: 5px 20px;
+          @include border-radius($btn-border-radius);
+        }
+      }
+    }
+  }
+
+  .header-img-slider {
+    position: relative;
+
+    .container-search {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 130px;
+      max-height: 80px;
+
+      .wrapper {
+        width: 100%;
+        max-width: 630px;
+        margin: 0 auto;
+      }
+
+      .container-searchbox {
+        margin: 0;
+
+        .col-sm-10, .col-sm-2 {
+          padding: 0;
+        }
+
+        .input-search {
+          width: 100%;
+          height: 40px;
+          outline: none;
+          border: 1px solid #ddd;
+
+          font-size: 14px;
+          color: #666;
+        }
+
+        .btn-search {
+          width: 100%;
+          height: 40px;
+          border: none;
+          font-size: 20px;
+          background-color: #ef0a0a;
+          color: white;
+
+          @include border-top-right-radius(3px);
+          @include border-bottom-right-radius(3px);
+        }
+      }
+
+      .container-keywords {
+        margin-top: 10px;
+
+        span, a {
+          margin-right: 10px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  $menus-bg-color: #2d84e5;
+  $menus-max-width: 1200px;
+
+  .header-menus {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .container-primary-menus {
+      background-color: $menus-bg-color;
+
+      & > .wrapper {
+        max-width: $menus-max-width;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      li {
+        padding: 0 5px;
+        display: inline-block;
+      }      
+
+      .primary-menus {
+        padding-top: 5px;
+      }
+
+      .menu {
+        display: inline-block;
+        padding: 10px 20px;
+        color: white;
+
+        &.selected, &.hovered, &:hover {
+          background-color: white;
+          color: $menus-bg-color;
+          @include border-top-left-radius(5px);
+          @include border-top-right-radius(5px);
+        }
+      }
+    }
+
+    .container-secondary-menus {
+      & > .wrapper {
+        max-width: $menus-max-width;
+        width: 100%;
+        margin: 0 auto;
+
+        position: relative;
+        height: 62px;
+      }
+
+      li {
+        display: inline-block;
+      }
+
+      .secondary-menus {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .secondary-menus.visible {
+        display: block;
+      }
+
+      .menu {
+        display: inline-block;
+        padding: 18px 10px;
+        color: #333;
+
+        &.selected, &:hover {
+          color: $menus-bg-color;
+        }
+      }
+    }
+  }
+}

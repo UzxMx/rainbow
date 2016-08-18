@@ -1,4 +1,15 @@
+{% set body_class = "page-manage-subscribe" %}
+{% set subscribe_management = 'true' %}
+
 {% extends 'user_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.ManageSubscribe.init();
+  });
+</script>
+{% endblock %}
 
 {% block content %}
 
@@ -18,7 +29,9 @@
     </thead>
     <tbody>
       <tr>
-        <td class="c-name">电梯</td>
+        <td class="c-name">
+          <a href="zhao_biao_ding_yue.html">电梯</a>
+        </td>
         <td class="c-email">已订阅</td>
         <td class="c-sms">已订阅</td>
         <td class="c-actions">
@@ -27,7 +40,9 @@
         </td>        
       </tr>
       <tr>
-        <td class="c-name">电梯</td>
+        <td class="c-name">
+          <a href="zhao_biao_ding_yue.html">电梯</a>
+        </td>
         <td class="c-email">已订阅</td>
         <td class="c-sms">已订阅</td>
         <td class="c-actions">
@@ -36,7 +51,9 @@
         </td>        
       </tr>
       <tr>
-        <td class="c-name">电梯</td>
+        <td class="c-name">
+          <a href="zhao_biao_ding_yue.html">电梯</a>
+        </td>
         <td class="c-email">已订阅</td>
         <td class="c-sms">已订阅</td>
         <td class="c-actions">
@@ -45,7 +62,9 @@
         </td>        
       </tr>
       <tr>
-        <td class="c-name">电梯</td>
+        <td class="c-name">
+          <a href="zhao_biao_ding_yue.html">电梯</a>
+        </td>
         <td class="c-email">已订阅</td>
         <td class="c-sms">已订阅</td>
         <td class="c-actions">
@@ -57,51 +76,49 @@
   </table>
 
   <div class="container-subscribe">
-    <form>
-      <div class="container-address">
+    <form method="post">
+      <div class="container-address container-address-email">
         <div>订阅邮箱：</div>
         <div class="address-list">
-          <div><input type="text" value="18888888888@126.com" /></div>
-          <div><input type="text" /><button class="icons-add"></button></div>
+          <div><input type="text" class="input-addr" name="addr[]" /><button type="button" class="icons-add btn-add-address btn-add-email"></button></div>
         </div>
       </div>
       <div class="container-frequence">
         <div>发送频率：</div>
         <div class="frequence-list">
-          <div class="item"><input type="radio" /><span>每半天</span></div>
-          <div class="item"><input type="radio" /><span>每一天</span></div>
-          <div class="item"><input type="radio" /><span>每一周</span></div>
-          <div class="item"><input type="radio" /><span>每一月</span></div>
+          <div class="item"><input type="radio" name="freq" /><span>每半天</span></div>
+          <div class="item"><input type="radio" name="freq" /><span>每一天</span></div>
+          <div class="item"><input type="radio" name="freq" /><span>每一周</span></div>
+          <div class="item"><input type="radio" name="freq" /><span>每一月</span></div>
         </div>
       </div>
 
       <div class="container-actions">
-        <button type="submit" class="btn-save">保存</button>
+        <button type="submit" class="btn-save btn-save-email">保存</button>
       </div>      
     </form>
   </div>
 
   <div class="container-subscribe container-subscribe-sms">
-    <form>
-      <div class="container-address">
+    <form method="post">
+      <div class="container-address container-address-phone">
         <div>订阅手机：</div>
         <div class="address-list">
-          <div><input type="text" value="18888888888" /></div>
-          <div><input type="text" /><button class="icons-add"></button></div>
+          <div><input type="text" class="input-addr" name="addr[]" /><button type="button" class="icons-add btn-add-address btn-add-phone"></button></div>
         </div>
       </div>
       <div class="container-frequence">
         <div>发送频率：</div>
         <div class="frequence-list">
-          <div class="item"><input type="radio" /><span>每半天</span></div>
-          <div class="item"><input type="radio" /><span>每一天</span></div>
-          <div class="item"><input type="radio" /><span>每一周</span></div>
-          <div class="item"><input type="radio" /><span>每一月</span></div>
+          <div class="item"><input type="radio" name="freq" /><span>每半天</span></div>
+          <div class="item"><input type="radio" name="freq" /><span>每一天</span></div>
+          <div class="item"><input type="radio" name="freq" /><span>每一周</span></div>
+          <div class="item"><input type="radio" name="freq" /><span>每一月</span></div>
         </div>
       </div>
 
       <div class="container-actions">
-        <button type="submit" class="btn-save">保存</button>
+        <button type="submit" class="btn-save btn-save-phone">保存</button>
       </div>      
     </form>
   </div>  
@@ -123,6 +140,23 @@
     </ul>
   </div>
 
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

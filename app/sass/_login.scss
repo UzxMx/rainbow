@@ -8,14 +8,13 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    height: 410px;
-    margin-bottom: 200px;
+    height: 475px;
     position: relative;
 
     .login {
       position: absolute;
       right: 200px;
-      bottom: -90px;
+      top: 50px;
 
       width: 350px;
       padding: 20px 30px;
@@ -183,5 +182,9 @@
       }
     }
 
+  }  
+
+  #page-footer {
+    padding-bottom: 80px;
   }  
 }

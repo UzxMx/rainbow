@@ -1,4 +1,15 @@
+{% set body_class = "page-project-details" %}
+
 {% extends 'layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.ProjectDetails.init();
+    ZBW.QuickRegister.init();
+  });
+</script>
+{% endblock %}
 
 {% block breadcrumb %}
 
@@ -6,11 +17,13 @@
   <div class="breadcrumb">
     <span class="icons-geo"></span>
     <span>您当前的位置：</span>
-    <a href="#">招标王</a>
+    <a href="home.html">招标王</a>
     <span class="icons-arrow-right"></span>
-    <a href="#">项目信息</a>
+    <a href="project.html">项目信息</a>
     <span class="icons-arrow-right"></span>
-    <a href="#">拟在建项目</a>    
+    <a href="constructing_project.html">拟在建项目</a>    
+    <span class="icons-arrow-right"></span>
+    <a href="project_details.html">年产10万吨石脑油综合利用厂房建设项目年产10万吨石脑油综合利用厂房建设项目年产10万吨石脑油综合利用厂房建设项目</a>    
   </div>
 </div>
 
@@ -139,28 +152,28 @@
                 <span class="icon icons-hezhun"></span>
                 <div class="description">核准</div>
               </div><!--
-           --><div class="progress-separator"></div><!--
-           --><div class="progress-stage progress-stage-lixiang inactive">
+           --><div class="progress-separator active"></div><!--
+           --><div class="progress-stage progress-stage-lixiang">
                 <span class="icon icons-lixiang"></span>
                 <div class="description">立项</div>
               </div><!--
-           --><div class="progress-separator"></div><!--
-           --><div class="progress-stage progress-stage-huanping inactive">
+           --><div class="progress-separator active"></div><!--
+           --><div class="progress-stage progress-stage-huanping ">
                 <span class="icon icons-huanping"></span>
                 <div class="description">环评</div>
               </div><!--
-           --><div class="progress-separator"></div><!--
-           --><div class="progress-stage progress-stage-zhunbei inactive">
+           --><div class="progress-separator active"></div><!--
+           --><div class="progress-stage progress-stage-zhunbei">
                 <span class="icon icons-zhunbei"></span>
                 <div class="description">施工准备</div>
               </div><!--
-           --><div class="progress-separator"></div><!--
-           --><div class="progress-stage progress-stage-zaijian inactive">
+           --><div class="progress-separator active"></div><!--
+           --><div class="progress-stage progress-stage-zaijian">
                 <span class="icon icons-zaijian"></span>
                 <div class="description">施工在建</div>
               </div><!--
-           --><div class="progress-separator"></div><!--
-           --><div class="progress-stage progress-stage-jungong inactive">
+           --><div class="progress-separator active"></div><!--
+           --><div class="progress-stage progress-stage-jungong ">
                 <span class="icon icons-jungong"></span>
                 <div class="description">竣工</div>
               </div>                                       
@@ -451,19 +464,106 @@
     <div class="col-sm-3 region-right-side">
       <div class="wrapper">
 
-        <div class="block block-ad-quick-search">
-          <div class="wrapper">
-            <a href="#" class="ad-quick-search">
-              <img src="images/quick-search.png" />
-            </a>
+        <div class="block block-login-register">
+          <div class="row">
+            <div class="col-sm-6">
+              <a href="deng_lu.html" class="btn btn-login">登录</a>
+            </div>
+            <div class="col-sm-6">
+              <a href="zhu_ce_1.html" class="btn btn-register">注册</a>
+            </div>
           </div>
         </div>
 
-        <div class="block block-ad-search-plus-email">
-          <div class="wrapper">
-            <a href="#" class="ad-search-plus-email">
-              <img src="images/search-plus-email-price.png" />
-            </a>
+        <div class="block block-services">
+          <div class="block-header">
+            注册后您可享受以下服务
+          </div>
+          <div class="block block-content container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-searchview">
+                  </span>
+                </div>
+                <div>免费查看所有招标信息</div>
+              </div>
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-hand">
+                  </span>
+                </div>
+                <div>提前把握项目</div>
+              </div>           
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-edit">
+                  </span>
+                </div>
+                <div>订阅属于自己的招标信息</div>
+              </div>    
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-gift">
+                  </span>
+                </div>
+                <div>信息免费发送邮箱</div>
+              </div>  
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-send">
+                  </span>
+                </div>
+                <div>发布招标信息</div>
+              </div>
+              <div class="col-sm-6">
+                <div>
+                  <span class="icons-cert">
+                  </span>
+                </div>
+                <div>招标王认证</div>
+              </div>                                           
+            </div>
+          </div> 
+        </div>
+
+        <div class="block block-register-info">
+          <div class="block-header">
+            5秒注册，百万招标信息唾手可得
+          </div>
+          <div class="block-content">
+            <div class="wrapper">
+              <form>
+                <div class="control-group">
+                  <div class="container-title">你的名字</div>
+                  <div>
+                    <input type="text" class="name" />
+                  </div>
+                </div>
+                <div class="control-group">
+                  <div class="container-title">你的公司</div>
+                  <div>
+                    <input type="text" class="company-name" />
+                  </div>
+                </div>
+
+                <div class="control-group control-group-phone">
+                  <div class="container-title">你的手机号码</div>
+                  <div>
+                    <input type="text" class="telphone" />
+                    <button type="button" class="btn btn-primary btn-send-verify-code">发送验证码</button>
+                  </div>
+                </div> 
+                <div class="control-group">
+                  <div class="container-title">短信验证码</div>
+                  <div>
+                    <input type="text" class="verify-code" />
+                  </div>
+                </div>                           
+
+                <button type="submit" class="btn btn-primary btn-register">免费注册</button>
+              </form>
+            </div>
           </div>
         </div>         
         
@@ -474,29 +574,47 @@
           <div class="block-content container-fluid">
             <div class="row">
               <div class="col-sm-4">
-                <a href="#">基础设施</a>
+                <a href="#">会展</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">公用事业设施</a>
+                <a href="#">办公楼</a>
               </div>            
               <div class="col-sm-4">
-                <a href="#">石油天然气</a>
+                <a href="#">商业零售</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">开采</a>
+                <a href="#">工业</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">公用事业设施</a>
+                <a href="#">住宅</a>
               </div>            
               <div class="col-sm-4">
-                <a href="#">石油天然气</a>
+                <a href="#">司法</a>
               </div> 
               <div class="col-sm-4">
-                <a href="#">基础设施</a>
+                <a href="#">农业</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">交通</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">社区</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">教育研究</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">休闲娱乐</a>
+              </div>            
+              <div class="col-sm-4">
+                <a href="#">医疗</a>
+              </div>
+              <div class="col-sm-4">
+                <a href="#">基础建设</a>
               </div>
               <div class="col-sm-4">
                 <a href="#">公用事业设施</a>
-              </div>            
+              </div>
               <div class="col-sm-4">
                 <a href="#">石油天然气</a>
               </div>
@@ -504,11 +622,14 @@
                 <a href="#">开采</a>
               </div>
               <div class="col-sm-4">
-                <a href="#">公用事业设施</a>
-              </div>            
+                <a href="#">酒店餐饮</a>
+              </div>  
               <div class="col-sm-4">
-                <a href="#">石油天然气</a>
-              </div>                                                                                       
+                <a href="#">新市区开发</a>
+              </div> 
+              <div class="col-sm-4">
+                <a href="#">其它</a>
+              </div>
             </div>
           </div>
         </div>
@@ -584,6 +705,23 @@
         </div>        
       </div>
 
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
     </div>
   </div>
 </div>

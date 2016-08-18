@@ -1,8 +1,19 @@
+{% set body_class = "page-subscribe" %}
+{% set my_subscribe = 'true' %}
+
 {% extends 'user_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Subscribe.init();
+  });
+</script>
+{% endblock %}
 
 {% block content %}
 
-<div class="container-subscribe">
+<div class="container-subscribe container-subscribe-project">
 
   <div class="container-subscribe-nav">
     <div class="row">
@@ -12,7 +23,7 @@
             <a href="zhao_biao_ding_yue.html">招标信息</a>
           </li>
           <li>
-            <a href="#">采购信息</a>
+            <a href="cai_gou_ding_yue.html">采购信息</a>
           </li> 
           <li>
             <a href="#" class="selected">项目信息</a>
@@ -20,7 +31,7 @@
         </ul>
       </div>
       <div class="col-sm-2 container-actions">
-        <a href="#" class="btn-add-subscribe-item">添加订阅</a>
+        <a href="xiang_mu_ding_yue_xiu_gai_huo_chuang_jian.html" class="btn-add-subscribe-item">添加订阅</a>
       </div>
     </div>
   </div>
@@ -32,23 +43,23 @@
           <li>
             <a href="#" class="selected">
               <span>电梯</span>
-              <span class="btn-remove">&#x274C;</span>
+              <span class="btn-remove">&times;</span>
             </a>
           </li>
           <li>
-            <a href="#">客梯</a>
+            <a href="xiang_mu_ding_yue.html">客梯</a>
           </li>       
         </ul>
       </div>
       <div class="col-sm-2 container-actions">
-        <a href="#" class="btn-modify">修改</a>
+        <a href="xiang_mu_ding_yue_xiu_gai_huo_chuang_jian.html" class="btn-modify">修改</a>
       </div>
     </div>    
   </div>
 
   <div class="container-results">
     <form>
-      <table class="table style-primary">
+      <table class="table style-primary table-sortable">
         <thead>
           <tr>
             <th class="c-stage">项目阶段</th>
@@ -64,7 +75,7 @@
             <td class="c-stage">地质勘查</td>
             <td class="c-title">
               <div>
-                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+                <a href="project_details.html">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
               </a>
               </div>
               <div class="description">
@@ -80,7 +91,7 @@
             <td class="c-stage">地质勘查</td>
             <td class="c-title">
               <div>
-                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+                <a href="project_details.html">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
               </a>
               </div>
               <div class="description">
@@ -96,7 +107,7 @@
             <td class="c-stage">地质勘查</td>
             <td class="c-title">
               <div>
-                <a href="#">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
+                <a href="project_details.html">贵港市职业教育中心3号综合实训工程<span class="highlight">跟进3</span>
               </a>
               </div>
               <div class="description">
@@ -131,6 +142,24 @@
     </div>
   </div>
 
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="remove_subscribe_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+      <button type="button" class="btn btn-default btn-cancel" style="width:80px;margin-left:20px;">取消</button>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

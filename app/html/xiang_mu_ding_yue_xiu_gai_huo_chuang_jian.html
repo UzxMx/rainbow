@@ -1,8 +1,19 @@
+{% set body_class = "page-subscribe" %}
+{% set my_subscribe = 'true' %}
+
 {% extends 'user_layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.ProjectSubscribe.init();
+  });
+</script>
+{% endblock %}
 
 {% block content %}
 
-<div class="container-subscribe">
+<div class="container-subscribe container-subscribe-project">
 
   <div class="container-subscribe-nav">
     <div class="row">
@@ -12,15 +23,15 @@
             <a href="zhao_biao_ding_yue.html">招标信息</a>
           </li>
           <li>
-            <a href="#">采购信息</a>
+            <a href="cai_gou_ding_yue.html">采购信息</a>
           </li> 
           <li>
             <a href="xiang_mu_ding_yue.html" class="selected">项目信息</a>
-          </li>       
+          </li>
         </ul>
       </div>
       <div class="col-sm-2 container-actions">
-        <a href="#" class="btn-add-subscribe-item">添加订阅</a>
+        <a href="xiang_mu_ding_yue_xiu_gai_huo_chuang_jian.html" class="btn-add-subscribe-item">添加订阅</a>
       </div>
     </div>
   </div>
@@ -59,7 +70,7 @@
           订阅器名称：
         </div>
         <div class="col-sm-9">
-          <input type="text" />
+          <input type="text" id="subscribe_name" />
         </div>
       </div>
 
@@ -70,11 +81,8 @@
         <div class="col-sm-9">
           <div class="description">信息中含有所填关键词，便会被收录到订阅中</div>
           <div class="item">
-            <input type="text" value="电梯" />
-          </div>          
-          <div class="item">
-            <input type="text" />
-            <button class="icons-add btn-add-keyword"></button>
+            <input type="text" name="keyword[]" class="keyword" />
+            <button type="button" class="icons-add btn-add-keyword"></button>
           </div>
         </div>
       </div>
@@ -124,11 +132,11 @@
           项目类型：
         </div>
         <div class="col-sm-9">
-          <div class="selections selections-single">
-            <span class="selection">
+          <div class="selections">
+            <span class="selection" data-type="1">
               住宅
             </span>
-            <span class="selection">
+            <span class="selection" data-type="2">
               办公楼
             </span>                                     
           </div> 
@@ -143,8 +151,8 @@
           <div class="hint visible">
             如需订阅子类型，请点击上方具体项目类型
           </div>
-          <div class="selections selections-multiple" style="display:none;">
-            <span class="selection">
+          <div class="selections selections-multiple" data-type="1">
+            <span class="selection" data-value="0">
               子类型1
             </span>
             <span class="selection">
@@ -175,92 +183,37 @@
               华北
             </span>
             <div class="selection-second-level-group">
-              <span class="selection">
+              <span class="selection" data-province="1">
                 北京
               </span>
-              <span class="selection">
+              <span class="selection" data-province="2">
                 天津
               </span>
-              <span class="selection">
-                北京
+              <span class="selection" data-province="3">
+                河北
               </span>
-              <span class="selection">
-                天津
+              <span class="selection" data-province="4">
+                山西
               </span>
-              <span class="selection">
-                北京
-              </span>
-              <span class="selection">
-                天津
-              </span>
-              <span class="selection">
-                北京
-              </span>
-              <span class="selection">
-                天津
-              </span>                                                                  
-            </div>                           
+              <span class="selection" data-province="5">
+                内蒙古
+              </span>                                     
+            </div>
           </div> 
           <div class="selections selections-multiple">
             <span class="selection selection-first-level">
               东北
             </span>
             <div class="selection-second-level-group">
-              <span class="selection">
-                北京
+              <span class="selection" data-province="6">
+                辽宁
               </span>
-              <span class="selection">
-                天津
+              <span class="selection" data-province="7">
+                吉林
               </span>
-              <span class="selection">
-                北京
-              </span>
-              <span class="selection">
-                天津
-              </span>
-              <span class="selection">
-                北京
-              </span>
-              <span class="selection">
-                天津
-              </span>
-              <span class="selection">
-                北京
-              </span>
-              <span class="selection">
-                天津
-              </span>                                                                  
-            </div>                           
-          </div>
-          <div class="selections selections-multiple">
-            <span class="selection selection-first-level">
-              华东
-            </span>
-            <div class="selection-second-level-group">
-              <span class="selection">
-                北京
-              </span>
-              <span class="selection">
-                天津
-              </span>
-              <span class="selection">
-                北京
-              </span>
-              <span class="selection">
-                天津
-              </span>
-              <span class="selection">
-                北京
-              </span>
-              <span class="selection">
-                天津
-              </span>
-              <span class="selection">
-                北京
-              </span>
-              <span class="selection">
-                天津
-              </span>                                                                  
+              <span class="selection" data-province="8">
+                黑龙江
+              </span>                                                             
             </div>                           
           </div>                    
         </div>
@@ -274,44 +227,30 @@
           <div class="hint visible">
             如需订阅市级地区，请点击上列省份按钮
           </div>
-          <div class="selections selections-multiple" style="display:none;">
-            <span class="selection">
-              保定
+          <div class="selections selections-multiple" data-province="3">
+            <span class="selection" data-value="1">
+              保定1
             </span>
-            <span class="selection">
-              保定
-            </span>
-            <span class="selection">
-              保定
-            </span>
-            <span class="selection">
-              保定
-            </span>
-            <span class="selection">
-              保定
-            </span>
-            <span class="selection">
-              保定
-            </span>
-            <span class="selection">
-              保定
-            </span>
-            <span class="selection">
-              保定
-            </span> 
-            <span class="selection">
-              保定
-            </span>
-            <span class="selection">
-              保定
-            </span>
-            <span class="selection">
-              保定
-            </span>
-            <span class="selection">
-              保定
-            </span>                                                                         
+            <span class="selection" data-value="2">
+              保定2
+            </span>                                                                    
           </div>
+          <div class="selections selections-multiple" data-province="4">
+            <span class="selection" data-value="1">
+              太原
+            </span>
+            <span class="selection" data-value="2">
+              平遥
+            </span>                                                                    
+          </div>       
+          <div class="selections selections-multiple" data-province="5">
+            <span class="selection" data-value="1">
+              赤峰
+            </span>
+            <span class="selection" data-value="2">
+              呼和浩特
+            </span>                                                                    
+          </div>                
         </div>           
       </div>
 
@@ -336,7 +275,7 @@
         </div>
         <div class="col-sm-9">
           <div class="container-actions">
-            <button class="btn btn-primary btn-save">完成</button>
+            <button type="submit" class="btn btn-primary btn-save">完成</button>
           </div>
         </div>
       </div>                        
@@ -345,6 +284,23 @@
 
   </div>
 
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

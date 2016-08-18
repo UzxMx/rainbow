@@ -1,13 +1,6 @@
 .page-login, .page-register, .page-find-password {
   #page-header {
     .header-main {
-      background-color: #f7f7f7;
-      padding-left: 40px;
-      padding-right: 40px;
-
-      & > .row, .col-left, .col-right {
-        height: 80px;
-      }
 
       .col-left {
         .link-logo {
@@ -27,13 +20,6 @@
           display: inline-block;
           height: 100%;
         }
-      }
-
-      .container-phone {
-        color: #666;
-        width: 200px;
-
-        padding-right: 10px;
       }
 
       .container-actions {

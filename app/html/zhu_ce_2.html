@@ -89,33 +89,53 @@
             主营业务：
           </div>
           <div class="col">
-            <input type="text" id="business" /><div class="dropdown">
+            <input type="text" id="business" disabled /><div class="dropdown">
             <div class="wrapper"><span>选择</span><span class="icons-blue-dropdown"></span></div>
-            <div class="container-selection">
-              <div class="selection">
-                <div class="wrapper">住宅社区</div>
-              </div>            
-              <div class="selection">
-                <div class="wrapper">交通运输</div>
+            <div class="container-selections">
+              <input type="hidden" name="business" value="" />
+              <div class="selections selections-single">
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    住宅社区
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    交通
+                  </span>                   
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    住宅社区
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    交通运输
+                  </span> 
+                </div>    
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    住宅社区
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    交通运输
+                  </span> 
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    住宅社区
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    交通运输
+                  </span> 
+                </div>                                            
+                                               
               </div>
-              <div class="selection">
-                <div class="wrapper">住宅社区</div>
-              </div>            
-              <div class="selection">
-                <div class="wrapper">交通运输</div>
-              </div> 
-              <div class="selection">
-                <div class="wrapper">住宅社区</div>
-              </div>            
-              <div class="selection">
-                <div class="wrapper">交通运输</div>
-              </div> 
-              <div class="selection">
-                <div class="wrapper">住宅社区</div>
-              </div>            
-              <div class="selection">
-                <div class="wrapper">交通运输</div>
-              </div> 
             </div>
           </div>
           <span class="hint">请选择您的主营业务</span>
@@ -127,16 +147,55 @@
             业务区域：
           </div>
           <div class="col">
-            <input type="text" id="business-region" /><div class="dropdown">
+            <input type="text" id="business-region" disabled /><div class="dropdown">
             <div class="wrapper"><span>选择</span><span class="icons-blue-dropdown"></span></div>
-            <div class="container-selection">
-              <div class="selection">
-                <div class="wrapper">北京</div>
-              </div>            
-              <div class="selection">
-                <div class="wrapper">上海</div>
-              </div>                           
-
+            <div class="container-selections">
+              <input type="hidden" name="business_region" value="" />
+              <div class="selections">
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    北京
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    上海
+                  </span>
+                </div>                
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="2">
+                    北京
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="3">
+                    上海
+                  </span>
+                </div> 
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    北京
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    上海
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    北京
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    上海
+                  </span>
+                </div>                                                                                       
+              </div>
+              <div class="container-actions">
+                <button type="button" class="btn btn-primary btn-finish-selection">完成</button>
+              </div>
             </div>
           </div>
           <span class="hint">请选择您的业务区域</span>         
@@ -148,16 +207,56 @@
             关注项目阶段：
           </div>
           <div class="col">
-            <input type="text" id="project-stage" /><div class="dropdown">
+            <input type="text" id="project-stage" disabled /><div class="dropdown">
             <div class="wrapper"><span>选择</span><span class="icons-blue-dropdown"></span></div>
-            <div class="container-selection">
-              <div class="selection">
-                <div class="wrapper">阶段1</div>
-              </div>            
-              <div class="selection">
-                <div class="wrapper">阶段2</div>
-              </div>                           
-
+            <div class="container-selections">
+              <input type="hidden" name="project_stage" value="" />
+              <div class="selections">
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    阶段1
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    阶段2
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    阶段1
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    阶段2
+                  </span>
+                </div> 
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    阶段1
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    阶段2
+                  </span>
+                </div> 
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="0">
+                    阶段1
+                  </span>
+                </div>
+                <div class="selection-wrapper">
+                  <span class="selection" data-value="1">
+                    阶段2
+                  </span>
+                </div>                                                                
+                                                                                      
+              </div>
+              <div class="container-actions">
+                <button type="button" class="btn btn-primary btn-finish-selection">完成</button>
+              </div>
             </div>
           </div>
           <span class="hint">请选择您关注项目的阶段</span>         

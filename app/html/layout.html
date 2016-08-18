@@ -8,15 +8,6 @@
         <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,700' rel='stylesheet' type='text/css' /> -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />        
         <link rel="stylesheet" type="text/css" href="css/common.css" />
-        <link rel="stylesheet" type="text/css" href="css/header.css" />
-
-        {% block before_main_css %}{% endblock %}
-        {% if main_css %}
-        <link rel="stylesheet" type="text/css" href="{{ main_css }}" />
-        {% endif %}
-        {% block after_main_css %}{% endblock %}
-
-        <link rel="stylesheet" type="text/css" href="css/footer.css" />
 
         <script type="text/javascript" src="js/modernizr.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
@@ -27,12 +18,9 @@
         <script type="text/javascript" src="js/common.js"></script>
 
         {% block before_main_js %}{% endblock %}
-        {% if main_js %}
-        <script type="text/javascript" src="{{ main_js }}"></script>
-        {% endif %}
         {% block after_main_js %}{% endblock %}
     </head>
-    <body>
+    <body class="{{ body_class }}">
         <div id="page-container">
             {% include "header.html" %}
             {% block breadcrumb %}{% endblock %}
@@ -44,5 +32,19 @@
         {% block body_tail %}{% endblock %}
 
         {% include "analytics.html" %}
+
+        <div id="quick_register_dialog" class="dialog">
+          <div class="wrapper" style="width:400px;">
+            <div class="dialog-header">
+              <span class="icons-close"></span>
+            </div>
+            <div class="dialog-content">
+            </div>
+            <div class="dialog-footer">
+              <button type="button" class="btn btn-primary btn-left" style=""></button>
+              <button type="button" class="btn btn-primary btn-right" style="margin-left:20px;"></button>
+            </div>
+          </div>
+        </div>        
     </body>
 </html>

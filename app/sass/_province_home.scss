@@ -1,0 +1,236 @@
+.page-province-home, .page-city-home {
+  .header-menus {
+    margin-bottom: 30px;
+
+    .container-region-menus {
+      background-color: $brand-primary-color;
+
+      $menus-max-width: 1200px;
+      & > .wrapper {
+        max-width: $menus-max-width;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      li {
+        padding: 0 5px;
+        display: inline-block;
+      }      
+
+      .menu {
+        display: inline-block;
+        padding: 13px 20px;
+        color: white;
+
+        &.selected, &:hover {
+          background-color: darken($brand-primary-color, 10%);
+        }
+      }
+    }
+  }
+
+  .block-city-sites {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+
+    .block-header {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .block-content {
+      margin-left: 2px;
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .item {
+        float: left;
+        width: 33.3%;
+        padding-bottom: 7px;
+
+        a {
+          color: #666;
+          &:hover {
+            color: $brand-primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .bracket {
+    &:before {
+      content: "\3010";
+    }
+    &:after {
+      content: "\3011";
+    }
+  }
+
+  .block-zbgg, .block-zbyg, .block-zbchange, .block-zbresult {
+    margin-bottom: 20px;
+    .content-list {
+      li {
+        & > div {
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+
+          .col {
+            float: left;
+          }
+
+          .col-bullet {
+            width: 3% !important;
+          }
+
+          .col-title {
+            width: 80%;
+          }
+
+          .col-date {
+            width: 17%;
+            text-align: right;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .block-zbhz {
+    .block-header {
+      text-align: left;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .more {
+      position: absolute;
+      right: 10px;
+      font-size: 14px;
+      color: white;
+    }
+  }
+
+  .block-shine {
+    margin-bottom: 20px;
+  }
+
+  .region-cg {
+    margin-bottom: 20px;
+  }
+
+  .block-cg {
+    .block-content {
+      .col-title {
+        width: 70%;
+      }
+      .col-date {
+        width: 20%;
+        text-align: right;
+      }
+    }
+  }
+
+  .region-project {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .country-sites {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .sites {
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .site {
+        float: left;
+        width: 14.28%;
+        padding-bottom: 8px;
+
+        a {
+          color: #666;
+          &:hover {
+            color: $brand-primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-city-home {
+  .block {
+    margin-bottom: 20px;
+  }
+
+  .block-city-sites {
+    padding: 0;
+    border: none;
+
+    .block-content {
+      padding-left: 10px;
+    }
+  }
+
+  .block-zfcg, .block-qycg {
+    .block-content {
+      .col-title {
+        width: 80%;
+      }
+      .col-date {
+        width: 10%;
+      }
+    }
+  }
+
+  .block-constructing-project, .block-jxxm, .block-zzxm {
+    .content-list {
+      li {
+        & > div {
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+
+          .col {
+            float: left;
+          }
+
+          .col-bullet {
+            width: 3% !important;
+          }
+
+          .col-title {
+            width: 80%;
+          }
+
+          .col-date {
+            width: 17%;
+            text-align: right;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }  
+}

@@ -101,6 +101,10 @@ ul {
 
 input[type="text"], input[type="password"] {
   border: 1px solid #ccc;
+
+  &:focus {
+    border-color: $brand-primary-color;
+  }
 }
 
 // .row {
@@ -230,6 +234,10 @@ input[type="text"], input[type="password"] {
     }
 
     a {
+      @include anchor-ellipse;
+      display: inline-block;
+      width: auto;
+      max-width: 300px;
       color: #333;
     }
   }
@@ -461,8 +469,31 @@ a.ellipse, span.ellipse {
       padding: 10px 5px;
     }
   }
-
 }
+
+.table-sortable {
+  th {
+    cursor: pointer;
+    @include user-select(none);
+    &:after {
+      display: none;
+      content: "";
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    &.sort-asc:after {
+      border-bottom: 6px solid white;
+      display: inline-block;
+    }
+    &.sort-desc:after {
+      border-top: 6px solid white;
+      display: inline-block;
+    }    
+  }
+}
+
 /**
  *
  * pagination
@@ -486,10 +517,93 @@ a.ellipse, span.ellipse {
       }
     }
 
-  }  
+  }
 }
+
+/**
+ *
+ * dialog
+ *
+ */
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+
+  & > .wrapper {
+    background-color: white;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    max-width: 900px;
+
+    @include border-radius(5px);
+  }
+
+  @include icons(close);
+
+  .icons-close {
+    cursor: pointer;
+  }
+
+  .dialog-header {
+    height: icons-sprite-height(close) + 5px;
+    text-align: right;
+    padding-right: 30px;
+  }
+
+  .dialog-content {
+    padding: 20px 20px 0 20px;
+  }
+
+  .dialog-footer {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+@import "header";
+
+@import "home";
 
 @import "header_auth";
 @import "login";
 @import "register";
 @import "find_password";
+
+@import "logged_in_header";
+@import "account_left_side";
+@import "account";
+
+@import "manage_subscribe";
+
+@import "subscribe";
+
+@import "collection";
+
+@import "orders";
+@import "messages";
+@import "feedback";
+
+@import "blocks";
+
+@import "search";
+
+@import "publish";
+
+@import "bid_details";
+
+@import 'project_details';
+
+@import "province_home";
+
+@import "footer";

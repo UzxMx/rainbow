@@ -1,0 +1,229 @@
+.region-right-side {
+  & > .wrapper {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.block-login-register {
+  margin: 0 auto;
+
+  .btn-login, .btn-register {
+    width: 100%;
+    border: 2px solid $brand-primary-color;
+    color: $brand-primary-color;
+    background-color: white;
+    @include border-radius(5px);
+    font-size: 16px;
+
+    &:hover {
+      color: white;
+      background-color: $brand-primary-color;
+    }
+  }
+}
+
+.block-services {
+  margin-top: 20px;
+
+  .block-header {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    border-top: 2px solid #666666;
+    background-color: #f7f7f7;
+    font-size: 16px;
+  }
+
+  @include icons(searchview);
+  @include icons(hand);
+  @include icons(edit);
+  @include icons(gift);
+  @include icons(send);
+  @include icons(cert);
+
+  .block-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    & >.row {
+      margin: 0;
+
+      & > div {
+        padding: 10px 0;
+        height: 130px;
+      }
+      
+    }
+  }
+}
+
+.block-register-info {
+  .block-header {
+    height: 40px;
+    line-height: 40px;
+
+    border-top: 2px solid $brand-primary-color;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background-color: #f7f7f7;
+    text-align: center;
+    color: $brand-primary-color;
+    font-size: 16px;
+  }
+
+  .block-content {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    color: $brand-primary-color;
+
+    & > .wrapper {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .control-group {
+      margin-bottom: 20px;
+    }
+
+    input[type='text'] {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid $brand-primary-color;
+      @include border-radius(3px);
+      outline: none;
+      color: #333;
+    }
+
+    .control-group-phone {
+      input[type='text'] {
+        width: 60%;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .btn-send-verify-code {
+        width: 30%;
+        padding: 3px;
+        font-size: 12px;
+        vertical-align: middle;
+        @include border-radius(15px);
+      }
+    }
+
+    .container-title {
+      margin-bottom: 5px;
+    }
+
+    .btn-register {
+      width: 100%;
+    }
+  }
+}
+
+.block-related-keywords {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .block-header {
+    font-size: 16px;
+    .keywords {
+      color: $brand-primary-color;
+    }
+  }
+
+  .block-content {
+    margin-left: 4px;
+    padding: 10px 0;
+    max-width: 300px;
+
+    & > .row > div {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+}
+
+.block-region-nav {
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+
+  .block-header {
+    font-size: 16px;
+  }
+
+  .block-content {
+    margin-left: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    & > .row > div {
+      padding: 5px 0;
+
+      a {
+        color: #333;
+
+        &:hover {
+          color: $brand-primary-color;
+        }
+      }
+    }
+  }
+}
+
+.block-project-types, .block-region-subsites {
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+
+  .block-header {
+    font-size: 16px;
+  }
+
+  .block-content {
+    padding-top: 10px;
+
+    & > .row > div {
+      padding: 5px 0;
+
+      a {
+        color: #333;
+
+        &:hover {
+          color: $brand-primary-color;
+        }
+      }
+    }
+  }
+}
+
+.block-region-subsites {
+  margin-bottom: 10px;
+}
+
+// 广告位
+.block-ad-quick-search {
+  margin-bottom: 20px;
+  .ad-quick-search {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.block-ad-search-plus-email {
+  margin-bottom: 20px;
+  .ad-search-plus-email {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+}
