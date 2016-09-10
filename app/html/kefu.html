@@ -1,0 +1,60 @@
+{% set header2 = 'true' %}
+
+{% set header2_kefu = 'true' %}
+{% set page_kefu = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="page-kefu page-about-us">
+
+  {% include "kefu_left_side.html" %}
+
+  <div class="main">
+    <div class="container-header">
+      <span class="icons-kefu"></span>
+      <span class="title">客服中心</span>
+    </div>
+    <div class="container-content" style="margin-bottom: 90px;">
+      <div style="margin-bottom:30px;">
+        <p>
+          客服电话：010-21521412
+        </p>
+        <p>
+          客服QQ：2308335078
+        </p>
+        <p>
+          客服邮箱：qiaoyu@qianlima.com
+        </p>
+      </div>
+
+      <div class="container-demo">
+        <div class="demo-header">
+          “搜索” 功能演示
+        </div>
+        <div class="demo-content">
+          <p>
+            1. 在招标王首页，输入您想查找的关键词，点击  搜索 即可。
+          </p>
+          <img src="images/tuan-dui-dummy.png" />
+        </div>
+      </div>
+
+      <div class="container-demo">
+        <div class="demo-header">
+          “搜索” 功能演示
+        </div>
+        <div class="demo-content">
+          <p>
+            1. 在招标王首页，输入您想查找的关键词，点击  搜索 即可。
+          </p>
+          <img src="images/tuan-dui-dummy.png" />
+        </div>
+      </div>      
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

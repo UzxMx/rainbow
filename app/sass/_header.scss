@@ -177,6 +177,13 @@
     }
   }
 
+  &.not-fixed {
+    padding-top: 0px;
+    .header-main {
+      position: static;
+    }
+  }  
+
   .header-img-slider {
     position: relative;
 
@@ -310,6 +317,41 @@
 
         &.selected, &:hover {
           color: $menus-bg-color;
+        }
+      }
+    }
+  }
+
+  .header-menus-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    & > ul {
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      li {
+        font-size: 15px;
+        float: left;
+        width: 12.5%;
+
+        a {
+          display: inline-block;
+          color: #666;
+          padding-bottom: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          &.current, &:hover {
+            color: $brand-primary-color;
+            border-bottom: 2px solid $brand-primary-color;
+          }
         }
       }
     }

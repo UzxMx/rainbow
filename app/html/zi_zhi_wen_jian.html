@@ -1,0 +1,26 @@
+{% set header2 = 'true' %}
+
+{% set header2_about_us = 'true' %}
+{% set page_zi_zhi_wen_jian = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="page-about-us">
+
+  {% include "about_us_left_side.html" %}
+
+  <div class="main">
+    <div class="container-header">
+      <span class="icons-file"></span>
+      <span class="title">资质文件</span>
+    </div>
+    <div class="container-content" style="margin-bottom: 90px;text-align:center;">
+      <img src="images/file-dummy.png" />
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

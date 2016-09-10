@@ -1,0 +1,321 @@
+.page-buy-service {
+  @include icons(member-logo);
+  @include icons(diamond);
+
+  padding: 50px 0 80px 0;
+
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  .service {
+    float: left;
+    width: 33.3%;
+
+    & > .wrapper {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .service-header {
+      height: 240px;
+      font-size: 18px;
+      color: white;
+      text-align: center;
+    }
+
+    .service-body {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-top: none;
+
+      .container-items {
+        height: 150px;
+
+        &:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+      .item {
+        float: left;
+        width: 50%;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .container-btn {
+      text-align: center;
+
+      .btn-buy {
+        width: 150px;
+      }
+    }
+  }
+
+  .service-low-level {
+    .service-header {
+      background-image: url(../images/low-level-member.png);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .service-high-level {
+    .service-header {
+      background-image: url(../images/high-level-member.png);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .service-vip {
+    .service-header {
+      background-image: url(../images/vip.png);
+      background-size: cover;
+      background-position: center;
+    }
+  }    
+}
+
+#page-pay {
+  padding: 50px 0 80px 0;
+
+  .required {
+    color: red;
+  }
+
+  .pay-header {
+    padding: 20px;
+    background-color: #fff1df;
+    border: 1px solid #d6c1a4;
+    color: #864c00;
+    font-size: 18px;
+    @include border-top-left-radius(5px);
+    @include border-top-right-radius(5px);
+  }
+
+  .pay-body {
+    @include icons(checked);
+    @include icons(wechat);
+    @include icons(zhifubao);
+    @include icons(union-pay);
+    @include icons(icbc);
+    @include icons(bc);
+    @include icons(mbc);
+    @include icons(abc);
+    @include icons(mail-bank);
+    @include icons(bcm);
+
+    .error-msg {
+      color: red;
+      margin-top: 5px;
+    }
+
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 20px 20px 80px 20px;
+
+    @include border-bottom-left-radius(5px);
+    @include border-bottom-right-radius(5px);
+
+    .form-row {
+      margin-bottom: 20px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .left {
+        float: left;
+        width: 10%;
+        text-align: right;
+        font-weight: 600;
+      }
+      .right {
+        float: left;
+        width: 90%;
+        padding-left: 10px;
+
+        .selections {
+          &:after {
+            content: "";
+            clear: both;
+            display: block;
+          }
+
+          .selection {
+            float: left;
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 20px;
+            margin-bottom: 5px;
+            border: 1px solid #ddd;
+            text-align: center;
+            @include border-radius(3px);
+            cursor: pointer;
+            @include user-select(none);
+            position: relative;
+
+            .icons-checked {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              display: none;
+            }
+
+            &.selected {
+              border-color: $brand-primary-color;
+
+              .icons-checked {
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .form-row-year, .form-row-bank, .form-row-fp {
+      .left {
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+
+    .form-row-fp {
+      .selections-normal-fp {
+        margin-top: 10px;
+      }
+
+      .fp-details {
+        .fp-details-group {
+          .item {
+            margin-bottom: 10px;
+            &:after {
+              display: block;
+              content: "";
+              clear: both;
+            }
+            .name {
+              float: left;
+              width: 11%;
+              text-align: right;
+              height: 30px;
+              line-height: 30px;
+            }
+            .value {
+              float: left;
+              width: 85%;
+              input[type="text"] {
+                width: 300px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .form-row-pay-channel {
+      .left {
+        height: 91px;
+        line-height: 91px;
+      }
+      .right {
+        .selections {
+          .selection {
+            height: auto;
+            padding-bottom: 10px;
+            line-height: 1;
+
+            .icon {
+              height: 60px;
+              line-height: 60px;       
+
+              span {
+                vertical-align: middle;
+              }       
+            }
+          }
+        }
+      }
+    }
+
+    .form-row-bank {
+      .icon {
+        vertical-align: middle;
+      }
+    }
+
+    .form-row-discount-code {
+      .left {
+        height: 30px;
+        line-height: 30px;
+      }
+      input {
+        height: 30px;
+        width: 200px;
+
+        border-color: #ddd;
+
+        &:focus {
+          border-color: $brand-primary-color;
+        }
+      }
+    }
+
+    .form-row-price {
+      .left {
+        height: 28px;
+        line-height: 28px;
+      }
+      .total-price {
+        color: #fd510f;
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+#page-pay {
+  .container-result {
+    @include icons(pay-succeed);
+    @include icons(pay-failed);
+
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    font-size: 16px;
+    line-height: 2.5;
+    position: relative;
+    padding-left: 60px;
+    max-width: 370px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    .container-btn {
+      margin-top: 30px;
+
+      .btn {
+        width: 150px;
+      }
+    }
+
+    .price {
+      color: #ff6024;
+    }
+  }
+}

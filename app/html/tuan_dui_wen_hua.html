@@ -1,0 +1,34 @@
+{% set header2 = 'true' %}
+
+{% set header2_about_us = 'true' %}
+{% set page_tuan_dui_wen_hua = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="page-about-us">
+
+  {% include "about_us_left_side.html" %}
+
+  <div class="main">
+    <div class="container-header">
+      <span class="icons-team-culture"></span>
+      <span class="title">团队文化</span>
+    </div>
+    <div class="container-content" style="margin-bottom: 90px;">
+      <img src="images/tuan-dui-dummy.png" />
+      <div style="margin-top:20px;max-width:800px">
+        <p style="text-indent:2em;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+        </p>      
+        <p style="text-indent:2em;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+        </p>
+      </div>          
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

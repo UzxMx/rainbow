@@ -1,0 +1,51 @@
+.page-industry-news {
+  .list-header {
+    padding: 0 0 20px 0;
+    font-size: 18px;
+  }
+
+  .list-content {
+    .item {
+      margin-bottom: 20px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .title {
+        float: left;
+        width: 80%;
+        a {
+          color: #666;
+          &:before {
+            content: "";
+            display: inline-block;
+            $radius: 2px;
+            width: 2 * $radius;
+            height: 2 * $radius;
+            @include border-radius($radius);
+            background-color: #666;
+            margin-right: 5px;
+            vertical-align: middle;
+          }
+
+          &:hover {
+            color: $brand-primary-color;
+
+            &:before {
+              background-color: $brand-primary-color;
+            }
+          }
+          span {
+            vertical-align: middle;
+          }
+        }
+      }
+      .date {
+        float: right;
+        text-align: right;
+      }
+    }
+  }
+}

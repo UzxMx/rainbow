@@ -1,0 +1,89 @@
+.page-about-us {
+  @include icons(company);
+  @include icons(file);
+  @include icons(team-culture);
+  @include icons(contact-us);
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  & > .left-side {
+    float: left;
+    width: 20%;
+
+    ul {
+      max-width: 130px;
+      margin: 0 auto;
+      font-size: 15px;
+
+      a {
+        display: block;
+        color: #666;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        padding-left: 10px;
+        border-bottom: 1px solid #e0e0e0;
+
+        span {
+          vertical-align: middle;
+        }
+
+        &:before {
+          content: " ";
+          display: inline-block;
+          $radius: 2px;
+          width: 2 * $radius;
+          height: 2 * $radius;
+          @include border-radius($radius);
+          background-color: #666;
+          margin-right: 8px;
+          vertical-align: middle;
+        }
+
+        &.current, &:hover {
+          color: $brand-primary-color;
+
+          &:before {
+            background-color: $brand-primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  & > .main {
+    float: left;
+    width: 80%;
+
+    .container-header {
+      font-size: 18px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+
+      span {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .container-contact-us {
+    .container-details {
+      margin-top:20px;
+      max-width:800px;
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .item {
+        float: left;
+        width: 50%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

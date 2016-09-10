@@ -145,6 +145,14 @@
     }
   }
 
+  a {
+    color: #666;
+
+    &:hover {
+      color: $brand-primary-color;
+    }
+  }
+
 }
 
 .block-region-nav {
@@ -224,6 +232,47 @@
 
     img {
       width: 100%;
+    }
+  }
+}
+
+.block-demo-center {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  @include border-radius(5px);
+  color: #666;
+
+  .block-header {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .item {
+    margin-bottom: 10px;
+
+    a {
+      color: #666;
+      &:before {
+        content: "";
+        display: inline-block;
+        $radius: 2px;
+        width: 2 * $radius;
+        height: 2 * $radius;
+        @include border-radius($radius);
+        background-color: #666;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+
+      &:hover {
+        color: $brand-primary-color;
+
+        &:before {
+          background-color: $brand-primary-color;
+        }
+      }
+
     }
   }
 }

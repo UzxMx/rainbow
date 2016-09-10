@@ -1,0 +1,105 @@
+{% extends 'layout.html' %}
+
+{% set page_zhan_hui_zhong_xin = 'true' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    
+  });
+</script>
+{% endblock %}
+
+{% block breadcrumb %}
+
+<div class="container-breadcrumb">
+  <div class="breadcrumb">
+    <span class="icons-geo"></span>
+    <span>您当前的位置：</span>
+    <a href="home.html">招标王</a>
+    <span class="icons-arrow-right"></span>
+    <a href="zhan_hui_zhong_xin.html">展会中心</a>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div id="page-demo-center">
+  <div class="region">
+    <div class="row">
+      <div class="col-sm-9 region-main">
+
+        <div class="list-header">展会中心</div>
+        <div class="list-content">
+          <div class="item">
+            <div class="part-left">
+              <img src="images/tuan-dui-dummy.png" />
+            </div>
+            <div class="part-right">
+              <div class="title"><a href="zi_xun_xiang_qing.html">2016中国（广州）国际电梯展览会</a></div>
+              <div class="content">
+                由工业和信息化部、国家工商行政管理总局与广东省人民政府共同主办，粤港澳合作促进会信息科技专业委员会、广东省机械行业协会和广东省企业技术改造投资促进会共同承办的CSMEF 2015已于2015年10月15-18日在广州琶洲国际采购中心圆满落幕。CSMEF 是按照国际化
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="part-left">
+              <img src="images/tuan-dui-dummy.png" />
+            </div>
+            <div class="part-right">
+              <div class="title"><a href="zi_xun_xiang_qing.html">2016中国（广州）国际电梯展览会</a></div>
+              <div class="content">
+                由工业和信息化部、国家工商行政管理总局与广东省人民政府共同主办，粤港澳合作促进会信息科技专业委员会、广东省机械行业协会和广东省企业技术改造投资促进会共同承办的CSMEF 2015已于2015年10月15-18日在广州琶洲国际采购中心圆满落幕。CSMEF 是按照国际化
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="part-left">
+              <img src="images/tuan-dui-dummy.png" />
+            </div>
+            <div class="part-right">
+              <div class="title"><a href="zi_xun_xiang_qing.html">2016中国（广州）国际电梯展览会</a></div>
+              <div class="content">
+                由工业和信息化部、国家工商行政管理总局与广东省人民政府共同主办，粤港澳合作促进会信息科技专业委员会、广东省机械行业协会和广东省企业技术改造投资促进会共同承办的CSMEF 2015已于2015年10月15-18日在广州琶洲国际采购中心圆满落幕。CSMEF 是按照国际化
+              </div>
+            </div>
+          </div>                    
+        </div>
+
+        <div class="container-pagination">
+          <div class="pagination">
+            <a href="#">上一页</a>
+            <a href="#" class="pageindex">1</a>
+            <a href="#" class="pageindex current">2</a>
+            <a href="#" class="pageindex">3</a>
+            <a href="#" class="pageindex">4</a>
+            <a href="#">下一页</a>
+          </div>
+        </div>
+      </div>
+
+      {% include "demo_center_right_side.html" %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

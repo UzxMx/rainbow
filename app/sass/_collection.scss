@@ -1,5 +1,5 @@
-.page-collection {
-  .container-collection {
+#member-center-collection {
+  &.container-collection {
 
     .collection-header {
       .nav-list {
@@ -145,7 +145,7 @@
   }
 
   // project
-  .container-collection-project {
+  &.container-collection-project {
     .container-results {
       .table {
 

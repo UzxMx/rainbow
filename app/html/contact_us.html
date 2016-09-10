@@ -1,0 +1,40 @@
+{% set header2 = 'true' %}
+
+{% set header2_about_us = 'true' %}
+{% set page_contact_us = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="page-about-us">
+
+  {% include "about_us_left_side.html" %}
+
+  <div class="main">
+    <div class="container-header">
+      <span class="icons-contact-us"></span>
+      <span class="title">联系我们</span>
+    </div>
+    <div class="container-content container-contact-us" style="margin-bottom: 90px;">
+      <img src="images/tuan-dui-dummy.png" />
+      <div class="container-details">
+        <div class="item">
+          地址：北京市海淀区圆明园
+        </div>
+        <div class="item">
+          邮箱：service@zhaobiaowang.com
+        </div>
+        <div class="item">
+          电话：010-66888866
+        </div>
+        <div class="item">
+          QQ：123123123123
+        </div>        
+      </div>  
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

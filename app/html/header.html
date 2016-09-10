@@ -1,4 +1,4 @@
-<div id="page-header">
+<div id="page-header" class="{% if logged_in %}logged-in{% endif %}">
   {% if logged_in %}
   {% include 'user_header_inner.html' %}
   {% else %}
@@ -91,6 +91,8 @@
   </div>
   {% endif %}
 
+  {% if !no_menus %}
+
   {% if show_header_img_slider %}
 
   <div class="header-img-slider">
@@ -133,78 +135,9 @@
 
   {% endif %}
 
-  {% if !region_home %}
+  {% if region_home %}
 
-  <div class="header-menus">
-    <div class="container-primary-menus">
-      <div class="wrapper">
-        <ul class="primary-menus">
-          <li><a href="home.html" class="menu menu-home" data-name="home">首页</a></li>
-          <li><a href="zblm.html" class="menu selected" data-name="zbxx">招标信息</a></li>
-          <li><a href="cglm.html" class="menu" data-name="cgxx">采购信息</a></li>
-          <li><a href="project.html" class="menu" data-name="xmxx">项目信息</a></li>
-          <li><a href="#" class="menu" data-name="sjk">数据库</a></li>
-          <li><a href="#" class="menu" data-name="zxzx">资讯中心</a></li>
-          <li><a href="#" class="menu" data-name="cjk">材价库</a></li>
-          <li><a href="#" class="menu" data-name="pxzx">培训中心</a></li>
-          <li><a href="#" class="menu" data-name="zzdl">资质代理</a></li>
-          <li><a href="#" class="menu" data-name="dzzb">电子招标</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container-secondary-menus">
-      <div class="wrapper">
-        <ul class="secondary-menus secondary-menus-zbxx visible">
-          <li><a href="zbgg.html" class="menu">招标预告</a></li>
-          <li><a href="zbgg.html" class="menu">招标公告</a></li>
-          <li><a href="zbgg.html" class="menu">招标变更</a></li>
-          <li><a href="zbgg.html" class="menu">中标公告</a></li>
-          <li><a href="zbgg.html" class="menu">推荐公告</a></li>
-          <li><a href="zbgg.html" class="menu">免费公告</a></li>
-          <li><a href="zbgg.html" class="menu">招标文件</a></li>
-          <li><a href="zhao_biao_ding_yue.html" class="menu">招标订阅</a></li>
-          <li><a href="fbgg.html" class="menu">发布招标</a></li>
-        </ul>
-        <ul class="secondary-menus secondary-menus-cgxx">
-          <li><a href="zbgg.html" class="menu">政府采购</a></li>
-          <li><a href="zbgg.html" class="menu">企业采购</a></li>
-          <li><a href="cai_gou_ding_yue.html" class="menu">采购订阅</a></li>
-          <li><a href="fbcg.html" class="menu">发布采购</a></li>                    
-        </ul>
-        <ul class="secondary-menus secondary-menus-xmxx">
-          <li><a href="constructing_project.html" class="menu">拟在建项目</a></li>
-          <li><a href="constructing_project.html" class="menu">精选项目</a></li>
-          <li><a href="constructing_project.html" class="menu">追踪项目</a></li>
-          <li><a href="xiang_mu_ding_yue.html" class="menu">项目订阅</a></li>
-        </ul> 
-        <ul class="secondary-menus secondary-menus-sjk">
-          <li><a href="#" class="menu">企业名录</a></li>
-          <li><a href="#" class="menu">业主单位库</a></li>
-          <li><a href="#" class="menu">设计单位库</a></li>
-          <li><a href="#" class="menu">招标代理机构</a></li>
-          <li><a href="#" class="menu">政府采购中心</a></li>
-          <li><a href="#" class="menu">工程交易中心</a></li>
-          <li><a href="#" class="menu">关系企业监控</a></li>
-          <li><a href="#" class="menu">竞争对手监控</a></li>          
-        </ul>       
-        <ul class="secondary-menus secondary-menus-zxzx">
-          <li><a href="#" class="menu">招标核准</a></li>
-          <li><a href="#" class="menu">项目报建</a></li>
-          <li><a href="#" class="menu">行业新闻</a></li>
-          <li><a href="#" class="menu">展会动态</a></li>
-        </ul> 
-        <ul class="secondary-menus secondary-menus-cjk">
-          <li><a href="#" class="menu">材料询价</a></li>
-          <li><a href="#" class="menu">业主报价</a></li>
-        </ul>                                  
-      </div>
-    </div>
-  </div>
-
-  {% else %}
-
-    <div class="header-menus">
+    <div class="header-menus header-region-menus">
       <div class="container-region-menus">
         <div class="wrapper">
           <ul class="region-menus">
@@ -222,6 +155,108 @@
         </div>
       </div>      
     </div>
+
+  {% elseif header2 %}
+
+  <div class="header-menus-2">
+    <ul>
+      <li>
+        <a href="home.html">首页</a>
+      </li>
+      <li>
+        <a href="about_us.html" {% if header2_about_us %}class="current"{% endif %}>关于我们</a>
+      </li>
+      <li>
+        <a href="guang_gao_fu_wu.html" {% if header2_ad_service %}class="current"{% endif %}>广告服务</a>
+      </li>   
+      <li>
+        <a href="zhao_pin_ji_shu.html" {% if header2_zhao_pin %}class="current"{% endif %}>招聘信息</a>
+      </li>      
+      <li>
+        <a href="service_list.html" {% if header2_service_list %}class="current"{% endif %}>服务列表</a>
+      </li>                    
+      <li>
+        <a href="kefu.html" {% if header2_kefu %}class="current"{% endif %}>客服中心</a>
+      </li>      
+      <li>
+        <a href="mian_ze_sheng_ming.html" {% if header2_mian_ze_sheng_ming %}class="current"{% endif %}>免责声明</a>
+      </li>      
+      <li>
+        <a href="yi_jian_jian_yi.html" {% if header2_yi_jian_jian_yi %}class="current"{% endif %}>意见建议</a>
+      </li>      
+    </ul>
+  </div>
+
+  {% else %}
+
+  <div class="header-menus">
+    <div class="container-primary-menus">
+      <div class="wrapper">
+        <ul class="primary-menus">
+          <li><a href="home.html" class="menu menu-home" data-name="home">首页</a></li>
+          <li><a href="zblm.html" class="menu {% if bid_menu %}selected{% endif %}" data-name="zbxx">招标信息</a></li>
+          <li><a href="cglm.html" class="menu" data-name="cgxx">采购信息</a></li>
+          <li><a href="project.html" class="menu {% if project_menu %}selected{% endif %}" data-name="xmxx">项目信息</a></li>
+          <li><a href="#" class="menu" data-name="sjk">数据库</a></li>
+          <li><a href="hang_ye_zi_xun.html" class="menu" data-name="zxzx">资讯中心</a></li>
+          <li><a href="#" class="menu" data-name="cjk">材价库</a></li>
+          <li><a href="#" class="menu" data-name="pxzx">培训中心</a></li>
+          <li><a href="#" class="menu" data-name="zzdl">资质代理</a></li>
+          <li><a href="#" class="menu" data-name="dzzb">电子招标</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-secondary-menus">
+      <div class="wrapper">
+        <ul class="secondary-menus secondary-menus-zbxx {% if bid_menu %}visible{% endif %}">
+          <li><a href="zbgg.html" class="menu">招标预告</a></li>
+          <li><a href="zbgg.html" class="menu">招标公告</a></li>
+          <li><a href="zbgg.html" class="menu">招标变更</a></li>
+          <li><a href="zbgg.html" class="menu">中标公告</a></li>
+          <li><a href="zbgg.html" class="menu">推荐公告</a></li>
+          <li><a href="zbgg.html" class="menu">免费公告</a></li>
+          <li><a href="zbgg.html" class="menu">招标文件</a></li>
+          <li><a href="zhao_biao_ding_yue.html" class="menu">招标订阅</a></li>
+          <li><a href="fbgg.html" class="menu">发布招标</a></li>
+        </ul>
+        <ul class="secondary-menus secondary-menus-cgxx">
+          <li><a href="zbgg.html" class="menu">政府采购</a></li>
+          <li><a href="zbgg.html" class="menu">企业采购</a></li>
+          <li><a href="cai_gou_ding_yue.html" class="menu">采购订阅</a></li>
+          <li><a href="fbcg.html" class="menu">发布采购</a></li>                    
+        </ul>
+        <ul class="secondary-menus secondary-menus-xmxx {% if project_menu %}visible{% endif %}">
+          <li><a href="constructing_project.html" class="menu">拟在建项目</a></li>
+          <li><a href="constructing_project.html" class="menu">精选项目</a></li>
+          <li><a href="constructing_project.html" class="menu">追踪项目</a></li>
+          <li><a href="xiang_mu_ding_yue.html" class="menu">项目订阅</a></li>
+        </ul> 
+        <ul class="secondary-menus secondary-menus-sjk">
+          <li><a href="#" class="menu">企业名录</a></li>
+          <li><a href="#" class="menu">业主单位库</a></li>
+          <li><a href="#" class="menu">设计单位库</a></li>
+          <li><a href="#" class="menu">招标代理机构</a></li>
+          <li><a href="#" class="menu">政府采购中心</a></li>
+          <li><a href="#" class="menu">工程交易中心</a></li>
+          <li><a href="#" class="menu">关系企业监控</a></li>
+          <li><a href="#" class="menu">竞争对手监控</a></li>          
+        </ul>       
+        <ul class="secondary-menus secondary-menus-zxzx">
+          <li><a href="zhao_biao_he_zhun.html" class="menu">招标核准</a></li>
+          <li><a href="#" class="menu">项目报建</a></li>
+          <li><a href="#" class="menu">行业新闻</a></li>
+          <li><a href="zhan_hui_zhong_xin.html" class="menu">展会动态</a></li>
+        </ul> 
+        <ul class="secondary-menus secondary-menus-cjk">
+          <li><a href="#" class="menu">材料询价</a></li>
+          <li><a href="#" class="menu">业主报价</a></li>
+        </ul>                                  
+      </div>
+    </div>
+  </div>  
+
+  {% endif %}
 
   {% endif %}
 

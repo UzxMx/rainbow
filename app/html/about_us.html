@@ -1,0 +1,52 @@
+{% set header2 = 'true' %}
+
+{% set header2_about_us = 'true' %}
+{% set page_about_us = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="page-about-us">
+
+  {% include "about_us_left_side.html" %}
+
+  <div class="main">
+    <div class="container-header">
+      <span class="icons-company"></span>
+      <span class="title">公司简介</span>
+    </div>
+    <div class="container-content" style="margin-bottom: 90px;">
+      <p>
+  企业文化：
+      </p>
+      <p style="text-indent:2em;">
+  招标王致力于成为一家专业的招投标信息咨询服务性质的企业，为招投标采购市场提供最及时、最全面、最专业的信息咨询服务，最大性地满足市场上大中小企业对于招投标信息及其咨询的需求，共同成长、互惠共赢。
+      </p>
+      <p style="text-indent:2em;">
+  三才文化、三生万物
+      </p>    
+      <p style="margin-top:30px;">
+  1、客户第一
+      </p>
+      <p>
+  只有成就客户，才能壮大招标王
+      </p>
+      <p>
+  2、团队协作
+      </p>
+      <p>
+  只有员工的成功，才能点燃招标王的希望
+      </p>
+      <p>
+  3、诚信敬业
+      </p>
+      <p>
+  只有坚守诚信经营、精益创新理念，才能铸就招标王的发展之路
+      </p>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

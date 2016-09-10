@@ -1,0 +1,12 @@
+.page-about-us-only-main {
+  & > .main {
+    float: none;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.page-mian-ze {
+  @include icons(mianze);
+}

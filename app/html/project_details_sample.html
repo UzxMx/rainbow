@@ -1,0 +1,826 @@
+{% set project_menu = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.ProjectDetails.init();
+    ZBW.QuickRegister.init();
+  });
+</script>
+{% endblock %}
+
+{% block breadcrumb %}
+
+<div class="container-breadcrumb">
+  <div class="breadcrumb">
+    <span class="icons-geo"></span>
+    <span>您当前的位置：</span>
+    <a href="home.html">招标王</a>
+    <span class="icons-arrow-right"></span>
+    <a href="project.html">项目信息</a>  
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div id="page-project-details">
+  <div class="region">
+    <div class="row">
+      <div class="col-sm-9 region-main">
+        <div class="project">
+          <div class="project-header">
+            <div class="project-title">
+              <h1>淄博市工业学校校舍项目</h1>
+            </div>
+            <div class="project-extra-info">
+              <div class="item">
+                <span>项目地址：</span>
+                <span>山东省淄博市临淄区齐兴</span>
+              </div>
+              <div class="item">
+                <span>发布时间：</span>
+                <span>2015-06-10</span>
+              </div>
+              <div class="item">
+                <span>更新时间：</span>
+                <span>2016-08-15</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-block project-block-outline">
+            <div class="project-block-header">
+              项目概况
+            </div>
+            <div class="project-block-content">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td class="item-name">项目编号</td>
+                    <td>43568732</td>
+                    <td class="item-name">跟进纪录</td>
+                    <td>跟进6</td>
+                  </tr>
+                  <tr>
+                    <td class="item-name">进展阶段</td>
+                    <td>施工在建</td>
+                    <td class="item-name">业主类型</td>
+                    <td>政府</td>
+                  </tr>
+                  <tr>
+                    <td class="item-name">项目性质</td>
+                    <td>新建</td>
+                    <td class="item-name">项目地区</td>
+                    <td>山东 淄博</td>
+                  </tr>         
+                  <tr>
+                    <td class="item-name">项目类别</td>
+                    <td>教育及研究</td>
+                    <td class="item-name">项目子类别</td>
+                    <td>大学、高等专科院校</td>
+                  </tr>                                       
+                  <tr>
+                    <td class="item-name">建筑面积</td>
+                    <td>102929平方米</td>
+                    <td class="item-name">占地面积</td>
+                    <td>220亩</td>
+                  </tr>
+                  <tr>
+                    <td class="item-name">建筑物层数</td>
+                    <td>5</td>
+                    <td class="item-name">装修情况</td>
+                    <td>精装修</td>
+                  </tr>      
+                  <tr>
+                    <td class="item-name">项目投资</td>
+                    <td>3.1亿元</td>
+                    <td class="item-name">钢结构</td>
+                    <td>是</td>
+                  </tr>                                          
+                  <tr>
+                    <td class="item-name">开工时间</td>
+                    <td colspan="3">2016年7月</td>
+                  </tr>  
+                  <tr>
+                    <td class="item-name">竣工时间</td>
+                    <td colspan="3">2018年1月</td>
+                  </tr>                 
+                  <tr>
+                    <td class="item-name">项目概况</td>
+                    <td colspan="3">
+                      <p>
+                      项目名称：淄博市工业学校校舍改造工程</p>
+                      <p>
+                      项目地点：临淄区齐兴路102号</p>
+                      <p style="margin-bottom:0px;">
+                      项目规模：</p>
+                      <p style="text-indent:2em;margin-bottom:0px;">规划占地220亩总体规划总建筑面积约102929平方米，地上约96454平方米，地下6475平方米。项目投资3.1亿元，工程预算3500万元。</p>
+                      <p style="text-indent:2em;">
+                      综合楼单体建筑面积暂按18000平方米。其中包括行政办公、信息中心、图书馆，及经济贸易专业、餐饮旅游专业学生的教室、实训室，合堂教室，负一楼设立地下车库。</p>
+                    </td>
+                  </tr>                             
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="project-block project-block-progress">
+            <div class="project-block-header">
+              项目跟进
+            </div>
+            <div class="project-block-content">
+              <div class="progress-graph">
+                <div class="progress-stage progress-stage-keyan">
+                  <span class="icon icons-keyan"></span>
+                  <div class="description">可研</div>
+                </div><!--
+             --><div class="progress-separator active"></div><!--
+             --><div class="progress-stage progress-stage-sheji active">
+                  <span class="icon icons-sheji"></span>
+                  <div class="description">设计阶段</div>
+                </div><!--
+             --><div class="progress-separator active"></div><!--
+             --><div class="progress-stage progress-stage-beian">
+                  <span class="icon icons-beian"></span>
+                  <div class="description">备案</div>
+                </div><!--
+             --><div class="progress-separator active"></div><!--
+             --><div class="progress-stage progress-stage-shenpi">
+                  <span class="icon icons-shenpi"></span>
+                  <div class="description">审批</div>
+                </div><!--
+             --><div class="progress-separator active"></div><!--
+             --><div class="progress-stage progress-stage-hezhun">
+                  <span class="icon icons-hezhun"></span>
+                  <div class="description">核准</div>
+                </div><!--
+             --><div class="progress-separator active"></div><!--
+             --><div class="progress-stage progress-stage-lixiang">
+                  <span class="icon icons-lixiang"></span>
+                  <div class="description">立项</div>
+                </div><!--
+             --><div class="progress-separator active"></div><!--
+             --><div class="progress-stage progress-stage-huanping">
+                  <span class="icon icons-huanping"></span>
+                  <div class="description">环评</div>
+                </div><!--
+             --><div class="progress-separator active"></div><!--
+             --><div class="progress-stage progress-stage-zhunbei">
+                  <span class="icon icons-zhunbei"></span>
+                  <div class="description">施工准备</div>
+                </div><!--
+             --><div class="progress-separator active"></div><!--
+             --><div class="progress-stage progress-stage-zaijian">
+                  <span class="icon icons-zaijian"></span>
+                  <div class="description">施工在建</div>
+                </div><!--
+             --><div class="progress-separator"></div><!--
+             --><div class="progress-stage progress-stage-jungong inactive">
+                  <span class="icon icons-jungong"></span>
+                  <div class="description">竣工</div>
+                </div>                                       
+              </div>
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="c-id">跟进</th>
+                    <th>阶段</th>
+                    <th>跟进纪录</th>
+                    <th class="c-date">跟进日期</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="c-id">6</td>
+                    <td>施工在建</td>
+                    <td>
+                      截止到2016年8月15日,该项目正在主体施工建设。
+                    </td>
+                    <td class="c-date">2016-08-15</td>
+                  </tr>
+                  <tr>
+                    <td class="c-id">5</td>
+                    <td>施工准备</td>
+                    <td>
+                      该项目十二月下旬新增工业学校校舍改造建设（PPP）项目变更公告，相关单位可关注。
+                    </td>
+                    <td class="c-date">2016-01-05</td>
+                  </tr>
+                  <tr>
+                    <td class="c-id">4</td>
+                    <td>施工准备</td>
+                    <td>
+                      该项目十二月上旬新增校舍改造建设（PPP）项目变更公告，相关单位可关注。
+                    </td>
+                    <td class="c-date">2015-12-09</td>
+                  </tr>
+                  <tr>
+                    <td class="c-id">3</td>
+                    <td>施工准备</td>
+                    <td>
+                      该项目处于工业学校校舍改造建设（PPP）项目招标阶段，相关单位可关注。
+                    </td>
+                    <td class="c-date">2015-12-26</td>
+                  </tr>
+                  <tr>
+                    <td class="c-id">2</td>
+                    <td>设计阶段</td>
+                    <td>
+                      据王先生透露：该项目处于设计招标阶段，施工单位招标还没有具体计划，后期会公开招标，相关信息会通过网络公示，资质合格者均可参与投标，相关单位可后续关注。
+                    </td>
+                    <td class="c-date">2015-06-10</td>
+                  </tr>
+                  <tr>
+                    <td class="c-id">1</td>
+                    <td>施工准备</td>
+                    <td>
+                      该项目处于设计招标阶段，2015年6月25日截止投标文件的递交，相关单位可关注。
+                    </td>
+                    <td class="c-date">2015-06-10</td>
+                  </tr>                                                                                
+                </tbody>
+              </table>            
+
+            </div>
+          </div>
+
+          <div class="project-block project-block-company">
+            <div class="project-block-header">
+              项目联系人
+            </div>    
+            <div class="project-block-content">
+              <div class="project-company project-company-owner">
+                <div class="project-company-header">
+                  <span class="icon icons-owner-company"></span>
+                  <span>业主单位</span>
+                </div>
+                <div class="project-company-content">
+                  <div>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>单位名称：</td>
+                          <td>淄博市工业学校</td>
+                          <td>业主类型：</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>职务：</td>
+                          <td></td>
+                          <td>联系人：</td>
+                          <td>王瑞孟(总务处)</td>
+                        </tr>
+                        <tr>
+                          <td>电话：</td>
+                          <td>0533-6290907</td>
+                          <td>邮箱：</td>
+                          <td></td>
+                        </tr>     
+                        <tr>
+                          <td>地址：</td>
+                          <td>山东淄博临淄区齐兴路102</td>
+                        </tr>                                                         
+                      </tbody>
+                    </table>
+                  </div>
+                  <div>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>单位名称：</td>
+                          <td>淄博市工业学校</td>
+                          <td>业主类型：</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>职务：</td>
+                          <td></td>
+                          <td>联系人：</td>
+                          <td>王文广 先生(办公室)</td>
+                        </tr>
+                        <tr>
+                          <td>电话：</td>
+                          <td>0533-6290907</td>
+                          <td>邮箱：</td>
+                          <td></td>
+                        </tr>     
+                        <tr>
+                          <td>地址：</td>
+                          <td>山东淄博临淄区齐兴路102</td>
+                        </tr>                                                         
+                      </tbody>
+                    </table>
+                  </div>
+                  <div>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>单位名称：</td>
+                          <td>淄博市临淄区教育局</td>
+                          <td>业主类型：</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>职务：</td>
+                          <td></td>
+                          <td>联系人：</td>
+                          <td>钟安水</td>
+                        </tr>
+                        <tr>
+                          <td>电话：</td>
+                          <td>0533-6290808</td>
+                          <td>邮箱：</td>
+                          <td></td>
+                        </tr>     
+                        <tr>
+                          <td>地址：</td>
+                          <td>临淄区晏婴路185号</td>
+                        </tr>                                                         
+                      </tbody>
+                    </table>
+                  </div>
+                </div>                     
+              </div>
+
+              <div class="project-company project-company-designer">
+                <div class="project-company-header">
+                  <span class="icon icons-designer-company"></span>
+                  <span>设计单位</span>
+                </div>
+                <div class="project-company-content">
+                  <div>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>单位名称：</td>
+                          <td>山东省建筑设计研究院</td>
+                          <td>业主类型：</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>职务：</td>
+                          <td></td>
+                          <td>联系人：</td>
+                          <td>乔永学 先生 (建筑设计师)</td>
+                        </tr>
+                        <tr>
+                          <td>电话：</td>
+                          <td>86 531 87913027</td>
+                          <td>邮箱：</td>
+                          <td>warchi@126.com</td>
+                        </tr>     
+                        <tr>
+                          <td>地址：</td>
+                          <td>山东济南经四路小纬四路2号</td>
+                        </tr>                                                         
+                      </tbody>
+                    </table>
+                  </div>
+                  <div>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>单位名称：</td>
+                          <td>山东省建筑设计研究院</td>
+                          <td>业主类型：</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>职务：</td>
+                          <td></td>
+                          <td>联系人：</td>
+                          <td>顾国栋 先生(所长)</td>
+                        </tr>
+                        <tr>
+                          <td>电话：</td>
+                          <td>86 531 87913040</td>
+                          <td>邮箱：</td>
+                          <td>warchi@126.com</td>
+                        </tr>     
+                        <tr>
+                          <td>地址：</td>
+                          <td>山东济南经四路小纬四路2号</td>
+                        </tr>                                                         
+                      </tbody>
+                    </table>
+                  </div>                 
+                </div>             
+              </div>
+
+              <div class="project-company project-company-constructing">
+                <div class="project-company-header">
+                  <span class="icon icons-constructing-company"></span>
+                  <span>施工单位</span>
+                </div>
+                <div class="project-company-content">
+                  <div>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td>单位名称：</td>
+                          <td>山东高阳建设公司(又名:山东金塔建设有限公司)</td>
+                          <td>业主类型：</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>职务：</td>
+                          <td></td>
+                          <td>联系人：</td>
+                          <td>孙 先生(技术负责人)</td>
+                        </tr>
+                        <tr>
+                          <td>电话：</td>
+                          <td>86 533 7110395</td>
+                          <td>邮箱：</td>
+                          <td>gyjs@gyjs.cc</td>
+                        </tr>     
+                        <tr>
+                          <td>地址：</td>
+                          <td>山东淄博临淄区管仲路174号</td>
+                        </tr>                                                         
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>                        
+            </div>
+          </div>   
+
+          <div class="project-like-container">
+            <div class="description">
+              如果您对本项目感兴趣，想长期关注，可以点击
+            </div>
+            <div>
+              <a href="javascript:void(0)" class="btn btn-primary btn-like">收藏项目</a>
+            </div>
+          </div> 
+
+        </div>
+
+        <div class="container-guess-what-you-like">
+          <div class="guess-what-you-like">
+            <div class="guess-what-you-like-header">
+              <span class="icons-heart"></span>
+              <span>猜您喜欢</span>
+            </div>
+            <div class="guess-what-you-like-body container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul class="list">
+                    <li>
+                      <div>
+                        <div class="col col-bullet">
+                          &#9642;
+                        </div>
+                        <div class="col col-title"><a href="javascript:void(0)" class="ellipse">海尔全球创新模式研究中心工程</a></div>
+                        <div class="col col-date">2016-08-15</div>
+                      </div>                    
+                    </li>
+                    <li>
+                      <div>
+                        <div class="col col-bullet">
+                          &#9642;
+                        </div>
+                        <div class="col col-title"><a href="javascript:void(0)" class="ellipse">阳信县水落坡镇中小学综合楼建设工程</a></div>
+                        <div class="col col-date">2016-06-12</div>
+                      </div>                    
+                    </li>
+                    <li>
+                      <div>
+                        <div class="col col-bullet">
+                          &#9642;
+                        </div>
+                        <div class="col col-title"><a href="javascript:void(0)" class="ellipse">东营市第二中学迁建项目</a></div>
+                        <div class="col col-date">2016-03-29</div>
+                      </div>                    
+                    </li>   
+                    <li>
+                      <div>
+                        <div class="col col-bullet">
+                          &#9642;
+                        </div>
+                        <div class="col col-title"><a href="javascript:void(0)" class="ellipse">曹县教育培训中心(PPP)项目</a></div>
+                        <div class="col col-date">2016-03-22</div>
+                      </div>                    
+                    </li>                                                   
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul class="list">
+                    <li>
+                      <div>
+                        <div class="col col-bullet">
+                          &#9642;
+                        </div>
+                        <div class="col col-title"><a href="javascript:void(0)" class="ellipse">山东工程技师学院新能源汽车实训楼工程</a></div>
+                        <div class="col col-date">2016-07-11</div>
+                      </div>                    
+                    </li>
+                    <li>
+                      <div>
+                        <div class="col col-bullet">
+                          &#9642;
+                        </div>
+                        <div class="col col-title"><a href="javascript:void(0)" class="ellipse">冠县实验高级中学学校建设项目</a></div>
+                        <div class="col col-date">2016-06-01</div>
+                      </div>                    
+                    </li>
+                    <li>
+                      <div>
+                        <div class="col col-bullet">
+                          &#9642;
+                        </div>
+                        <div class="col col-title"><a href="javascript:void(0)" class="ellipse">山东城市建设职业学院实验实训中心项目</a></div>
+                        <div class="col col-date">2016-03-24</div>
+                      </div>                    
+                    </li>   
+                    <li>
+                      <div>
+                        <div class="col col-bullet">
+                          &#9642;
+                        </div>
+                        <div class="col col-title"><a href="javascript:void(0)" class="ellipse">聊城莘县莘州中学4号学生宿舍楼、游泳池、教工宿舍项目</a></div>
+                        <div class="col col-date">2016-03-21</div>
+                      </div>                    
+                    </li>                                                   
+                  </ul>
+                </div>              
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="col-sm-3 region-right-side">
+        <div class="wrapper">
+
+          <div class="block block-login-register">
+            <div class="row">
+              <div class="col-sm-6">
+                <a href="deng_lu.html" class="btn btn-login">登录</a>
+              </div>
+              <div class="col-sm-6">
+                <a href="zhu_ce_1.html" class="btn btn-register">注册</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="block block-services">
+            <div class="block-header">
+              注册后您可享受以下服务
+            </div>
+            <div class="block block-content container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-searchview">
+                    </span>
+                  </div>
+                  <div>免费查看所有招标信息</div>
+                </div>
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-hand">
+                    </span>
+                  </div>
+                  <div>提前把握项目</div>
+                </div>           
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-edit">
+                    </span>
+                  </div>
+                  <div>订阅属于自己的招标信息</div>
+                </div>    
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-gift">
+                    </span>
+                  </div>
+                  <div>信息免费发送邮箱</div>
+                </div>  
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-send">
+                    </span>
+                  </div>
+                  <div>发布招标信息</div>
+                </div>
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-cert">
+                    </span>
+                  </div>
+                  <div>招标王认证</div>
+                </div>                                           
+              </div>
+            </div> 
+          </div>
+
+          <div class="block block-register-info">
+            <div class="block-header">
+              5秒注册，百万招标信息唾手可得
+            </div>
+            <div class="block-content">
+              <div class="wrapper">
+                <form>
+                  <div class="control-group">
+                    <div class="container-title">你的名字</div>
+                    <div>
+                      <input type="text" class="name" />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="container-title">你的公司</div>
+                    <div>
+                      <input type="text" class="company-name" />
+                    </div>
+                  </div>
+
+                  <div class="control-group control-group-phone">
+                    <div class="container-title">你的手机号码</div>
+                    <div>
+                      <input type="text" class="telphone" />
+                      <button type="button" class="btn btn-primary btn-send-verify-code">发送验证码</button>
+                    </div>
+                  </div> 
+                  <div class="control-group">
+                    <div class="container-title">短信验证码</div>
+                    <div>
+                      <input type="text" class="verify-code" />
+                    </div>
+                  </div>                           
+
+                  <button type="submit" class="btn btn-primary btn-register">免费注册</button>
+                </form>
+              </div>
+            </div>
+          </div>         
+          
+          <div class="block block-project-types">
+            <div class="block-header">
+              项目类型
+            </div>
+            <div class="block-content container-fluid">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href="#">会展</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">办公楼</a>
+                </div>            
+                <div class="col-sm-4">
+                  <a href="#">商业零售</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">工业</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">住宅</a>
+                </div>            
+                <div class="col-sm-4">
+                  <a href="#">司法</a>
+                </div> 
+                <div class="col-sm-4">
+                  <a href="#">农业</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">交通</a>
+                </div>            
+                <div class="col-sm-4">
+                  <a href="#">社区</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">教育研究</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">休闲娱乐</a>
+                </div>            
+                <div class="col-sm-4">
+                  <a href="#">医疗</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">基础建设</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">公用事业设施</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">石油天然气</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">开采</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="#">酒店餐饮</a>
+                </div>  
+                <div class="col-sm-4">
+                  <a href="#">新市区开发</a>
+                </div> 
+                <div class="col-sm-4">
+                  <a href="#">其它</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block block-region-subsites">
+            <div class="block-header">
+              招标王分站
+            </div>
+            <div class="block-content container-fluid">
+              <div class="row">
+                <div class="col-sm-2">
+                  <a href="#">全国</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>  
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">全国</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>  
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>   
+                <div class="col-sm-2">
+                  <a href="#">全国</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>  
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">全国</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>  
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>                                                       
+              </div>
+            </div>
+          </div>        
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

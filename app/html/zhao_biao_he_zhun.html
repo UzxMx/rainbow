@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+
+{% set page_zhao_biao_he_zhun = 'true' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    
+  });
+</script>
+{% endblock %}
+
+{% block breadcrumb %}
+
+<div class="container-breadcrumb">
+  <div class="breadcrumb">
+    <span class="icons-geo"></span>
+    <span>您当前的位置：</span>
+    <a href="home.html">招标王</a>
+    <span class="icons-arrow-right"></span>
+    <a href="zhao_biao_he_zhun.html">招标核准</a>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="page-industry-news">
+  <div class="region">
+    <div class="row">
+      <div class="col-sm-9 region-main">
+
+        <div class="list-header">招标核准</div>
+        <div class="list-content">
+          <div class="item">
+            <div class="title"><a href="zi_xun_xiang_qing.html">
+              <span>南京浦口公证处对重点工程招投标进行现场监督公证</span></a></div>
+            <div class="date">今天</div>
+          </div>       
+          <div class="item">
+            <div class="title"><a href="zi_xun_xiang_qing.html">
+              <span>南京浦口公证处对重点工程招投标进行现场监督公证</span></a></div>
+            <div class="date">2016-07-04</div>
+          </div>
+          <div class="item">
+            <div class="title"><a href="zi_xun_xiang_qing.html">
+              <span>南京浦口公证处对重点工程招投标进行现场监督公证</span></a></div>
+            <div class="date">2016-07-04</div>
+          </div> 
+          <div class="item">
+            <div class="title"><a href="zi_xun_xiang_qing.html">
+              <span>南京浦口公证处对重点工程招投标进行现场监督公证</span></a></div>
+            <div class="date">2016-07-04</div>
+          </div> 
+          <div class="item">
+            <div class="title"><a href="zi_xun_xiang_qing.html">
+              <span>南京浦口公证处对重点工程招投标进行现场监督公证</span></a></div>
+            <div class="date">2016-07-04</div>
+          </div>                                                      
+        </div>
+
+        <div class="container-pagination">
+          <div class="pagination">
+            <a href="#">上一页</a>
+            <a href="#" class="pageindex">1</a>
+            <a href="#" class="pageindex current">2</a>
+            <a href="#" class="pageindex">3</a>
+            <a href="#" class="pageindex">4</a>
+            <a href="#">下一页</a>
+          </div>
+        </div>
+      </div>
+
+      {% include "demo_center_right_side.html" %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

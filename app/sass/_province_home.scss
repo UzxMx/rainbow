@@ -1,5 +1,5 @@
-.page-province-home, .page-city-home {
-  .header-menus {
+#page-header {
+  .header-region-menus {
     margin-bottom: 30px;
 
     .container-region-menus {
@@ -28,6 +28,9 @@
       }
     }
   }
+}
+
+#page-province-home, #page-city-home {
 
   .block-city-sites {
     margin-bottom: 20px;
@@ -177,7 +180,7 @@
   }
 }
 
-.page-city-home {
+#page-city-home {
   .block {
     margin-bottom: 20px;
   }

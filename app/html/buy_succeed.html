@@ -1,0 +1,28 @@
+{% set logged_in = "true" %}
+{% set no_menus = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div id="page-pay">
+  <div class="pay-header">
+    支付结果
+  </div>
+  <div class="pay-body">
+    <div class="container-result">
+      <span class="icon icons-pay-succeed"></span>
+      <div>
+        您已成功付款！
+      </div>
+      <div>支付方式：支付宝</div>
+      <div>付款金额：<span class="price">¥1000</span></div>
+      <div>请进入会员中心我的订单查询支付结果</div>
+      <div class="container-btn">
+        <a href="orders.html" class="btn btn-primary">查看我的订单</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

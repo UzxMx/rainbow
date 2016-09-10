@@ -1,4 +1,4 @@
-.page-bid-details {
+#page-bid-details {
   .container-bid {
 
     .container-bid-outline {
@@ -122,7 +122,7 @@
     border: 1px solid $brand-primary-color;
 
     .block-header {
-      padding: 20px 0 0 20px;
+      padding: 20px 0 0 10px;
       font-size: 16px;
       color: $brand-primary-color;
     }
@@ -145,7 +145,7 @@
           display: block;
           content: attr(data-date);
           position: absolute;
-          left: -$padding-left - 40px;
+          left: -88px;
         }
 
         &:after {
@@ -170,6 +170,13 @@
           padding-bottom: 0;
           margin-top: -5px;
           border: none;
+        }
+
+        a {
+          color: #666;
+          &:hover {
+            color: $brand-primary-color;
+          }
         }      
       }
     }
@@ -240,78 +247,78 @@
       }
     }
   }
+}
 
-  #choose_other_stage_dialog {
-    @include icons(bid-yugao);
-    @include icons(bid-notification);
-    @include icons(bid-change);
-    @include icons(bid-result);
+#choose_other_stage_dialog {
+  @include icons(bid-yugao);
+  @include icons(bid-notification);
+  @include icons(bid-change);
+  @include icons(bid-result);
 
-    .dialog-header {
-      h1 {
-        float: left;
-        font-size: 18px;
-        padding: 20px 0 0 20px;
+  .dialog-header {
+    h1 {
+      float: left;
+      font-size: 18px;
+      padding: 20px 0 0 20px;
+    }
+  }
+
+  .dialog-content {
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    & > .wrapper {
+      font-size: 0;
+      text-align: center;
+    }
+  }
+
+  .separator {
+    display: inline-block;
+    background-color: #ccc;
+    height: 2px;
+    width: 60px;
+    vertical-align: top;
+    margin-top: 30px;
+
+    &.active {
+      background-color: $brand-primary-color;
+    }
+  }
+
+  .stage {
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: top;
+    color: #666;
+    cursor: default;
+
+    &.active {
+      cursor: pointer;
+
+      .icons-bid-yugao {
+        @include icons-sprite(bid-yugao-active);
+      }
+
+      .icons-bid-notification {
+        @include icons-sprite(bid-notification-active);
+      }
+
+      .icons-bid-change {
+        @include icons-sprite(bid-change-active);
+      }
+
+      .icons-bid-result {
+        @include icons-sprite(bid-result-active);
+      }
+
+      &.current, &:hover {
+        color: $brand-primary-color;
       }
     }
 
-    .dialog-content {
-      padding-top: 60px;
-      padding-bottom: 40px;
-
-      & > .wrapper {
-        font-size: 0;
-        text-align: center;
-      }
-    }
-
-    .separator {
-      display: inline-block;
-      background-color: #ccc;
-      height: 2px;
-      width: 60px;
-      vertical-align: top;
-      margin-top: 30px;
-
-      &.active {
-        background-color: $brand-primary-color;
-      }
-    }
-
-    .stage {
-      display: inline-block;
-      font-size: 15px;
-      vertical-align: top;
-      color: #666;
-      cursor: default;
-
-      &.active {
-        cursor: pointer;
-
-        .icons-bid-yugao {
-          @include icons-sprite(bid-yugao-active);
-        }
-
-        .icons-bid-notification {
-          @include icons-sprite(bid-notification-active);
-        }
-
-        .icons-bid-change {
-          @include icons-sprite(bid-change-active);
-        }
-
-        .icons-bid-result {
-          @include icons-sprite(bid-result-active);
-        }
-
-        &.current, &:hover {
-          color: $brand-primary-color;
-        }
-      }
-
-      .container-icon {
-        margin-bottom: 10px;
-      }      
-    }
-  }  
+    .container-icon {
+      margin-bottom: 10px;
+    }      
+  }
 }

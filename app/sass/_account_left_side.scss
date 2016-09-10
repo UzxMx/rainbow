@@ -1,8 +1,6 @@
-.page-account, .page-manage-subscribe, .page-subscribe, .page-collection, .page-orders, .page-messages, .page-feedback {
-  #main-container {
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
+#main-container.member-center {
+  padding-top: 30px;
+  padding-bottom: 40px;
 
   .region-left-side {
     @include icons(book);

@@ -1,5 +1,3 @@
-{% set body_class = "page-search" %}
-
 {% extends 'layout.html' %}
 
 {% block after_main_js %}
@@ -26,7 +24,8 @@
 
 {% block content %}
 
-<div class="region">
+<div id="page-search">
+  <div class="region">
   <div class="row">
     <div class="col-sm-9 region-main">
       <div class="container-search">
@@ -437,6 +436,7 @@
         </div>        
       </div>
 
+    </div>
     </div>
   </div>
 </div>

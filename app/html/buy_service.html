@@ -1,0 +1,104 @@
+{% set logged_in = "true" %}
+{% set no_menus = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-buy-service">
+  <div class="service service-low-level">
+    <div class="wrapper">
+      <div class="service-header">
+        <div class="table-row">
+          <div class="table-col vertical-middle">
+            <div>
+              <span>初级会员</span>
+              <span class="icons-member-logo"></span>
+            </div>
+            <div>
+              4800元/年
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-body">
+        <div class="container-items">
+          <div class="item">招标信息</div>
+          <div class="item">招标订阅</div>
+          <div class="item">邮箱订阅</div>
+          <div class="item">短信订阅</div>          
+        </div>
+        <div class="container-btn">
+          <a href="buy.html" class="btn btn-danger btn-buy">立即购买</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="service service-high-level">
+    <div class="wrapper">
+      <div class="service-header">
+        <div class="table-row">
+          <div class="table-col vertical-middle">
+            <div>
+              <span>高级会员</span>
+              <span class="icons-member-logo"></span>
+            </div>
+            <div>
+              8800元/年
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-body">
+        <div class="container-items">
+          <div class="item">招标信息</div>
+          <div class="item">招标订阅</div>
+          <div class="item">项目信息</div>
+          <div class="item">项目订阅</div>
+          <div class="item">邮箱订阅</div>
+          <div class="item">短信订阅</div>          
+        </div>
+        <div class="container-btn">
+          <a href="buy.html" class="btn btn-danger btn-buy">立即购买</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="service service-vip">
+    <div class="wrapper">
+      <div class="service-header">
+        <div class="table-row">
+          <div class="table-col vertical-middle">
+            <div>
+              <span>VIP会员</span>
+              <span class="icons-diamond"></span>
+            </div>
+            <div>
+              16800元/年
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-body">
+        <div class="container-items">
+          <div class="item">精选项目</div>
+          <div class="item">项目订阅</div>
+          <div class="item">邮箱订阅</div>
+          <div class="item">短信订阅</div>          
+        </div>
+        <div class="container-btn">
+          <a href="buy.html" class="btn btn-danger btn-buy">立即购买</a>
+        </div>
+      </div>
+    </div>
+  </div>     
+</div>
+
+{% endblock %}

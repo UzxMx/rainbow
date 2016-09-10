@@ -494,6 +494,17 @@ a.ellipse, span.ellipse {
   }
 }
 
+.table-bordered {
+  & > thead > tr > th {
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+  }
+  & > tbody > tr > td {
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+  }
+}
+
 /**
  *
  * pagination
@@ -533,6 +544,7 @@ a.ellipse, span.ellipse {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
+  z-index: 10000;
 
   &.visible {
     display: block;
@@ -605,5 +617,22 @@ a.ellipse, span.ellipse {
 @import 'project_details';
 
 @import "province_home";
+
+@import "about_us";
+@import "zhao_pin";
+@import "kefu";
+@import "mian_ze";
+@import "yi_jian_jian_yi";
+@import "ad_service";
+
+@import "landing_page";
+
+@import "demo_center";
+@import "industry_news";
+@import "industry_news_details";
+
+@import "buy";
+
+@import "industry_category";
 
 @import "footer";

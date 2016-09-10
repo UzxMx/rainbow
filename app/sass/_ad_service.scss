@@ -1,0 +1,62 @@
+.page-ad-service {
+  @include icons(ad-service);
+
+  & > .main {
+    max-width: 1100px;
+  }
+
+  .ad-item {
+    margin-bottom: 80px;
+
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+
+    .part-left, .part-right {
+      float: left;
+      width: 50%;
+    }
+
+    .part-left {
+      margin-top: 30px;
+    }
+
+    .computer {
+      display: inline-block;
+      background-image: url(../images/computer-framework.png);
+      width: 480px;
+      height: 272px;
+
+      img {
+        position: relative;
+        width: 360px;
+        height: 235px;
+        top: 15px;
+        left: 61px;
+      }
+    }
+
+    .ad-header {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .part-right {
+      table {
+        width: 100%;
+        text-align: center;
+
+        th {
+          text-align: center;
+          background-color: #daeeff;
+        }
+
+        td, th {
+          padding: 8px 0;
+        }
+      }
+    }
+  }
+}

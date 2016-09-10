@@ -1,6 +1,6 @@
-.page-subscribe {
+#member-center-subscribe {
 
-  .container-subscribe {
+  &.container-subscribe {
 
     .container-subscribe-nav {
       border-bottom: 2px solid $brand-primary-color;
@@ -219,7 +219,7 @@
   }
 
   // create or edit
-  .container-subscribe {
+  &.container-subscribe {
     .container-subscribe-item-list {
       .indicator {
         position: absolute;
@@ -295,8 +295,8 @@
 
         .selection {
           display: inline-block;
-          padding: 5px 0;
-          width: 100px;
+          padding: 5px 20px;
+          min-width: 100px;
           border: 1px solid #ccc;
           @include border-radius(3px);
           cursor: pointer;
@@ -391,7 +391,7 @@
   }  
 
   // project
-  .container-subscribe-project {
+  &.container-subscribe-project {
     .container-results {
       .table {
 
@@ -449,7 +449,7 @@
   }
 
   // create or edit for project
-  .container-subscribe-project {
+  &.container-subscribe-project {
     .row-subtype {
       .hint {
         display: none;

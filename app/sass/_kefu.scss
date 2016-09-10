@@ -1,0 +1,36 @@
+.page-kefu {
+  @include icons(kefu);
+
+  .container-demo {
+    margin-bottom: 30px;
+
+    .demo-header {
+      color: $brand-primary-color;
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .problem {
+    margin-bottom: 30px;
+
+    .problem-header {
+      margin-bottom: 10px;
+      &:before {
+        content: " ";
+        display: inline-block;
+        $radius: 2px;
+        width: 2 * $radius;
+        height: 2 * $radius;
+        @include border-radius($radius);
+        margin-right: 5px;
+        background-color: #666;
+        vertical-align: middle;
+      }
+
+      span {
+        vertical-align: middle;
+      }
+    }
+  }
+}

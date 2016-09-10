@@ -1,11 +1,10 @@
-{% set body_class = "page-bid-details" %}
-
 {% extends 'layout.html' %}
 
 {% block after_main_js %}
 <script type="text/javascript">
   $(function() {
-    ZBW.BidDetails.init();
+    ZBW.QuickRegister.init();
+    ZBW.BidDetailsNotLogin.init();
   });
 </script>
 {% endblock %}
@@ -20,7 +19,7 @@
     <span class="icons-arrow-right"></span>
     <a href="zblm.html">招标信息</a>
     <span class="icons-arrow-right"></span>
-    <a href="bid_details.html">连江县中学学生宿舍楼...</a>    
+    <a href="{{ bid_details_link }}">{{ bid_details_title }}</a>    
   </div>
 </div>
 
@@ -28,282 +27,341 @@
 
 {% block content %}
 
-<div class="region">
-  <div class="row">
-    <div class="col-sm-8 region-main">
-      <div class="container-bid">
-        <div class="container-bid-title">
-          <h1>连江县中学学生宿舍楼、教师宿舍楼及运动场工程（施工）工程勘察设计招标答疑纪要</h1>
-        </div>
-
-        <div class="container-bid-outline">
-          <table class="table">
-            <tbody>
-              <tr>
-                <td>发布时间：</td>
-                <td>2016-07-01</td>
-                <td>招标阶段：</td>
-                <td>{{ stage }}</td>
-              </tr>
-              <tr>
-                <td>所属地区</td>
-                <td>安徽</td>
-                <td>业务相关：</td>
-                <td>政府、采购</td>                
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="container-bid-details">
-          {% block details %}
-          {% endblock %}
-        </div>
-
-        <div class="container-bid-actions">
-          <div class="container-action">
-            <a class="container-action-btn btn-download" href="#">
-              <div class="table-row">
-                <div class="table-col vertical-middle">
-                  <div><span class="icons-big-download"></span></div>
-                  <div>招标文件下载</div>
-                </div>
-              </div>
-            </a>
+<div id="page-bid-details">
+  <div class="region">
+    <div class="row">
+      <div class="col-sm-9 region-main">
+        <div class="container-bid">
+          <div class="container-bid-title">
+            <h1>{{ bid_details_title }}</h1>
           </div>
-          <div class="container-action">
-            <a class="container-action-btn btn-collect" href="">
-              <div class="table-row">
-                <div class="table-col vertical-middle">
-                  <div><span class="icons-blue-folder"></span></div>
-                  <div>收藏项目</div>
-                </div>
-              </div>
-            </a>
+
+          <div class="container-bid-outline">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>发布时间：</td>
+                  <td>2016-07-01</td>
+                  <td>招标阶段：</td>
+                  <td>{{ stage }}</td>
+                </tr>
+                <tr>
+                  <td>所属地区：</td>
+                  <td>安徽</td>
+                  <td>业务相关：</td>
+                  <td><a href="zblm.html">政府</a>、<a href="zblm.html">采购</a></td>                
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="container-action">
-            <a class="container-action-btn btn-view-project-other-stage">
-              <div class="table-row">
-                <div class="table-col vertical-middle">
-                  <div><span class="icons-blue-edit"></span></div>
-                  <div>查看该项目其他阶段公告</div>
+
+          <div class="container-bid-details">
+            {% block details %}
+            {% endblock %}
+          </div>
+
+          <div class="container-bid-actions">
+            <div class="container-action">
+              <a class="container-action-btn" href="javascript:void(0)">
+                <div class="table-row">
+                  <div class="table-col vertical-middle">
+                    <div><span class="icons-big-download"></span></div>
+                    <div>招标文件下载</div>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>          
-          <div class="container-action">
-            <a class="container-action-btn">
-              <div class="table-row">
-                <div class="table-col vertical-middle">
-                  <div><span class="icons-print"></span></div>
-                  <div>打印该条</div>
+              </a>
+            </div>
+            <div class="container-action">
+              <a class="container-action-btn" href="javascript:void(0)">
+                <div class="table-row">
+                  <div class="table-col vertical-middle">
+                    <div><span class="icons-blue-folder"></span></div>
+                    <div>收藏项目</div>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>          
+              </a>
+            </div>
+            <div class="container-action">
+              <a class="container-action-btn btn-view-project-other-stage">
+                <div class="table-row">
+                  <div class="table-col vertical-middle">
+                    <div><span class="icons-blue-edit"></span></div>
+                    <div>查看该项目其他阶段公告</div>
+                  </div>
+                </div>
+              </a>
+            </div>          
+            <div class="container-action">
+              <a class="container-action-btn" href="javascript:void(0)">
+                <div class="table-row">
+                  <div class="table-col vertical-middle">
+                    <div><span class="icons-print"></span></div>
+                    <div>打印该条</div>
+                  </div>
+                </div>
+              </a>
+            </div>          
+          </div>
         </div>
+
+        {% block guess_what_you_like %}
+        {% endblock %}
       </div>
 
-      <div class="container-guess-what-you-like">
-        <div class="guess-what-you-like">
-          <div class="guess-what-you-like-header">
-            <span class="icons-heart"></span>
-            <span>猜您喜欢</span>
-          </div>
-          <div class="guess-what-you-like-body container-fluid">
+      <div class="col-sm-3 region-right-side">
+        <div class="wrapper">
+          <div class="block block-login-register">
             <div class="row">
               <div class="col-sm-6">
-                <ul class="list">
-                  <li>
-                    <div>
-                      <div class="col col-bullet">
-                        &#9642;
-                      </div>
-                      <div class="col col-title"><a href="bid_details.html" class="ellipse">中国银行业监督管理委员会菏泽监管采购设备项目招标公告</a></div>
-                      <div class="col col-date">06-28</div>
-                    </div>                    
-                  </li>
-                  <li>
-                    <div>
-                      <div class="col col-bullet">
-                        &#9642;
-                      </div>
-                      <div class="col col-title"><a href="bid_details.html" class="ellipse">中国银行业监督管理委员会菏泽监管采购设备项目招标公告</a></div>
-                      <div class="col col-date">06-28</div>
-                    </div>                    
-                  </li>
-                  <li>
-                    <div>
-                      <div class="col col-bullet">
-                        &#9642;
-                      </div>
-                      <div class="col col-title"><a href="bid_details.html" class="ellipse">中国银行业监督管理委员会菏泽监管采购设备项目招标公告</a></div>
-                      <div class="col col-date">06-28</div>
-                    </div>                    
-                  </li>   
-                  <li>
-                    <div>
-                      <div class="col col-bullet">
-                        &#9642;
-                      </div>
-                      <div class="col col-title"><a href="bid_details.html" class="ellipse">中国银行业监督管理委员会菏泽监管采购设备项目招标公告</a></div>
-                      <div class="col col-date">06-28</div>
-                    </div>                    
-                  </li>                                                   
-                </ul>
+                <a href="deng_lu.html" class="btn btn-login">登录</a>
               </div>
               <div class="col-sm-6">
-                <ul class="list">
-                  <li>
+                <a href="zhu_ce_1.html" class="btn btn-register">注册</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="block block-services">
+            <div class="block-header">
+              注册后您可享受以下服务
+            </div>
+            <div class="block block-content container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-searchview">
+                    </span>
+                  </div>
+                  <div>免费查看所有招标信息</div>
+                </div>
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-hand">
+                    </span>
+                  </div>
+                  <div>提前把握项目</div>
+                </div>           
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-edit">
+                    </span>
+                  </div>
+                  <div>订阅属于自己的招标信息</div>
+                </div>    
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-gift">
+                    </span>
+                  </div>
+                  <div>信息免费发送邮箱</div>
+                </div>  
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-send">
+                    </span>
+                  </div>
+                  <div>发布招标信息</div>
+                </div>
+                <div class="col-sm-6">
+                  <div>
+                    <span class="icons-cert">
+                    </span>
+                  </div>
+                  <div>招标王认证</div>
+                </div>                                           
+              </div>
+            </div> 
+          </div>
+
+          <div class="block block-register-info">
+            <div class="block-header">
+              5秒注册，百万招标信息唾手可得
+            </div>
+            <div class="block-content">
+              <div class="wrapper">
+                <form>
+                  <div class="control-group">
+                    <div class="container-title">你的名字</div>
                     <div>
-                      <div class="col col-bullet">
-                        &#9642;
-                      </div>
-                      <div class="col col-title"><a href="bid_details.html" class="ellipse">中国银行业监督管理委员会菏泽监管采购设备项目招标公告</a></div>
-                      <div class="col col-date">06-28</div>
-                    </div>                    
+                      <input type="text" class="name" />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="container-title">你的公司</div>
+                    <div>
+                      <input type="text" class="company-name" />
+                    </div>
+                  </div>
+
+                  <div class="control-group control-group-phone">
+                    <div class="container-title">你的手机号码</div>
+                    <div>
+                      <input type="text" class="telphone" />
+                      <button type="button" class="btn btn-primary btn-send-verify-code">发送验证码</button>
+                    </div>
+                  </div> 
+                  <div class="control-group">
+                    <div class="container-title">短信验证码</div>
+                    <div>
+                      <input type="text" class="verify-code" />
+                    </div>
+                  </div>                           
+
+                  <button type="submit" class="btn btn-primary btn-register">免费注册</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="block block-related-keywords">
+            <div class="block-header">
+              相关行业
+            </div>
+            <div class="block-content">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">规划设计</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">初步设计</a>
+                </div>            
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">方案设计</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">施工图设计</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">勘察设计</a>
+                </div>            
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">装修设计</a>
+                </div> 
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">工程设计</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">建筑设计</a>
+                </div>            
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">园林设计</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">绿化设计</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">景观设计</a>
+                </div>
+                <div class="col-sm-4">
+                  <a href="javascript:void(0)">工业设计</a>
+                </div>                                                                           
+              </div>
+            </div>
+          </div>        
+
+          <div class="block block-timeline">
+            <div class="block-header">
+              业主历史招标纪录：
+            </div>
+            <div class="block-content">
+              <div class="container-timeline">
+                <ul class="timeline">
+                  <li class="event" data-date="2016-08-03">
+                    <div><a href="javascript:void(0)">合肥经开区中小学校园一卡通采购及安装项目公开招标公告</a></div>
                   </li>
-                  <li>
-                    <div>
-                      <div class="col col-bullet">
-                        &#9642;
-                      </div>
-                      <div class="col col-title"><a href="bid_details.html" class="ellipse">中国银行业监督管理委员会菏泽监管采购设备项目招标公告</a></div>
-                      <div class="col col-date">06-28</div>
-                    </div>                    
+                  <li class="event" data-date="2016-08-02">
+                    <div><a href="javascript:void(0)">阜阳经开区和畅家园、惠民新苑一期、九鼎华苑一期智能化系统工程施工招标公告</a></div>
                   </li>
-                  <li>
-                    <div>
-                      <div class="col col-bullet">
-                        &#9642;
-                      </div>
-                      <div class="col col-title"><a href="bid_details.html" class="ellipse">中国银行业监督管理委员会菏泽监管采购设备项目招标公告</a></div>
-                      <div class="col col-date">06-28</div>
-                    </div>                    
-                  </li>   
-                  <li>
-                    <div>
-                      <div class="col col-bullet">
-                        &#9642;
-                      </div>
-                      <div class="col col-title"><a href="bid_details.html" class="ellipse">中国银行业监督管理委员会菏泽监管采购设备项目招标公告</a></div>
-                      <div class="col col-date">06-28</div>
-                    </div>                    
-                  </li>                                                   
-                </ul>
-              </div>              
+                  <li class="event" data-date="2016-08-02">
+                    <div><a href="javascript:void(0)">合肥经开区滨水花都、依澜雅居、长岗幼儿园班班通设备采购安装</a></div>
+                  </li> 
+                  <li class="event" data-date="2016-07-22">
+                    <div><a href="javascript:void(0)">合肥经开区中小学服务器增容采购及安装</a></div>
+                  </li> 
+                  <li class="event" data-date="2016-07-18">
+                    <div><a href="javascript:void(0)">合肥经开区中小学电子屏采购及安装项目公开招标公告</a></div>
+                  </li> 
+                  <li class="event" data-date="2016-06-27">
+                    <div><a href="javascript:void(0)">合肥经济技术开发区尚泽时代广场幼儿园运营管理服务招标公告</a></div>
+                  </li>
+                </ul>                                                                
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-sm-4 region-right-side">
-      <div class="wrapper">
-        
-        <!-- Usable -->
-        <div class="block block-timeline">
-          <div class="block-header">
-            业主历史招标纪录：
-          </div>
-          <div class="block-content">
-            <div class="container-timeline">
-              <ul class="timeline">
-                <li class="event" data-date="05-09">
-                  <div>南海九江盈信城市广场项目广场</div>
-                </li>
-                <li class="event" data-date="05-09">
-                  <div>南海九江盈信城市广场项目广场</div>
-                </li>
-                <li class="event" data-date="05-09">
-                  <div>南海九江盈信城市广场项目广场</div>
-                </li> 
-                <li class="event" data-date="05-09">
-                  <div>南海九江盈信城市广场项目广场</div>
-                </li> 
-                <li class="event" data-date="05-09">
-                  <div>南海九江盈信城市广场项目广场</div>
-                </li> 
-                <li class="event" data-date="05-09">
-                  <div>南海九江盈信城市广场项目广场</div>
-                </li>
-              </ul>                                                                
+          <div class="block block-region-nav">
+            <div class="block-header">
+              招标王分站
             </div>
-          </div>
-        </div>
+            <div class="block-content container-fluid">
+              <div class="row">
+                <div class="col-sm-2">
+                  <a href="#">全国</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>  
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">全国</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>  
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>   
+                <div class="col-sm-2">
+                  <a href="#">全国</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>  
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">全国</a>
+                </div>
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>  
+                <div class="col-sm-2">
+                  <a href="#">湖北</a>
+                </div>            
+                <div class="col-sm-2">
+                  <a href="#">上海</a>
+                </div>                                                       
+              </div>
+            </div>
+          </div>         
 
-        <div class="block block-region-nav">
-          <div class="block-header">
-            招标王分站
-          </div>
-          <div class="block-content container-fluid">
-            <div class="row">
-              <div class="col-sm-2">
-                <a href="#">全国</a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#">湖北</a>
-              </div>            
-              <div class="col-sm-2">
-                <a href="#">上海</a>
-              </div>  
-              <div class="col-sm-2">
-                <a href="#">湖北</a>
-              </div>            
-              <div class="col-sm-2">
-                <a href="#">上海</a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#">全国</a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#">湖北</a>
-              </div>            
-              <div class="col-sm-2">
-                <a href="#">上海</a>
-              </div>  
-              <div class="col-sm-2">
-                <a href="#">湖北</a>
-              </div>            
-              <div class="col-sm-2">
-                <a href="#">上海</a>
-              </div>   
-              <div class="col-sm-2">
-                <a href="#">全国</a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#">湖北</a>
-              </div>            
-              <div class="col-sm-2">
-                <a href="#">上海</a>
-              </div>  
-              <div class="col-sm-2">
-                <a href="#">湖北</a>
-              </div>            
-              <div class="col-sm-2">
-                <a href="#">上海</a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#">全国</a>
-              </div>
-              <div class="col-sm-2">
-                <a href="#">湖北</a>
-              </div>            
-              <div class="col-sm-2">
-                <a href="#">上海</a>
-              </div>  
-              <div class="col-sm-2">
-                <a href="#">湖北</a>
-              </div>            
-              <div class="col-sm-2">
-                <a href="#">上海</a>
-              </div>                                                       
-            </div>
-          </div>
-        </div>         
+        </div>
 
       </div>
-
     </div>
   </div>
 </div>
@@ -311,6 +369,19 @@
 {% endblock %}
 
 {% block body_tail %}
+
+<div id="message_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <button type="button" class="btn btn-ok btn-primary" style="width:80px;">确定</button>
+    </div>
+  </div>
+</div>
 
 <div id="choose_other_stage_dialog" class="dialog">
   <div class="wrapper" style="width:600px;">
@@ -320,34 +391,48 @@
     </div>
     <div class="dialog-content">
       <div class="wrapper">
-        <a href="bid_details.html" class="stage current active">
+        <a href="bid_yu_gao_sample.html" class="stage active {% if yu_gao_page %}current{% endif %}">
           <div class="container-icon">
             <span class="icons-bid-yugao"></span>
           </div>
           <div class="description">招标预告</div>
         </a>
         <div class="separator active"></div>        
-        <a href="bid_details.html" class="stage active">
+        <a href="bid_notification_sample.html" class="stage active {% if gong_gao_page %}current{% endif %}">
           <div class="container-icon">
             <span class="icons-bid-notification"></span>
           </div>
           <div class="description">招标公告</div>
         </a>
-        <div class="separator"></div>        
-        <a href="bid_details.html" class="stage">
+        <div class="separator active"></div>        
+        <a href="bid_change_sample.html" class="stage active {% if change_page %}current{% endif %}">
           <div class="container-icon">
             <span class="icons-bid-change"></span>
           </div>
           <div class="description">招标变更</div>
         </a>
-        <div class="separator"></div>
-        <a href="bid_details.html" class="stage">
+        <div class="separator active"></div>
+        <a href="bid_result_sample.html" class="stage active {% if result_page %}current{% endif %}">
           <div class="container-icon">
             <span class="icons-bid-result"></span>
           </div>
           <div class="description">中标结果</div>
         </a>                 
       </div>
+    </div>
+  </div>
+</div>
+
+<div id="login_register_dialog" class="dialog">
+  <div class="wrapper" style="width:400px;">
+    <div class="dialog-header">
+      <span class="icons-close"></span>
+    </div>
+    <div class="dialog-content">
+    </div>
+    <div class="dialog-footer">
+      <a class="btn btn-login btn-primary" style="width:80px;" href="deng_lu.html">登录</a>
+      <a class="btn btn-primary btn-register" style="width:80px;margin-left:20px;" href="zhu_ce_1.html">注册</a>
     </div>
   </div>
 </div>

@@ -1,0 +1,53 @@
+#page-demo-center {
+  .list-header {
+    padding: 0 0 20px 0;
+    font-size: 18px;
+  }
+
+  .list-content {
+    .item {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e0e0e0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .part-left {
+        float: left;
+        width: 27%;
+
+        img {
+          max-width: 200px;
+        }
+      }
+      .part-right {
+        float: left;
+        width: 73%;
+
+        .title {
+          font-size: 16px;
+          margin-bottom: 10px;
+
+          a {
+            color: #333;
+
+            &:hover {
+              color: $brand-primary-color;
+            }
+          }
+        }
+        .content {
+          color: #666;
+        }
+      }
+    }
+  }
+}

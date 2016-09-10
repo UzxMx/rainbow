@@ -1,0 +1,262 @@
+{% set logged_in = "true" %}
+{% set no_menus = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block after_main_js %}
+<script type="text/javascript">
+  $(function() {
+    ZBW.Buy.init();
+  });
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div id="page-pay">
+  <div class="pay-header">
+    会员支付
+  </div>
+  <div class="pay-body">
+    <form>
+      <div class="form-row">
+        <div class="left">购买类型：</div>
+        <div class="right">初级会员</div>
+      </div>
+      <div class="form-row form-row-pay-channel">
+        <div class="left"><span class="required">*</span>支付方式：</div>
+        <div class="right">
+          <div class="selections">
+            <div class="selection">
+              <div class="icon">
+                <span class="icons-wechat"></span>
+              </div>
+              <div>微信</div>
+              <span class="icons-checked"></span>
+            </div>
+            <div class="selection">
+              <div class="icon">
+                <span class="icons-zhifubao"></span>
+              </div>
+              <div>支付宝</div>
+              <span class="icons-checked"></span>
+            </div>
+            <div class="selection selection-union-pay">
+              <div class="icon">
+                <span class="icons-union-pay"></span>
+              </div>
+              <div>银联</div>
+              <span class="icons-checked"></span>
+            </div>                        
+          </div>          
+        </div>
+      </div>
+      <div class="form-row form-row-year">
+        <div class="left"><span class="required">*</span>开通年限：</div>
+        <div class="right">
+          <div class="selections">
+            <div class="selection">
+              <span>1年</span>
+              <span class="icons-checked"></span>
+            </div>
+            <div class="selection">
+              <span>2年</span>
+              <span class="icons-checked"></span>
+            </div>  
+            <div class="selection">
+              <span>3年</span>
+              <span class="icons-checked"></span>
+            </div> 
+            <div class="selection">
+              <span>4年</span>
+              <span class="icons-checked"></span>
+            </div> 
+            <div class="selection">
+              <span>5年</span>
+              <span class="icons-checked"></span>
+            </div>                                               
+          </div>
+        </div>
+      </div> 
+
+      <div class="form-row form-row-bank" style="display:none;">
+        <div class="left">选择银行：</div>
+        <div class="right">
+          <div class="selections">
+            <div class="selection">
+              <span class="icon icons-icbc"></span>
+              <span>工商银行</span>
+              <span class="icons-checked"></span>
+            </div>                                              
+            <div class="selection">
+              <span class="icon icons-bc"></span>
+              <span>中国银行</span>
+              <span class="icons-checked"></span>
+            </div>
+            <div class="selection">
+              <span class="icon icons-mbc"></span>
+              <span>招商银行</span>
+              <span class="icons-checked"></span>
+            </div>     
+            <div class="selection">
+              <span class="icon icons-abc"></span>
+              <span>农业银行</span>
+              <span class="icons-checked"></span>
+            </div>     
+            <div class="selection">
+              <span class="icon icons-mail-bank"></span>
+              <span>邮政银行</span>
+              <span class="icons-checked"></span>
+            </div>     
+            <div class="selection">
+              <span class="icon icons-bcm"></span>
+              <span>交通银行</span>
+              <span class="icons-checked"></span>
+            </div>                                             
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row form-row-discount-code">
+        <div class="left">优惠码：</div>
+        <div class="right">
+          <input type="text" />
+        </div>
+      </div>
+
+      <div class="form-row form-row-fp">
+        <div class="left">开具发票：</div>
+        <div class="right">
+          <div class="selections">
+            <div class="selection selection-normal-fp">
+              <span>普通发票</span>
+              <span class="icons-checked"></span>
+            </div>
+            <div class="selection selection-zzs-fp">
+              <span>增值税发票</span>
+              <span class="icons-checked"></span>
+            </div>                                                
+          </div>
+          <div class="selections selections-normal-fp" style="display:none;">
+            <div class="selection selection-personal-fp">
+              <span>个人发票</span>
+              <span class="icons-checked"></span>
+            </div>
+            <div class="selection selection-company-fp">
+              <span>单位发票</span>
+              <span class="icons-checked"></span>
+            </div>                                                
+          </div>
+          <div class="fp-details" style="display:none;">
+            <div class="fp-details-group fp-details-group-1" style="margin-top:25px;">
+              <div class="item item-company-name">
+                <div class="name">
+                  <span class="required">*</span>单位名称：
+                </div>
+                <div class="value">
+                  <input type="text" class="company-name" />
+                </div>
+              </div>
+            </div>
+            <div class="fp-details-group fp-details-group-2">
+              <div class="item item-identity">
+                <div class="name">
+                  <span class="required">*</span>纳税人识别码：
+                </div>
+                <div class="value">
+                  <input type="text" class="identity" />
+                </div>
+              </div>
+              <div class="item item-register-address">
+                <div class="name">
+                  <span class="required">*</span>注册地址：
+                </div>
+                <div class="value">
+                  <input type="text" class="register-address" />
+                </div>
+              </div>
+              <div class="item item-register-phone">
+                <div class="name">
+                  <span class="required">*</span>注册电话：
+                </div>
+                <div class="value">
+                  <input type="text" class="register-phone" />
+                </div>
+              </div>
+              <div class="item item-bank">
+                <div class="name">
+                  <span class="required">*</span>开户银行：
+                </div>
+                <div class="value">
+                  <input type="text" class="bank" />
+                </div>
+              </div>
+              <div class="item item-bank-account">
+                <div class="name">
+                  <span class="required">*</span>银行账户：
+                </div>
+                <div class="value">
+                  <input type="text" class="bank-account" />
+                </div>
+              </div>                                                   
+            </div>
+            <div style="margin:25px 0 10px 12px;font-size:15px;">
+              发票邮寄地址
+            </div>            
+            <div class="fp-details-group fp-details-group-3">
+              <div class="item item-region">
+                <div class="name">
+                  <span class="required">*</span>所在区域：
+                </div>
+                <div class="value">
+                  <input type="text" class="region" />
+                </div>
+              </div>
+              <div class="item item-address">
+                <div class="name">
+                  <span class="required">*</span>详细地址：
+                </div>
+                <div class="value">
+                  <input type="text" class="address" />
+                </div>
+              </div>
+              <div class="item item-receiver-name">
+                <div class="name">
+                  <span class="required">*</span>收件人：
+                </div>
+                <div class="value">
+                  <input type="text" class="receiver-name" />
+                </div>
+              </div>
+              <div class="item item-tel">
+                <div class="name">
+                  <span class="required">*</span>手机号码：
+                </div>
+                <div class="value">
+                  <input type="text" class="tel" />
+                </div>
+              </div>                                                                
+            </div>                      
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row form-row-price">
+        <div class="left">应付金额：</div>
+        <div class="right">
+          <span class="total-price">1000</span>元
+        </div>
+      </div>      
+
+      <div class="form-row" style="margin-top:30px;">
+        <div class="left" style="min-height:1px;"></div>
+        <div class="right">
+          <button type="submit" class="btn btn-primary btn-submit" style="width:150px;">立即支付</button>
+        </div>
+      </div>           
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

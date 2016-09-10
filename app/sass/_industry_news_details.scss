@@ -1,0 +1,89 @@
+.page-industry-news-details {
+  .news {
+    margin-bottom: 100px;
+    color: #666;
+
+    .title {
+      color: #333;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+    .publish-date {
+      margin-bottom: 20px;
+    }
+  }
+
+  .related-news {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+
+    @include icons(related-news);
+    .related-news-header {
+      margin-bottom: 15px;
+      color: $brand-primary-color;
+      font-size: 16px;
+
+      span {
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+    }
+
+    .related-news-body {
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+
+    .item {
+      float: left;
+      width: 50%;
+      color: #666;
+      margin-bottom: 5px;
+
+      &:nth-child(odd) {
+        padding-right: 30px;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .title {
+        float: left;
+        width: 80%;
+
+        a {
+          &:before {
+            content: "";
+            display: inline-block;
+            $radius: 2px;
+            width: 2 * $radius;
+            height: 2 * $radius;
+            @include border-radius($radius);
+            background-color: #666;
+            margin-right: 5px;
+            vertical-align: middle;
+          }
+
+          color: #666;
+          &:hover {
+            color: $brand-primary-color;
+
+            &:before {
+              background-color: $brand-primary-color;
+            }
+          }
+        }
+      }
+      .date {
+        float: left;
+        width: 20%;
+        text-align: right;
+      }
+    }
+  }
+}

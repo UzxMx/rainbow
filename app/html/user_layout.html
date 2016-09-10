@@ -20,11 +20,11 @@
         {% block before_main_js %}{% endblock %}
         {% block after_main_js %}{% endblock %}
     </head>
-    <body class="{{ body_class }}">
+    <body>
         <div id="page-container">
             {% include "user_header.html" %}
             {% block breadcrumb %}{% endblock %}
-            <div id="main-container">
+            <div id="main-container" class="member-center">
                 <div class="row">
                     <div class="col-sm-3 region-left-side">
                         {% include "user_left_side.html" %}

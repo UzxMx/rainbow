@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        {% include "meta.html" %}
+
+        <title>{{ title }}</title>
+        <!-- <link rel="shortcut icon" href="images/favicon.png" type="image/png" /> -->
+        <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600,700' rel='stylesheet' type='text/css' /> -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />        
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/selectivizr.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/prepareTransition.js"></script>
+        <script type="text/javascript" src="js/console.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                ZBW.LandingPage.init();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="page-header" class="page-landing-header not-fixed">
+              <div class="header-main">
+                <div class="wrapper">
+                  <div class="row">
+                    <div class="col-left col-sm-6">
+                      <div class="table-row">
+                        <div class="table-col vertical-middle">
+                          <a href="/home.html" class="link-logo" >
+                            <img src="images/logo.png" />
+                          </a>
+                          <span class="title">中国招投标领域信息最全的招标采购平台</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-right col-sm-6 align-right">
+                      <div class="container-phone">
+                        <div class="table-row">
+                          <div class="table-col vertical-middle">
+                            <span>免费热线：</span>
+                            <span>400-8888-666</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container-actions">
+                        <div class="table-row">
+                          <div class="table-col vertical-middle"> 
+                            <a class="btn btn-primary btn-login" href="deng_lu.html">登录</a>
+                            <a class="btn btn-danger btn-register" href="zhu_ce_1.html">注册</a>
+                          </div>
+                        </div>          
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+            <div id="page-landing">
+                <section id="section-banner">
+                    <div class="part-left">
+                        <h1>
+                            4000万业主在线发布<br />
+                            汇集5000万招标采购信息
+                        </h1>
+                        <div style="margin-bottom:5px;">
+                            日均发布招标采购信息30000条
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            每日更新项目进展3000次
+                        </div>
+                        <div>
+                            <a class="btn-query-info" href="javascript:void(0)">
+                                <span>招标信息查询</span>
+                                <span class="circle">
+                                    <span class="icons-left-arrow"></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="part-right">
+                        <div class="container-landing-register-form">
+                            <form>
+                                <div class="form-header">
+                                    免费注册，立即查看招标采购信息
+                                </div>
+                                <div class="form-row form-row-name">
+                                    <div class="input">
+                                        <input type="text" class="name" placeholder="你的名字" />
+                                        <div class="icon">
+                                            <span class="icons-l-user"></span>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="form-row form-row-company">
+                                    <div class="input">
+                                        <input type="text" class="company-name" placeholder="你的公司" />
+                                        <div class="icon">
+                                            <span class="icons-l-company"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row form-row-phone">
+                                    <div class="wrapper">
+                                        <div class="input">
+                                            <input type="text" class="phone" placeholder="你的手机号码" />
+                                            <div class="icon">
+                                                <span class="icons-l-phone"></span>
+                                            </div>
+                                        </div>
+                                        <div class="container-btn">
+                                            <button type="button" class="btn-send-verify-code">获取验证码</button>
+                                        </div>
+                                    </div>
+                                </div>                                 
+                                <div class="form-row form-row-verify-code">
+                                    <div class="input">
+                                        <input type="text" class="verify-code" placeholder="短信验证码" />
+                                        <div class="icon">
+                                            <span class="icons-l-mail"></span>
+                                        </div>
+                                    </div>
+                                </div>                                
+
+                                <div class="container-submit">
+                                    <button type="submit" class="btn btn-primary btn-submit">免费注册</button>
+                                </div>
+                                <div class="container-license">
+                                    <input type="checkbox" class="cb-license" />
+                                    <span>我已阅读并接受<a href="javascript:void(0)" class="btn-license">《招标王会员服务条款》</a>中的各项内容</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="section_zb_cg" class="section-style-1">
+                    <div class="section-header">
+                        <h2>全国招标采购信息免费查看</h2>
+                    </div>
+                    <div class="section-content">
+                        <div style="margin-top:20px;">可查看全国范围内，拟在建项目，招标采购预告，公告，中标，政府采购，企业招标采购等信息</div>
+                        <div class="container-types">
+                            <div class="type">
+                                <div class="icon">
+                                    <span class="icons-l-gg"></span>
+                                </div>
+                                <div class="name">招标公告</div>
+                                <div class="content">
+                                    今日更新<span class="highlight">30000</span>条
+                                </div>
+                            </div>
+                            <div class="type">
+                                <div class="icon">
+                                    <span class="icons-l-yg"></span>
+                                </div>
+                                <div class="name">招标预告</div>
+                                <div class="content">
+                                    今日更新<span class="highlight">30000</span>条
+                                </div>
+                            </div>
+                            <div class="type">
+                                <div class="icon">
+                                    <span class="icons-l-bg"></span>
+                                </div>
+                                <div class="name">招标变更</div>
+                                <div class="content">
+                                    今日更新<span class="highlight">30000</span>条
+                                </div>
+                            </div>
+                            <div class="type">
+                                <div class="icon">
+                                    <span class="icons-l-jg"></span>
+                                </div>
+                                <div class="name">中标结果</div>
+                                <div class="content">
+                                    今日更新<span class="highlight">30000</span>条
+                                </div>
+                            </div>
+                            <div class="type">
+                                <div class="icon">
+                                    <span class="icons-l-zf"></span>
+                                </div>
+                                <div class="name">政府采购</div>
+                                <div class="content">
+                                    今日更新<span class="highlight">30000</span>条
+                                </div>
+                            </div>
+                            <div class="type">
+                                <div class="icon">
+                                    <span class="icons-l-qy"></span>
+                                </div>
+                                <div class="name">企业采购</div>
+                                <div class="content">
+                                    今日更新<span class="highlight">30000</span>条
+                                </div>
+                            </div>                            
+
+                        </div>
+                        <div class="container-btn">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-view-zb-cg">立即查看</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="section_project" class="section-style-1">
+                    <div class="section-header">
+                        <h2>全国拟建、在建项目一网打尽，全程跟踪</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="features">
+                            <div class="feature">
+                                <div class="wrapper">
+                                    <div class="icon">
+                                        <span class="icons-l-world"></span>
+                                    </div>
+                                    <div class="title">
+                                        全国项目覆盖
+                                    </div>
+                                    <div class="content">
+                                        信息覆盖全国31个省、自治区。<br/>包括工业、电力、石油化工、酒店、<br/>办公楼、住宅和医疗在内的1000多个行业。<br/>覆盖项目拟建、在建进展的全部建设周期。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="wrapper" style="margin:0 auto;max-width:250px;">
+                                    <div class="icon">
+                                        <span class="icons-l-satellite"></span>
+                                    </div>
+                                    <div class="title">
+                                        项目全程跟踪
+                                    </div>
+                                    <div class="content">
+                                        全国各地的资深信息团队<br/>每天致电和造访数以百计的政府部门、<br />业主开发商、设计师、工程师和<br />承建单位，每日发布更新项目信息<br />3000余次。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="wrapper" style="margin-left:auto;margin-right:0;">
+                                    <div class="icon">
+                                        <span class="icons-l-true"></span>
+                                    </div>
+                                    <div class="title">
+                                        信息真实实用
+                                    </div>
+                                    <div class="content">
+                                        招标王的所有信息均来自全国资深<br/>信息团队，保证信息的真实有效性。<br/>在信息的实际挖掘中，充分考虑<br/>用户的实际使用需求，为用户提供关键<br/>负责人的联系方式，做到真正为用户负责。
+                                    </div>
+                                </div>
+                            </div>                                                        
+                        </div>
+                        <div class="container-btn">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-register-now">立即体验</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="section_features">
+                    <div class="features">
+                        <div class="feature">
+                            <div class="wrapper">
+                                <div class="container-feature">
+                                    <div class="title">
+                                        成功中标
+                                    </div>
+                                    <div class="details">
+                                        <div class="item">
+                                            <span>第一时间获知招标采购项目</span>
+                                        </div>
+                                        <div class="item">
+                                            <span>快人一步地运作招标采购</span>
+                                        </div>
+                                        <div class="item">
+                                            <span>大大提升成功中标的几率</span>
+                                        </div>                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="wrapper">
+                                <div class="container-feature">
+                                    <div class="title">
+                                        便捷高效
+                                    </div>
+                                    <div class="details">
+                                        <div class="item">
+                                            <span>高效的招标王智能化系统</span>
+                                        </div>
+                                        <div class="item">
+                                            <span>便捷的邮件、短信系统</span>
+                                        </div>
+                                        <div class="item">
+                                            <span>提高企业中标的效率</span>
+                                        </div>                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="wrapper">
+                                <div class="container-feature" style="max-width:220px;">
+                                    <div class="title">
+                                        实力保障
+                                    </div>
+                                    <div class="details">
+                                        <div class="item">
+                                            <span>依托众多招标方、代理方的信息</span>
+                                        </div>
+                                        <div class="item">
+                                            <span>依靠招标王强大的资源整合能力</span>
+                                        </div>
+                                        <div class="item">
+                                            <span>与客户互惠共赢，共建发展之路</span>
+                                        </div>                                                                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                                
+                    </div>
+                    <div class="container-btn">
+                        <a href="javascript:void(0)" class="btn btn-primary btn-register-now">马上加入</a>
+                    </div>                    
+                </section>
+
+                <section id="section_steps" class="section-style-1">
+                    <div class="section-header">
+                        <h2>中标居然也可以变的这么简单</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="stage-graph">
+                            <div class="line"></div>
+                            <div class="stage stage-1">
+                                <span class="circle"></span>
+                                <div class="content content-above">
+                                    <div class="title">注册</div>
+                                    <div class="details">20秒快速注册</div>
+                                    <div class="step-number">
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="stage stage-2">
+                                <span class="circle"></span>
+                                <div class="content content-below">
+                                    <div class="step-number">
+                                        <span>2</span>
+                                    </div>                              
+                                    <div class="title">查询信息</div>
+                                    <div class="details">网页查询、邮箱查看、手机查看</div>
+                                </div>
+                            </div>                            
+                            <div class="line"></div>
+                            <div class="stage stage-3">
+                                <span class="circle"></span>
+                                <div class="content content-above">
+                                    <div class="title">投标</div>
+                                    <div class="details">为您提供项目关键人联系方式</div>
+                                    <div class="step-number">
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="stage stage-4">
+                                <span class="circle"></span>
+                                <div class="content content-below">
+                                    <div class="step-number">
+                                        <span>4</span>
+                                    </div>                              
+                                    <div class="title">中标</div>
+                                    <div class="details">中标喜讯公布</div>
+                                </div>
+                            </div>                            
+                            <div class="line"></div>                                 
+                        </div>
+
+                        <div class="container-btn">
+                            <a href="javascript:void(0)" class="btn btn-primary btn-register-now">立即免费注册</a>
+                        </div>
+                    </div>
+                </section>                               
+
+            </div>
+            {% include "footer.html" %}
+        </div>
+        {% block body_tail %}{% endblock %}
+
+        <div id="landing_register_dialog" class="dialog">
+          <div class="wrapper" style="width:410px;">
+            <div class="dialog-header">
+              <span class="icons-close"></span>
+            </div>
+            <div class="dialog-content">
+                <div class="container-landing-register-form">
+                    <form>
+                        <div class="form-header">
+                            免费注册，立即查看招标采购信息
+                        </div>
+                        <div class="form-row form-row-name">
+                            <div class="input">
+                                <input type="text" class="name" placeholder="你的名字" />
+                                <div class="icon">
+                                    <span class="icons-l-user"></span>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form-row form-row-company">
+                            <div class="input">
+                                <input type="text" class="company-name" placeholder="你的公司" />
+                                <div class="icon">
+                                    <span class="icons-l-company"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-row-phone">
+                            <div class="wrapper">
+                                <div class="input">
+                                    <input type="text" class="phone" placeholder="你的手机号码" />
+                                    <div class="icon">
+                                        <span class="icons-l-phone"></span>
+                                    </div>
+                                </div>
+                                <div class="container-btn">
+                                    <button type="button" class="btn-send-verify-code">获取验证码</button>
+                                </div>
+                            </div>
+                        </div>                                 
+                        <div class="form-row form-row-verify-code">
+                            <div class="input">
+                                <input type="text" class="verify-code" placeholder="短信验证码" />
+                                <div class="icon">
+                                    <span class="icons-l-mail"></span>
+                                </div>
+                            </div>
+                        </div>                                
+
+                        <div class="container-submit">
+                            <button type="submit" class="btn btn-primary btn-submit">免费注册</button>
+                        </div>
+                        <div class="container-license">
+                            <input type="checkbox" class="cb-license" />
+                            <span>我已阅读并接受<a href="javascript:void(0)" class="btn-license">《招标王会员服务条款》</a>中的各项内容</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+          </div>           
+        </div>
+
+        <div id="license_dialog" class="dialog">
+          <div class="wrapper">
+            <div class="dialog-content">
+              <div class="container-close-icon">
+                <span class="icons-close"></span>
+              </div>
+              <div class="wrapper">
+                <div class="content">
+                  <p class="title">招标王服务条款</p>
+                  <p>
+                    1. 特别说明<br />
+                    1.1 招标王同意按照本协议的规定及其不定时发布的操作规则提供基于互联网的相关服务（以下称"网络服务 "）。为获得网络服务，服务使用人（以下称"用户"）应当同意本协议的全部条款并按照页面上的提示完成全部的注册程序。用户在进行注册程序过程中点击"接受服务条款"即表示用户完全接受本协议项下的全部条款。
+                  </p>
+                  <p>
+                    2. 服务内容<br />
+                    2.1 招标王网络服务的具体内容由招标王根据实际情况提供，并保留随时变更、中断或终止部分或全部网络服务的权利。
+                    2.2 招标王在提供网络服务时，会对部分网络服务的用户收取一定的费用。在此情况下，招标王会在相关页面上做明确的提示。如用户拒绝支付该项费用，则不能使用相关的网络服务。<br />
+                    2.3 招标王仅提供相关的网络服务，除此之外与相关网络服务有关的设备（如电脑、调制解调器及其他与接入互联网有关的装置）及所需的费用（如为接入互联网而支付的电话费及上网费）均应由用户自行负担。            
+                  </p>
+                  <p>
+              3. 使用规则<br />
+              3.1 用户在申请使用招标王网络服务时，必须提供准确的企业及个人资料，如资料有任何变动，必须及时更新。<br />
+              3.2 用户注册成功后，招标王将给予每个用户一个用户名及相应的密码，该用户名和密码由用户负责保管；用户应当对以其用户名进行的所有活动和事件负法律责任。<br />
+              3.3 用户必须同意接受招标王通过电子邮件或其他方式向用户发送的相关网站服务信息。<br />
+              3.4 用户必须同意遵循以下原则：<br />
+              (a) 遵守中国有关的法律和法规；<br />
+              (b) 不得为任何非法目的而使用网络服务系统；<br />
+              (c) 遵守所有与网络服务有关的网络协议、规定和程序；<br />
+              (d) 不得利用招标王网络服务系统进行任何可能对互联网的正常运转造成不利影响的行为；<br />
+              (e) 不得利用招标王网络服务系统传输任何骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的或其他任何非法的信息资料；<br />
+              (f) 不得利用招标王网络服务系统进行任何不利于招标王的行为；<br />
+              (g) 如发现任何非法使用用户名或用户出现安全漏洞的情况，应立即通告招标王。<br />
+              3.5 用户必须同意遵循以下规则：<br />
+              (a) 未经招标王书面许可，用户不得将其用户名、密码转售、赠与、转借、租供给第三方或用于商业性用途。否则，由此造成的一切后果和责任由用户承担；同时，招标王有权单方面中止为其提供的服务。<br />
+              (b) 未经招标王书面许可，用户不得利用招标王所获得的信息用于商业用途，如发现用户与招标王形成竞争或损害招标王的利益，或招标王认为对其正常运营造成损害的其他行为，招标王有权单方面终止其使用资格，由此造成的一切后果和责任由用户承担。<br />
+                  </p>
+                  <p>
+              4. 内容所有权<br />
+              4.1 招标王提供的网络服务内容受版权、商标和其它财产所有权法律的保护。<br />
+              4.2 用户只有在获得招标王或其他相关权利人的授权之后才能使用这些内容，而不能擅自复制、再造这些内容、或创造与内容有关的衍生产品。
+                  </p>
+                  <p>
+              5. 隐私保护<br />
+              5.1 保护用户隐私是招标王的一项基本政策，招标王保证不对外公开或向第三方提供用户注册资料及用户在使用网络服务时存储在招标王的非公开内容，但下列情况除外：<br />
+              (a) 事先获得用户的明确授权；<br />
+              (b) 根据有关的法律法规要求；<br />
+              (c) 按照相关政府主管部门的要求；<br />
+              (d) 为维护社会公众的利益；<br />
+              (e) 为维护招标王的合法权益。<br />
+              (f) 潜在有利于用户利益的用途。        
+                  </p>    
+                  <p>
+              6. 免责声明<br />
+              6.1 用户使用招标王网络服务所存在的风险将完全由其自己承担；因其使用招标王网络服务而产生的一切后果也由其自己承担，招标王对用户不承担任何责任。<br />
+                  </p> 
+                  <p>
+              7. 服务变更、中断或终止<br />
+              7.1 如因系统维护或升级的需要而需暂停网络服务，招标王将尽可能事先进行通告。<br />
+              7.2 如发生下列任何一种情形，招标王有权随时中断或终止向用户提供本协议项下的网络服务而无需通知用户：<br />
+              (a) 用户提供的个人资料不真实；<br />
+              (b) 用户违反本协议中规定的使用规则。<br />
+              7.3 除前款所述情形外，招标王同时保留在事先通知用户的情况下随时中断或终止部分或全部网络服务的权利，对于所有服务的中断或终止而造成的任何损失，招标王无需对用户或任何第三方承担任何责任。
+                  </p>
+                  <p>
+              8. 违约赔偿<br />
+              8.1 用户同意保障和维护招标王及其他用户的利益，如因用户违反有关法律、法规或本协议项下的任何条款而给招标王或任何其他第三人造成损失，用户同意承担由此造成的损害赔偿责任。
+                  </p>
+                  <p>
+              9. 协议变更<br />
+              9.1 招标王将根据实际情况不定期的修改本协议的有关条款，一旦条款内容发生变动，招标王将会在相关的页面提示修改内容。<br />
+              9.2 如果不同意招标王对服务条款所做的修改，用户有权停止使用网络服务。如果用户继续使用网络服务，则视为用户接受服务条款的变动。
+                  </p>
+                  <p>
+              10. 通知和送达<br />
+              10.1 本协议事项下所有的通知均通过重要页面公告、电子邮件或常规的信件传送等方式进行；通知发送之日即视为已送达到用户。<br />
+                  </p>
+                  <p>
+              11. 其他规定<br />
+              11.1 本协议构成双方对本协议之约定事项及其他有关事宜的完整协议，除本协议规定的之外，未赋予本协议各方其他权利。<br />
+              11.2 如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。
+                  </p>
+                </div>        
+              </div>
+            </div>
+            <div class="dialog-footer">
+              <button class="btn btn-primary btn-finish-read">阅读完毕</button>
+            </div>
+          </div>
+        </div>        
+
+        {% include "analytics.html" %}
+
+      
+    </body>
+</html>

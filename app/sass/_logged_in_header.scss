@@ -1,102 +1,100 @@
-.page-account, .page-manage-subscribe, .page-subscribe, .page-collection, .page-orders, .page-messages, .page-feedback, .page-logged-in {
-  #page-header {
-    .header-main {
+#page-header.logged-in {
+  .header-main {
 
-      .container-actions {
-        width: 320px;
-        font-size: 16px;
+    .container-actions {
+      width: 320px;
+      font-size: 16px;
 
-        $btn-border-radius: 15px;
+      $btn-border-radius: 15px;
 
-        .btn-buy {
-          padding: 5px 20px;
-          margin-right: 30px;
+      .btn-buy {
+        padding: 5px 20px;
+        margin-right: 30px;
 
-          @include border-radius($btn-border-radius);
-          border: 1px solid $brand-danger-color;
-          background-color: $brand-danger-color;
+        @include border-radius($btn-border-radius);
+        border: 1px solid $brand-danger-color;
+        background-color: $brand-danger-color;
 
-          @include reset-anchor-color(white);
+        @include reset-anchor-color(white);
 
-          &:hover {
-            background-color: darken($brand-danger-color, 10%);
-          }
+        &:hover {
+          background-color: darken($brand-danger-color, 10%);
         }
+      }
 
-        .container-profile, .container-avatar, .container-name {
+      .container-profile, .container-avatar, .container-name {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .container-profile {
+        cursor: pointer;
+        position: relative;
+        $border-height: 12px;
+        $border-color: #666;
+        &:after {
+          content: "";
           display: inline-block;
-          vertical-align: middle;
+          border-top: $border-height solid $border-color;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
         }
 
-        .container-profile {
-          cursor: pointer;
-          position: relative;
-          $border-height: 12px;
-          $border-color: #666;
+        &.menus-visible {
           &:after {
-            content: "";
-            display: inline-block;
-            border-top: $border-height solid $border-color;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-          }
-
-          &.menus-visible {
-            &:after {
-              border-top: none;
-              border-bottom: $border-height solid $border-color;
-            }
-
-            .container-user-menus {
-              display: block;
-            }
+            border-top: none;
+            border-bottom: $border-height solid $border-color;
           }
 
           .container-user-menus {
-            position: absolute;
-            border: 1px solid #ccc;
-            top: 60px;
-            left: 0px;
-            width: 200px;
-            display: none;
-            text-align: center;
-            z-index: 100;
-            background-color: white;
+            display: block;
+          }
+        }
 
-            li:last-child {
-              a {
-                border-bottom: none;
-              }
-            }
+        .container-user-menus {
+          position: absolute;
+          border: 1px solid #ccc;
+          top: 60px;
+          left: 0px;
+          width: 200px;
+          display: none;
+          text-align: center;
+          z-index: 100;
+          background-color: white;
 
+          li:last-child {
             a {
-              display: block;
-              padding: 10px 0;
-              font-size: 15px;
-              color: #666;
-              border-bottom: 1px solid #e0e0e0;
+              border-bottom: none;
+            }
+          }
 
-              &:hover {
-                background-color: #f0f0f0;
-              }
+          a {
+            display: block;
+            padding: 10px 0;
+            font-size: 15px;
+            color: #666;
+            border-bottom: 1px solid #e0e0e0;
+
+            &:hover {
+              background-color: #f0f0f0;
             }
           }
         }
+      }
 
-        .container-avatar {
-          margin-right: 10px;
-          img {
-            width: 48px;
-            height: 48px;
-          }
+      .container-avatar {
+        margin-right: 10px;
+        img {
+          width: 48px;
+          height: 48px;
         }
+      }
 
-        .container-name {
-          max-width: 110px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
+      .container-name {
+        max-width: 110px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }

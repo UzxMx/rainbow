@@ -2549,4 +2549,539 @@
     };
   })();
 
+  ZBW.LandingPage = (function() {
+    var init;
+
+    function showRegisterDialog() {
+      var $dialog = $('#landing_register_dialog');
+
+      $('.icons-close', $dialog).off('click').click(function() {
+        $dialog.removeClass('visible');
+      });
+
+      $dialog.addClass('visible');
+    }
+
+    function validateName($container_form) {
+      var $row = $('.form-row-name', $container_form);
+      var val = $('.name', $row).val().trim();
+      $('.error', $row).remove();
+      if (val.length == 0) {
+        var html = '<div class="error">请输入姓名</div>';
+        $row.append(html);
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function validateCompanyName($container_form) {
+      var $row = $('.form-row-company', $container_form);
+      var val = $('.company-name', $row).val().trim();
+      $('.error', $row).remove();
+      if (val.length == 0) {
+        var html = '<div class="error">请输入公司</div>';
+        $row.append(html);
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function validatePhone($container_form) {
+      var $row = $('.form-row-phone', $container_form);
+      var val = $('.phone', $row).val().trim();
+      $('.error', $row).remove();
+      if (!ZBW.validateTelphone(val)) {
+        var html = '<div class="error">请输入正确的手机号码</div>';
+        $row.append(html);
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function validateVerifyCode($container_form) {
+      var $row = $('.form-row-verify-code', $container_form);
+      var val = $('.verify-code', $row).val().trim();
+      $('.error', $row).remove();
+      if (val.length == 0) {
+        var html = '<div class="error">请输入验证码</div>';
+        $row.append(html);
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function validateLicense($container_form) {
+      var $row = $('.container-license', $container_form);
+      var checked = $('.cb-license', $row).prop('checked');
+      $('.error', $row).remove();
+      if (!checked) {
+        var html = '<div class="error">请接受服务条款</div>';
+        $row.append(html);
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function initRegisterForm() {
+      var $container_form = $('.container-landing-register-form');
+
+      $('.btn-send-verify-code', $container_form).click(function() {
+        var $cur_container_form = $(this).parent().parent().parent().parent().parent();
+
+        if (!validatePhone($cur_container_form)) {
+          return;
+        }
+
+        var $this = $(this);
+
+        $this.prop('disabled', true);
+        var count = 60;
+        function tick() {
+          count--;
+          if (count == 0) {
+            $this.text('获取验证码');
+            $this.prop('disabled', false);
+          } else {
+            $this.text(count + '秒后重新获取');
+            setTimeout(tick, 1000);
+          }
+        }
+        setTimeout(tick, 0);        
+      });
+
+      $('.btn-license', $container_form).click(function() {
+        var $dialog = $('#license_dialog');
+        $('.icons-close, .btn-finish-read', $dialog).off('click').click(function() {
+          $dialog.removeClass('visible');
+        });
+        $dialog.addClass('visible');
+      });
+
+      $('.btn-submit', $container_form).click(function() {
+        var $cur_container_form = $(this).parent().parent().parent();
+        $('.error', $cur_container_form).remove();
+
+        if (!validateName($cur_container_form)) {
+          return false;
+        }
+
+        if (!validateCompanyName($cur_container_form)) {
+          return false;
+        }
+
+        if (!validatePhone($cur_container_form)) {
+          return false;
+        }
+
+        if (!validateVerifyCode($cur_container_form)) {
+          return false;
+        }
+
+        if (!validateLicense($cur_container_form)) {
+          return false;
+        }
+
+        return false;
+      });
+    }
+
+    init = function() {
+      initRegisterForm();
+
+      $('.btn-query-info, .btn-view-zb-cg, .btn-register-now, .stage-graph .title').click(function() {
+        showRegisterDialog();
+      });
+    };
+
+    return {
+      init: init
+    }
+  })();
+
+  ZBW.Buy = (function() {
+    var init;
+
+    function changeSelection($selection) {
+      $('.selected', $selection.parent()).removeClass('selected');
+      $selection.addClass('selected');
+    }
+
+    function initSelections() {
+      $('.form-row-pay-channel .selections .selection').click(function() {
+        var $this = $(this);
+
+        changeSelection($this);
+
+        if ($('.selection-union-pay', $this.parent()).hasClass('selected')) {
+          $('.form-row-bank').css('display', 'block');
+        } else {
+          $('.form-row-bank').css('display', 'none');
+        }
+      });
+
+      var $selectable_row = $('.form-row-year, .form-row-bank');
+      $('.selection', $selectable_row).click(function() {
+        changeSelection($(this));
+      });
+
+      $('.form-row-fp .selection').click(function() {
+        var $row = $('.form-row-fp');
+        var $selections_normal_fp = $('.selections-normal-fp', $row);
+        var $selection_personal_fp = $('.selection-personal-fp', $row);
+        var $fp_details = $('.fp-details', $row);
+        var $fp_details_group_1 = $('.fp-details-group-1', $fp_details);
+        var $fp_details_group_2 = $('.fp-details-group-2', $fp_details);
+
+        if ($(this).hasClass('selection-normal-fp') ||
+          $(this).hasClass('selection-zzs-fp')) {
+
+          if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+            $selections_normal_fp.hide();
+            $fp_details.hide();
+            return;
+          }
+
+          $('.selected', $(this).parent()).removeClass('selected');
+          $(this).addClass('selected');
+
+          if ($(this).hasClass('selection-normal-fp')) {
+            $selections_normal_fp.show();
+            $('.selected', $selections_normal_fp).removeClass('selected');
+            $selection_personal_fp.addClass('selected');
+            $fp_details.show();
+            $fp_details_group_1.hide();
+            $fp_details_group_2.hide();
+          } else {
+            $selections_normal_fp.hide();
+            $fp_details.show();
+            $fp_details_group_1.show();
+            $fp_details_group_2.show();            
+          }
+
+        } else {
+          if ($(this).hasClass('selected')) {
+            return;
+          }
+
+          $('.selected', $(this).parent()).removeClass('selected');
+          $(this).addClass('selected');
+
+          if ($(this).hasClass('selection-personal-fp')) {
+            $fp_details_group_1.hide();
+            $fp_details_group_2.hide();
+          } else {
+            $fp_details_group_1.show();
+            $fp_details_group_2.hide();            
+          }               
+        }
+      });
+    }
+
+    function validatePayChannel() {
+      var $right = $('.form-row-pay-channel .right');
+      $('.error-msg', $right).remove();
+      if ($('.selected', $right).length == 0) {
+        var html = '<div class="error-msg">请选择支付方式</div>';
+        $right.append(html);
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function validateYear() {
+      var $right = $('.form-row-year .right');
+      $('.error-msg', $right).remove();
+      if ($('.selected', $right).length == 0) {
+        var html = '<div class="error-msg">请选择开通年限</div>';
+        $right.append(html);
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+    function validateBank() {
+      if ($('.form-row-pay-channel .selection-union-pay').hasClass('selected')) {
+        var $right = $('.form-row-bank .right');
+        $('.error-msg', $right).remove();
+        if ($('.selected', $right).length == 0) {
+          var html = '<div class="error-msg">请选择银行</div>';
+          $right.append(html);
+          return false;
+        } else {
+          return true;
+        }     
+      } else {
+        return true;
+      }
+    }
+
+    function CreateFormValidationItem(name) {
+      return new FormValidationItem(name);
+    }
+
+    function FormValidationItem(name) {
+      this.name = name;
+      this.tests = [];
+    }
+
+    FormValidationItem.prototype.range = function(range, msg) {
+      var min, max;
+      var arr = range.split(',');
+      
+      if (isNaN(parseInt(arr[0]))) {
+        min = null;
+      } else {
+        min = parseInt(arr[0]);
+      }
+
+      if (isNaN(parseInt(arr[1]))) {
+        max = null;
+      } else {
+        max = parseInt(arr[1]);
+      }
+
+      var test = {
+        range: {
+          min: min,
+          max: max
+        },
+        msg: msg
+      };
+
+      this.tests.push(test);
+
+      return this;
+    }
+
+    FormValidationItem.prototype.fn = function(fn, msg) {
+      var test = {
+        fn: fn,
+        msg: msg
+      };
+
+      this.tests.push(test);
+
+      return this;
+    };
+
+    function FormValidation(options) {
+      var default_options = {
+        form_selector: '',
+        prefix: 'item',
+        items: []
+      };
+
+      this.options = $.extend(true, default_options, options);
+    }
+
+    FormValidation.prototype.showErrorMsg = function($text, msg) {
+      var html = '<div class="error-msg">' + msg + '</div>';
+      $text.parent().append(html);
+    }
+
+    FormValidation.prototype.validateText = function($text, tests) {
+      function testRange(val, range) {
+        var len = val.length;
+        if (typeof range.min == 'number') {
+          if (len < range.min) {
+            return false;
+          }
+        }
+        if (typeof range.max == 'number') {
+          if (len > range.max) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      var val = $text.val().trim();
+      for (var i in tests) {
+        var test = tests[i];
+
+        if (test.range) {
+          if (testRange(val, test.range)) {
+            continue;
+          }
+        } else if (test.fn) {
+          if (test.fn(val)) {
+            continue;
+          }
+        }
+
+        this.showErrorMsg($text, test.msg);
+        return false;
+      }
+      return true;
+    };
+
+    FormValidation.prototype.validate = function() {
+      var options = this.options;
+      var items = options.items;
+      var $form = $(options.form_selector);
+
+      $('.error-msg', $form).remove();
+
+      for (var i in items) {
+        var item = items[i];
+        var name = item.name;
+        var $row = $('.' + options.prefix + '-' + name);
+        var $form_control = $('.' + name, $row);
+
+        if ($form_control.is('input[type="text"]')) {
+          if (!this.validateText($form_control, item.tests)) {
+            return false;
+          }
+        }
+      }
+
+      return true;
+    };
+
+    function validateFP() {
+      var $row = $('.form-row-fp');
+      var $selection = $('.selections:first-child .selected', $row);
+      if ($selection.length == 0) {
+        return true;
+      }
+
+      var $fp_details = $('.fp-details', $row);
+      if ($selection.hasClass('selection-normal-fp')) {
+        $selection = $('.selections-normal-fp .selected', $row);
+      }
+
+      var items = [], item;
+
+      if (!$selection.hasClass('selection-personal-fp')) {
+        item = CreateFormValidationItem('company-name').range('1,', '请填写单位名称');
+        items.push(item);
+      }
+
+      if ($selection.hasClass('selection-zzs-fp')) {
+        item = CreateFormValidationItem('identity').range('1,', '请填写纳税人识别码');
+        items.push(item);
+        item = CreateFormValidationItem('register-address').range('1,', '请填写注册地址');
+        items.push(item);
+        item = CreateFormValidationItem('register-phone').range('1,', '请填写注册电话');
+        items.push(item);
+        item = CreateFormValidationItem('bank').range('1,', '请填写开户银行');
+        items.push(item);
+        item = CreateFormValidationItem('bank-account').range('1,', '请填写银行账户');
+        items.push(item);                
+      }
+
+      item = CreateFormValidationItem('region').range('1,', '请填写所在区域');
+      items.push(item);       
+      item = CreateFormValidationItem('address').range('1,', '请填写详细地址');
+      items.push(item);             
+      item = CreateFormValidationItem('receiver-name').range('1,', '请填写收件人');
+      items.push(item);             
+      item = CreateFormValidationItem('tel').fn(function(val) {
+        return ZBW.validateTelphone(val);
+      }, '请填写正确的手机号码');
+      items.push(item);             
+
+      var form_validate = new FormValidation({
+        form_selector: '.form-row-fp .fp-details',
+        items: items
+      });
+
+      return form_validate.validate();
+    }
+
+    init = function() {
+      initSelections();
+
+      $('.pay-body .btn-submit').click(function() {
+        if (!validatePayChannel()) {
+          return false;
+        }
+
+        if (!validateYear()) {
+          return false;
+        }
+
+        if (!validateBank()) {
+          return false;
+        }
+
+        if (!validateFP()) {
+          return false;
+        }
+
+        window.location.href = 'buy_succeed.html';
+
+        return false;
+      });
+    };
+
+    return {
+      init: init
+    };
+  })();
+
+  ZBW.IndustryCategory = (function() {
+    var init;
+
+    function initSelections() {
+      var $selections = $('#page-industry-category .container-selections');
+      var $header = $('.header', $selections);
+      var $body = $('.body', $selections);
+      $('.header .item', $selections).click(function() {
+        var expanded = $(this).hasClass('expanded');
+
+        $('.expanded', $header).removeClass('expanded');
+        if (!expanded) {
+          $(this).addClass('expanded');
+        }
+
+        var idx = $(this).index();
+        $('.visible', $body).removeClass('visible');
+        if (!expanded) {
+          $($('.list', $body).eq(idx)).addClass('visible');
+        }
+      });
+
+      $('.item > .wrapper', $body).click(function() {
+        var $list = $(this).parent().parent();
+        $('.selected', $list).removeClass('selected');
+        $(this).parent().addClass('selected');
+      });
+    }
+
+    init = function() {
+      ZBW.QuickRegister.init();
+
+      $('.btn-switch-industry').click(function(event) {
+        event.stopPropagation();
+
+        var $industries = $('#page-industry-category .industries');
+        if ($industries.hasClass('visible')) {
+          $industries.removeClass('visible');
+        } else {
+          $industries.addClass('visible');
+        }
+      });
+
+      $(document).click(function() {
+        var $industries = $('#page-industry-category .industries');
+        $industries.removeClass('visible');
+      });
+
+      initSelections();
+    };
+
+    return {
+      init: init
+    };
+  })();
+
 })(jQuery);

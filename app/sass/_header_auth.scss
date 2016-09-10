@@ -1,47 +1,11 @@
-.page-login, .page-register, .page-find-password {
-  #page-header {
-    .header-main {
+#page-header {
+  .header-main {
 
-      .col-left {
-        .link-logo {
-          display: inline-block;
-          padding-right: 20px;
-          margin-right: 20px;
-          border-right: 1px solid #ddd;
-        }
-        .description {
-          display: inline-block;
-          font-size: 16px; 
-        }
-      }
-
-      .col-right {
-        & > div {
-          display: inline-block;
-          height: 100%;
-        }
-      }
-
-      .container-actions {
-        width: 270px;
-        font-size: 16px;
-
-        $btn-border-radius: 15px;
-
-        .btn-buy {
-          padding: 5px 20px;
-          margin-right: 10px;
-
-          @include border-radius($btn-border-radius);
-          border: 1px solid $brand-danger-color;
-
-          @include reset-anchor-color($brand-danger-color);
-
-          &:hover {
-            background-color: $brand-danger-color;
-            color: white;
-          }
-        }
+    .col-left {
+      .page-description {
+        padding-left: 30px;
+        display: inline-block;
+        font-size: 16px; 
       }
     }
   }  

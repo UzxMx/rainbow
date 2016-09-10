@@ -1,0 +1,26 @@
+{% set logged_in = "true" %}
+{% set no_menus = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div id="page-pay">
+  <div class="pay-header">
+    支付结果
+  </div>
+  <div class="pay-body">
+    <div class="container-result" style="margin-top:80px;">
+      <span class="icon icons-pay-failed"></span>
+      <div>
+        支付失败或正在处理中
+      </div>
+      <div>请进入 会员中心－我的订单 查询支付结果</div>
+      <div class="container-btn" style="margin-top:50px;">
+        <a href="orders.html" class="btn btn-primary">查看我的订单</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

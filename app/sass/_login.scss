@@ -1,6 +1,7 @@
 .page-login {
-  #main-container {
+  &#main-container {
     max-width: 100%;
+    margin-bottom: 80px;
   }
 
   .container-login {
@@ -183,8 +184,5 @@
     }
 
   }  
-
-  #page-footer {
-    padding-bottom: 80px;
-  }  
+ 
 }

@@ -1,0 +1,51 @@
+{% set header2 = 'true' %}
+
+{% set header2_yi_jian_jian_yi = 'true' %}
+
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="page-yi-jian-jian-yi page-about-us page-about-us-only-main">
+
+  <div class="main">
+    <div class="container-header">
+      <span class="icons-mianze"></span>
+      <span class="title">意见建议</span>
+    </div>
+    <div class="container-content" style="margin-bottom: 90px; max-width: 800px;">
+      <p>
+        招标王正式上线啦，大家对招标王有什么建议和看法可以畅所欲言。
+      </p>
+      <p>
+我们希望广大用户提出宝贵意见和建议，寻找各种Bug。只要玩家在使用中发现Bug或对有任何建议，都可以提交给我们。   
+      </p>
+      <p>
+建议一经采纳，提建议用户可以获得一个月的使用期限。
+      </p>
+      <p style="margin-top:20px;">
+您可以选择下面任意角度提出建议
+      </p>
+      <p>
+1、当前招标王存在的问题</p>
+ <p>
+2、您发现的BUG</p>
+ <p>
+3、您的建议和意见</p>
+    
+    <div class="container-form">
+      <form>
+        <div>
+          <textarea></textarea>
+        </div>
+        <div style="margin-top:20px;">
+          <button type="submit" class="btn btn-primary btn-submit">提交</button>
+        </div>
+      </form>
+    </div>  
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
